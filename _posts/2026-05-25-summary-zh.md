@@ -5,221 +5,236 @@ date: 2026-05-25
 lang: zh
 ---
 
-> 从 36 条内容中筛选出 10 条重要资讯。
+> 从 35 条内容中筛选出 11 条重要资讯。
 
 ---
 
-1. [飞机表面微粗糙度可减阻，推翻工程学原理](#item-1) ⭐️ 9.0/10
-2. [华为提出“韬定律”：以时间缩微替代几何缩微](#item-2) ⭐️ 9.0/10
-3. [Epic 公布虚幻引擎 6，《火箭联盟》为首个展示游戏](#item-3) ⭐️ 9.0/10
-4. [教皇通谕敦促技术构建者思考伦理影响](#item-4) ⭐️ 8.0/10
-5. [DeepSeek Reasonix：具有高缓存和低成本的原生编码代理](#item-5) ⭐️ 8.0/10
-6. [Go 到 Rust 迁移指南引发争论](#item-6) ⭐️ 8.0/10
-7. [微软开源最早发现的 DOS 源代码](#item-7) ⭐️ 8.0/10
-8. [论文揭示 LLM 代理在后端代码生成中的约束衰减](#item-8) ⭐️ 8.0/10
-9. [诈骗者滥用内部微软账户发送垃圾邮件](#item-9) ⭐️ 8.0/10
-10. [APKPure 上的 Telegram 官方版被植入间谍后门](#item-10) ⭐️ 8.0/10
+1. [微粗糙度降低阻力，推翻航空工程原理](#item-1) ⭐️ 9.0/10
+2. [APKPure 上的 Telegram 版本被植入间谍后门](#item-2) ⭐️ 9.0/10
+3. [Epic 公开虚幻引擎 6，首秀游戏《火箭联盟》](#item-3) ⭐️ 9.0/10
+4. [Show HN：免费开源网页版多轨音频编辑器](#item-4) ⭐️ 8.0/10
+5. [DeepSeek Reasonix：利用高缓存实现低成本的原生编码代理](#item-5) ⭐️ 8.0/10
+6. [从 Go 迁移到 Rust 的指南引发语言争论](#item-6) ⭐️ 8.0/10
+7. [LLM 代理的约束衰减：后端代码生成脆弱性](#item-7) ⭐️ 8.0/10
+8. [微软开源已知最早的 DOS 源代码](#item-8) ⭐️ 8.0/10
+9. [内存现占 AI 芯片成本近三分之二](#item-9) ⭐️ 8.0/10
+10. [Armin Ronacher 批评 AI 生成的错误报告](#item-10) ⭐️ 8.0/10
+11. [马斯克宣布 Grok V9-Medium（1.5T）训练完成](#item-11) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [飞机表面微粗糙度可减阻，推翻工程学原理](https://www.wired.com/story/a-fundamental-principle-of-aeronautical-engineering-has-been-overturned/) ⭐️ 9.0/10
+## [微粗糙度降低阻力，推翻航空工程原理](https://www.wired.com/story/a-fundamental-principle-of-aeronautical-engineering-has-been-overturned/) ⭐️ 9.0/10
 
-研究人员发现，在飞机表面施加微粗糙度可以减少空气阻力，这与长期认为表面越光滑性能越好的传统观念相悖。 这一突破可能通过提供简单、低成本的减阻方法，为航空、汽车和高速铁路行业带来显著的燃油节约和效率提升。 减阻效果尤其体现在层流与湍流之间的过渡区；整个表面的净改善可能有限，但对于飞机而言，即使很小的百分比提升也能转化为巨大的燃油节省。
+日本东北大学的一项研究推翻了长期以来的观点，即表面越光滑空气阻力越小。他们发现分布式微粗糙度可以延迟层流到湍流的转换，在风洞测试中阻力降低高达 43.6%。 这一发现挑战了航空工程的基本原理，可能导致更高效的飞机设计，减少燃料消耗和排放。它也与其他领域（如帆船和高尔夫球设计）的理解统一起来，在这些领域中已知粗糙度有助于性能提升。 所使用的微粗糙度在 1000 至 1500 目砂纸范围内，与竞技帆船手使用的类似。该研究发表在《流体力学杂志》上，而 Ichiro Tani 于 1940 年的原始研究在 1989 年已被重新解释以暗示这一效应。
 
 hackernews · littlexsparkee · 5月24日 19:10 · [社区讨论](https://news.ycombinator.com/item?id=48260117)
 
-**背景**: 空气阻力受边界层（紧贴表面的薄空气层）行为控制。传统上，工程师认为完全光滑的表面促进层流（低阻力），而粗糙度会触发湍流（高阻力）。然而，这项研究表明，可控的微粗糙度实际上可以延迟向湍流的转变，从而降低整体阻力。
+**背景**: 在流体动力学中，边界层流动可以是层流（平滑）或湍流（混乱）。层流具有较小的表面摩擦，但不稳定，可能转变为湍流，增加阻力。人们认为表面粗糙度会触发早期转换，因此表面保持光滑。然而，这项研究表明微粗糙度可以通过抑制扰动来稳定层流，延迟转换并减少阻力。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.wired.com/story/a-fundamental-principle-of-aeronautical-engineering-has-been-overturned/">A Fundamental Principle of Aeronautical Engineering Has... | WIRED</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Laminar–turbulent_transition">Laminar – turbulent transition - Wikipedia</a></li>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S0142727X23001297">Drag reduction effect of distributed roughness on the transitional flow state using direct numerical simulation - ScienceDirect</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者指出，水手们长期在水下翼面上使用细砂纸来减阻，并与高尔夫球凹坑类比。一些人担心净改善幅度较小，并提及喷砂等改造方法的可行性。
+**社区讨论**: 评论者指出，竞技帆船手早已知道细砂纸能改善水动力学，质疑为何未应用于空气动力学。其他人则提到了 Tani 1940 年研究及其 1989 年重新解释的历史背景。一些人对如此简单的效应早前未被理解表示惊讶，而另一些人则讨论了飞机制造的实际影响。
 
-**标签**: `#aeronautical engineering`, `#fluid dynamics`, `#drag reduction`, `#surface roughness`, `#aerodynamics`
+**标签**: `#aeronautics`, `#fluid dynamics`, `#drag reduction`, `#surface roughness`, `#laminar flow`
 
 ---
 
 <a id="item-2"></a>
-## [华为提出“韬定律”：以时间缩微替代几何缩微](https://www.peopleapp.com/column/30052220655-500007509895) ⭐️ 9.0/10
+## [APKPure 上的 Telegram 版本被植入间谍后门](https://x.com/EricParker/status/2058411298195661221) ⭐️ 9.0/10
 
-在 2026 年上海国际电路与系统研讨会上，华为发表了“韬定律”，提出以“时间缩微”替代传统的“几何缩微”作为半导体演进新原则。华为已据此设计量产 381 款芯片，今年秋季将推出采用逻辑折叠技术的新麒麟手机芯片。 “韬定律”提供了一条超越摩尔定律物理极限的可行路径，可能重塑全球芯片产业格局。如果成功，它将减少对极紫外光刻的依赖，并使中国在先进芯片制造中获得竞争优势。 “韬定律”通过跨器件、电路、芯片和系统优化信号传播时延（即“时间缩微”）来提升性能。华为预计，到 2031 年基于该定律的高端芯片晶体管密度将达到 1.4 纳米制程的同等水平。
+在 APKPure 上分发的重打包 Telegram 12.6.5 版本被发现包含 DataCollector 间谍软件框架，该框架可窃取聊天记录、通讯录、照片和其他敏感数据。 此事件危及了数百万从 APKPure 下载 Telegram 的用户的隐私，突显了第三方应用商店的安全风险以及验证应用完整性的重要性。 该后门在 classes3.dex 中注入了名为 DataCollector 的 3000 多行代码模块，使用 AES-GCM 加密窃取的数据，并将其外泄至命令与控制服务器 38.190.225.166。
 
-telegram · zaihuapd · 5月25日 01:35
+telegram · zaihuapd · 5月24日 11:38
 
-**背景**: 传统半导体缩放（摩尔定律）依赖缩小晶体管尺寸（几何缩微）来提高密度和性能。然而，量子隧穿和散热等物理极限使进一步缩小愈发困难。“韬定律”则专注于通过多层级优化降低信号延迟，包括采用逻辑折叠技术垂直堆叠电路，以缩短互连长度并降低电阻-电容延迟。
+**背景**: APKPure 是一个第三方 Android 应用商店，提供包括 Telegram 在内的各种应用的 APK 文件，Telegram 是一个流行的安全通信平台。像 DataCollector 这样的间谍软件框架旨在静默窃取个人信息。AES-GCM 是一种高级加密标准，提供机密性和真实性，常用于保护传输中的数据。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.huxiu.com/article/4861142.html">芯片发展的中国方案：华为提出的韬定律到底是什么？-虎嗅网</a></li>
-<li><a href="https://www.ithome.com/0/954/677.htm">华为发表半导体韬定律：预计到 2031 年，基于该定律的高端芯片晶体管密度将达到 1.4 纳米制程的同等水平</a></li>
-<li><a href="https://news.mydrivers.com/1/1124/1124647.htm">首发逻辑折叠技术！华为麒麟2026手机芯片官方PPT公布：晶体管密度提升53.5% 达238MTr/平方毫米 --快科技--科技改变未来</a></li>
+<li><a href="https://www.nature.com/articles/s41597-024-03027-3">AndroDex: Android Dex Images of Obfuscated Malware</a></li>
+<li><a href="https://medium.com/@thomas_40553/how-to-secure-encrypt-and-decrypt-data-within-the-browser-with-aes-gcm-and-pbkdf2-057b839c96b6">The Ultimate Developer’s Guide to AES - GCM : Encrypt and... | Medium</a></li>
 
 </ul>
 </details>
 
-**标签**: `#半导体`, `#摩尔定律`, `#芯片`, `#华为`, `#技术突破`
+**标签**: `#安全`, `#间谍软件`, `#Telegram`, `#APKPure`, `#后门`
 
 ---
 
 <a id="item-3"></a>
-## [Epic 公布虚幻引擎 6，《火箭联盟》为首个展示游戏](https://www.pcgamer.com/gaming-industry/epic-reveals-first-unreal-engine-6-game-and-its-not-fortnite/) ⭐️ 9.0/10
+## [Epic 公开虚幻引擎 6，首秀游戏《火箭联盟》](https://www.pcgamer.com/gaming-industry/epic-reveals-first-unreal-engine-6-game-and-its-not-fortnite/) ⭐️ 9.0/10
 
-Epic Games 在巴黎《火箭联盟》冠军系列赛上首次公开了虚幻引擎 6，并确认《火箭联盟》将直接从虚幻引擎 3 跨代升级至 UE6。 虚幻引擎 6 的发布是游戏开发技术的重要里程碑，标志着从 UE5 的巨大代际飞跃；而像《火箭联盟》这样一款有十年历史的游戏直接从 UE3 升级至 UE6，凸显了 Epic 对向后兼容和面向未来的承诺。此举也强化了 Epic 推动元宇宙平台的战略。 《火箭联盟》此前一直基于 Xbox 360 时代的虚幻引擎 3 运行，此次引擎换代幅度堪比一款续作。虚幻引擎 5 在发布四年来因 PC 端优化问题频遭批评，而 UE6 预告还出现了《堡垒之夜》等游戏的串联镜头，暗示了元宇宙平台的推动。
+Epic Games 在巴黎《火箭联盟》冠军系列赛上公开了虚幻引擎 6，并宣布《火箭联盟》将从虚幻引擎 3 直接跨代升级至 UE6，完全跳过 UE5。 这标志着 Epic 的重大战略转变，展示了跨越式升级路径，可能影响游戏开发生态和 Epic 的元宇宙布局，尤其是在 UE5 的 PC 端优化饱受批评的背景下。 《火箭联盟》最初基于 Xbox 360 时代的 UE3，此次直接跨越至 UE6，升级幅度堪比续作。UE6 预告片中还出现了《堡垒之夜》等游戏的片段，暗示了统一元宇宙平台的意图。
 
 telegram · zaihuapd · 5月25日 02:20
 
-**背景**: 虚幻引擎是 Epic Games 开发的游戏引擎，广泛应用于游戏和影视制作。虚幻引擎 5 于 2022 年发布，引入了 Nanite 虚拟几何体和 Lumen 全局光照等先进特性，但因 PC 端性能问题受到批评。UE6 是下一代版本，承诺提供进一步优化和更好的元宇宙集成。《火箭联盟》最初于 2015 年发布，结合了足球与车辆特技，至今一直运行在 UE3 上。
+**背景**: 虚幻引擎 5 发布四年来已成为影视和游戏行业最广泛使用的中间件之一，但在 PC 端因性能问题屡遭批评。Epic 决定让《火箭联盟》直接从 UE3 跳升至 UE6，表明其希望绕过 UE5 的优化问题，将未来开发统一到新引擎上。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Unreal_Engine_6">Unreal Engine 6</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Unreal_Engine">Unreal Engine - Wikipedia</a></li>
-
-</ul>
-</details>
-
-**标签**: `#Unreal Engine`, `#Game Development`, `#Epic Games`, `#Rocket League`, `#Metaverse`
+**标签**: `#游戏引擎`, `#虚幻引擎6`, `#Epic Games`, `#Rocket League`, `#行业新闻`
 
 ---
 
 <a id="item-4"></a>
-## [教皇通谕敦促技术构建者思考伦理影响](https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html) ⭐️ 8.0/10
+## [Show HN：免费开源网页版多轨音频编辑器](https://audiomass.co/?multitrack=1) ⭐️ 8.0/10
 
-这份通谕标志着梵蒂冈对技术伦理（尤其是 AI 伦理）的重要介入，敦促构建者将共同利益置于利润和统一之上，这可能影响全球关于负责任创新的讨论。 通谕警告反对“巴别综合征”——即对利润的崇拜和同质化——并指出技术绝不中立，因为它反映了创造者和使用者的价值观。
+Audiomass 是一款免费开源的多轨音频编辑器，完全在网页浏览器中运行，在 Hacker News 上展示后获得 412 分和 88 条评论。 该工具填补了无需重型桌面软件即可快速编辑音频的需求，对于开发者、音乐人以及任何需要在浏览器中快速进行波形编辑的人来说非常有用。 该编辑器支持实时效果、多轨叠加，并且默认支持 .flac 文件；不过，某些功能如淡入淡出时间控制尚未实现。
 
-hackernews · theletterf · 5月25日 10:11 · [社区讨论](https://news.ycombinator.com/item?id=48265206)
+hackernews · pantelisk · 5月24日 15:25 · [社区讨论](https://news.ycombinator.com/item?id=48258015)
 
-**背景**: 教皇通谕是教皇就重要问题向天主教会和世界发出的正式信函。利奥十四世继任教皇方济各，延续了后者对技术伦理的强调，尤其是在人工智能和人类尊严方面。
+**背景**: 基于网页的音频编辑器允许用户无需安装软件即可录制、编辑和制作音频。Audiomass 使用现代网络技术构建，完全开源，提供了类似于 Cool Edit Pro 等经典工具的直观用户界面。
 
-**社区讨论**: 评论者赞扬通谕呼吁构建者考虑其伦理责任，sethbannon 强调其传达的信息是“每个设计选择都反映了对人性的看法”。其他人指出该文件在反对同质化、捍卫人类多样性对抗 AI 驱动的标准化方面的相关性。
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://audiomass.co/">AudioMass - Audio Editor</a></li>
 
-**标签**: `#ethics`, `#AI ethics`, `#technology`, `#papal encyclical`, `#software engineering`
+</ul>
+</details>
+
+**社区讨论**: Hacker News 社区反响热烈，称赞其直观的用户体验以及对 .flac 文件的支持。一些用户希望增加云端协作功能和更精细的效果控制，另一些用户则对项目使用的编码风格表示怀旧。
+
+**标签**: `#audio editing`, `#open source`, `#web app`, `#music production`, `#Hacker News Show HN`
 
 ---
 
 <a id="item-5"></a>
-## [DeepSeek Reasonix：具有高缓存和低成本的原生编码代理](https://esengine.github.io/DeepSeek-Reasonix/) ⭐️ 8.0/10
+## [DeepSeek Reasonix：利用高缓存实现低成本的原生编码代理](https://esengine.github.io/DeepSeek-Reasonix/) ⭐️ 8.0/10
 
-DeepSeek Reasonix 是一个专为 DeepSeek API 设计的终端 AI 编码代理，采用缓存优先循环和闪存优先成本控制，通过最大化缓存命中来最小化推理成本。 这很重要，因为针对模型的缓存行为定制代理可以显著降低推理成本，使 AI 辅助编码更加经济实惠，并引发了关于为获得更好结果而破坏缓存与保持低成本之间权衡的讨论。 该代理支持通过本地 Ollama 或 DeepSeek 托管的嵌入来构建嵌入索引，可通过 npx 或全局安装使用，但社区反馈指出了工具质量和用户体验问题，例如打字动画导致布局移动。
+DeepSeek Reasonix 是一个专为 DeepSeek API 设计的原生编码代理，利用前缀缓存稳定性来降低成本。它旨在通过缓存优先的循环为终端用户提供高效的 AI 编码辅助。 Reasonix 展示了针对特定模型缓存行为进行优化可以大幅降低运营成本，从而可能使 AI 辅助编码更加普及。它也凸显了模型原生工具这一日益增长的趋势。 Reasonix 仅针对 DeepSeek 模型，因为其循环不变量是围绕 DeepSeek 的缓存机制设计的。该代理在终端中运行，直接与 api.deepseek.com 通信，无需翻译层。
 
 hackernews · Alifatisk · 5月24日 13:02 · [社区讨论](https://news.ycombinator.com/item?id=48256953)
 
-**背景**: 语言模型推理成本是一个重要问题，缓存是降低成本的關鍵技術。DeepSeek 的 API 为缓存 token 提供折扣，使得设计最大化缓存命中的代理具有吸引力。然而，一些编码代理有意破坏缓存前缀以获得更好的性能，这导致了成本与质量之间的权衡。
+**背景**: AI 中的缓存通过存储和重用先前结果来降低成本和延迟。DeepSeek 提供前缀缓存，可以显著降低重复或相似输入的令牌使用量。Reasonix 旨在通过保持请求中稳定的前缀来最大化缓存命中率。
 
 <details><summary>参考链接</summary>
 <ul>
+<li><a href="https://github.com/esengine/deepseek-reasonix">GitHub - esengine/DeepSeek-Reasonix: DeepSeek-native AI ...</a></li>
+<li><a href="https://esengine.github.io/DeepSeek-Reasonix/">Reasonix — DeepSeek-native AI coding agent for your terminal</a></li>
 <li><a href="https://api-docs.deepseek.com/quick_start/agent_integrations/reasonix">Integrate with Reasonix | DeepSeek API Docs</a></li>
-<li><a href="https://esengine.github.io/DeepSeek-Reasonix/">Reasonix — DeepSeek -native AI coding agent</a></li>
-<li><a href="https://github.com/esengine/deepseek-reasonix">GitHub - esengine/ DeepSeek - Reasonix : DeepSeek -native AI coding...</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论褒贬不一：一些用户通过简单桥接就实现了高缓存命中率，而另一些用户则批评该工具生成的页面质量和用户体验缺陷。关于缓存破坏的讨论存在分歧，有人认为破坏缓存通常能带来更好的结果，盲目依赖缓存是错误的。
+**社区讨论**: 社区评论褒贬不一；一些用户赞赏缓存效率，但批评网站的 UX 并质疑是否需要专门的代理。一位评论者指出，通用的 harness 已经有效处理了缓存。
 
-**标签**: `#DeepSeek`, `#AI coding agents`, `#caching`, `#LLM costs`, `#tooling`
+**标签**: `#DeepSeek`, `#caching`, `#coding agent`, `#AI`, `#cost optimization`
 
 ---
 
 <a id="item-6"></a>
-## [Go 到 Rust 迁移指南引发争论](https://corrode.dev/learn/migration-guides/go-to-rust/) ⭐️ 8.0/10
+## [从 Go 迁移到 Rust 的指南引发语言争论](https://corrode.dev/learn/migration-guides/go-to-rust/) ⭐️ 8.0/10
 
-一篇详细的从 Go 迁移到 Rust 的指南发布，引发了社区关于两种语言在 Web 后端开发中权衡的广泛讨论。 这场辩论凸显了开发者社区中在管理运行时语言（如 Go）与系统语言（如 Rust）之间的持续紧张关系，影响着后端服务的语言选择。 该指南涵盖语法差异、错误处理模式和并发模型，但批评者认为它更像是倡导而非中立的迁移指南。
+一篇从 Go 迁移到 Rust 的全面指南发布，引发了社区关于两种语言权衡的广泛讨论，特别是在错误处理、托管运行时与包管理方面。 此讨论突显了软件工程社区中关于为后端开发选择 Go 还是 Rust 的持续辩论，影响着语言采用和项目架构的决策。 该指南承认 Go 的简洁性，但指出 Rust 通过'?'操作符实现了更优的错误处理；社区评论则强调托管运行时的权衡，以及 Rust 相比于 Go 精简标准库的庞大依赖树。
 
 hackernews · jabits · 5月24日 18:31 · [社区讨论](https://news.ycombinator.com/item?id=48259808)
 
-**背景**: Go 和 Rust 都是现代编译语言，但理念不同：Go 追求简单和带有垃圾回收的管理运行时，而 Rust 则提供无需运行时的精细内存控制，通过所有权和借用保证安全。选择通常取决于更看重开发速度（Go）还是性能与安全性（Rust）。
+**背景**: Go 和 Rust 都是现代系统编程语言，但它们的设计理念不同：Go 优先考虑简洁性和带有垃圾回收的托管运行时，而 Rust 则通过借用检查器在不使用垃圾回收器的情况下实现内存安全。这些差异使得两者之间的选择高度依赖具体场景，通常取决于性能要求和团队专长。
 
-**社区讨论**: 用户 Animats 和 tptacek 的评论提供了对比观点：一位更倾向于使用 Go 进行 Web 后端开发，另一位则认为决策归结于是否想要一个管理运行时。其他人指出 Rust 较高的学习曲线和依赖管理问题。
+**社区讨论**: 评论者就托管运行时的优劣展开辩论，有人认为 Go 的垃圾回收比 Rust 的复杂性负担更小。其他人则对 Rust 的包管理以及指南的真实性表示担忧，怀疑其内容是由 AI 生成的。
 
-**标签**: `#Rust`, `#Go`, `#Migration`, `#Web Backend`, `#Programming Languages`
+**标签**: `#Go`, `#Rust`, `#migration`, `#programming languages`, `#web backend`
 
 ---
 
 <a id="item-7"></a>
-## [微软开源最早发现的 DOS 源代码](https://arstechnica.com/gadgets/2026/04/microsoft-open-sources-the-earliest-dos-source-code-discovered-to-date/) ⭐️ 8.0/10
+## [LLM 代理的约束衰减：后端代码生成脆弱性](https://arxiv.org/abs/2605.06445) ⭐️ 8.0/10
 
-微软已开源了已知最早的 DOS 源代码，这些代码是由历史学家和保存者团队通过 OCR 从纸质打印稿中精心恢复的。 此次发布保存了计算史上的关键一环，展现了微软对软件保存的承诺，使开发者和历史学家能够研究 PC 时代的基础代码。 该源代码是从 DOS 原作者 Tim Paterson 提供的纸质打印稿中恢复的，由于几十年前的打印质量较差，必须使用特殊的 OCR 技术进行转录。
+该论文提出“约束衰减”概念，证明 LLM 编码代理在多文件后端代码生成任务中，当需要遵循 ORM 映射和框架约定等具体架构约束时，性能显著下降约 30 个百分点。 这一发现凸显了 LLM 代理在无约束编码方面令人印象深刻的能力与在生产级软件开发中所需的严格遵守架构规则之间的关键差距，强调需要在 AI 辅助编码工具中改进约束处理能力。 该研究在多个 LLM 代理上评估了多文件后端生成基准，发现约束条件下断言通过率从无约束时的约 90%下降到约 60%。值得注意的是，由于成本原因，论文未测试 GPT-4 或 Claude 3.5 等前沿模型，这可能影响结论的普适性。
 
-hackernews · DamnInteresting · 5月24日 01:21 · [社区讨论](https://news.ycombinator.com/item?id=48253386)
+hackernews · wek · 5月24日 12:55 · [社区讨论](https://news.ycombinator.com/item?id=48256912)
 
-**背景**: MS-DOS（微软磁盘操作系统）是 1980 年代驱动 IBM PC 及其兼容机的操作系统。它是一个命令行操作系统，为微软早期的成功奠定了基础。该源代码已丢失数十年，其恢复标志着复古计算和软件历史上的一个重要里程碑。
+**背景**: 在软件工程中，生产级后端代码必须遵循特定的架构模式、ORM 配置和框架约定，以确保可维护性和可扩展性。现有的 LLM 代码生成基准通常关注单文件任务的功能正确性，忽略了这些结构约束。本论文通过系统评估 LLM 代理在真实约束下的表现，填补了这一空白。
 
-**社区讨论**: 评论者对微软发布该代码表示感谢，一些人指出伴随的 BASIC 源代码的历史意义。也有人对早期软件的小体积感到惊讶——只需几千行汇编代码，与现代代码库形成鲜明对比。一位用户确认该代码在 DOSBox 中运行流畅。
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://arxiv.org/abs/2605.06445">[2605.06445] Constraint Decay: The Fragility of LLM Agents in Backend ...</a></li>
+<li><a href="https://www.agentpatterns.ai/verification/constraint-decay-backend-agents/">Constraint Decay in Backend Code Generation - agentpatterns.ai</a></li>
+<li><a href="https://www.knowlab.io/content/30febb02-ec40-4138-8212-025d65f0a583/">Constraint Decay: The Fragility of LLM Agents in Backend Code ...</a></li>
 
-**标签**: `#open source`, `#DOS`, `#Microsoft`, `#history`, `#software preservation`
+</ul>
+</details>
+
+**社区讨论**: 社区评论普遍认同论文的发现，用户分享了 LLM 在约束下性能下降的经历。有人指出，逐步引入约束而非一次性添加可以缓解衰减，并提到一种称为“固化”的相关现象，即代理反复强化现有模式。一个被指出的局限是未包含前沿模型，其表现可能不同。
+
+**标签**: `#LLM agents`, `#code generation`, `#constraint decay`, `#production software`, `#AI reliability`
 
 ---
 
 <a id="item-8"></a>
-## [论文揭示 LLM 代理在后端代码生成中的约束衰减](https://arxiv.org/abs/2605.06445) ⭐️ 8.0/10
+## [微软开源已知最早的 DOS 源代码](https://arstechnica.com/gadgets/2026/04/microsoft-open-sources-the-earliest-dos-source-code-discovered-to-date/) ⭐️ 8.0/10
 
-arXiv 上的一项新研究系统评估了 LLM 代理在后端代码生成中的表现，并发现了一种称为“约束衰减”的现象，即当代理被迫遵守明确的架构规则时，其性能显著下降。 这一发现凸显了 LLM 在代码生成在生产环境中的一个关键局限——在这些环境中遵循结构化约束至关重要。它表明，尽管 LLM 代理擅长快速原型开发，但在生产级后端开发中仍不可靠。 该研究测试了包括 GPT-4o 和 Claude 3.5 Sonnet 在内的多个模型，发现在基准测试中，无约束生成与有约束生成之间的性能下降高达 30 个百分点。不过，作者指出，由于成本限制，他们并未完全测试前沿模型，这限制了具体分数的普适性。
+微软开源了已知最早的 DOS 源代码，这段代码由历史学家和保存专家团队通过 OCR 从纸质打印输出中艰辛重建。 此次发布保存了计算历史的基础部分，使开发者和历史学家能够研究启动个人电脑革命的操作系统的早期起源。 源代码来自 DOS 原作者 Tim Paterson 提供的纸质打印输出，现代 OCR 软件难以处理年代久远的打印件，需要手动清理。
 
-hackernews · wek · 5月24日 12:55 · [社区讨论](https://news.ycombinator.com/item?id=48256912)
+hackernews · DamnInteresting · 5月24日 01:21 · [社区讨论](https://news.ycombinator.com/item?id=48253386)
 
-**背景**: LLM 代理是将大型语言模型与规划、记忆和工具使用相结合的 AI 系统，用于执行代码生成等复杂任务。在后端开发中，代码必须遵循严格的架构模式、错误处理及性能约束。“约束衰减”指的是当这些约束随时间累积时，LLM 代理表现下降的趋势，相关研究中也将其称为代码库的“钙化”。
+**背景**: DOS（磁盘操作系统）是 20 世纪 80 年代至 90 年代初 IBM PC 兼容机的主流操作系统。微软从西雅图电脑产品公司获得了早期版本的 DOS，并授权给 IBM，这成为该公司的关键转折点。已知最早的源代码已遗失数十年，因此这次重建和开源是一项重要的存档成就。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://arxiv.org/abs/2605.06445">[2605.06445] Constraint Decay : The Fragility of LLM Agents in...</a></li>
-<li><a href="https://agentpatterns.ai/verification/constraint-decay-backend-agents/">Constraint Decay in Backend Code Generation - AgentPatterns.ai</a></li>
+**社区讨论**: 社区普遍赞扬微软的这次发布，有人指出同样开源的 BASIC 解释器的历史重要性。评论者表达了对过去的怀念，并对当时仅需几千行汇编代码就能创立一家成功公司感到惊讶。
 
-</ul>
-</details>
-
-**社区讨论**: 社区评论反映了既有认同也有实际经验：一位用户指出，尽管他高度依赖 LLM 代码生成，但他看到的局限性与论文发现一致。另一位强调该研究未测试最先进的模型，这可能影响性能数据。一位开发者分享了自己观察到的“钙化”现象——代理反复应用相似模式，并建议逐步引入约束可能有所帮助。
-
-**标签**: `#LLM`, `#Code Generation`, `#AI Agents`, `#Software Engineering`, `#Reliability`
+**标签**: `#open-source`, `#history`, `#DOS`, `#Microsoft`, `#software preservation`
 
 ---
 
 <a id="item-9"></a>
-## [诈骗者滥用内部微软账户发送垃圾邮件](https://techcrunch.com/2026/05/21/scammers-are-abusing-an-internal-microsoft-account-to-send-spam/) ⭐️ 8.0/10
+## [内存现占 AI 芯片成本近三分之二](https://epoch.ai/data-insights/ai-chip-component-cost-shares) ⭐️ 8.0/10
 
-几个月来，诈骗者一直在利用一个漏洞，从通常用于发送合法账户警报的内部微软电子邮件地址发送垃圾邮件。 这削弱了人们对微软电子邮件域的信任，并突显了广泛使用的平台中的安全漏洞，增加了数百万用户遭受钓鱼攻击的风险。 该漏洞的确切机制尚不清楚，但据报道，诈骗者注册了新的微软账户，假装是真实的公司客户。微软尚未宣布修复方案。
+根据 Epoch AI 的数据，内存占 AI 芯片组件成本的比例从 2024 年的约 13-14%上升至 2025 年的 63%，主要受 HBM 支出驱动。AI 芯片组件总支出从 2024 年的 220 亿美元激增至 2025 年的 520 亿美元。 这一变化意味着内存现已成为 AI 加速器的主要成本，从根本上改变了硬件定价和供应链动态。它可能导致 AI 训练和推理成本上升，影响从云计算到消费设备的一切，并凸显了内存供应的关键瓶颈。 HBM（高带宽内存）是主要推动力，据 Epoch AI 报道，仅 HBM 支出就占了成本增长的很大一部分。同期逻辑芯片成本占比保持在约 13-14%不变。
 
-hackernews · spike021 · 5月24日 00:51 · [社区讨论](https://news.ycombinator.com/item?id=48253186)
+hackernews · intelkishan · 5月24日 16:31 · [社区讨论](https://news.ycombinator.com/item?id=48258684)
 
-**背景**: 微软账户（MSA）是用于访问 Outlook.com、OneDrive 和 Xbox 等消费者服务的个人账户，与组织管理的工作或学校账户不同。被滥用的内部账户通常用于向用户发送自动账户通知。此事件凸显了哪些域是合法的微软域这一困惑，因为该公司对其服务使用了众多不同的域。
+**背景**: HBM 是一种 3D 堆叠 DRAM 接口，用于 NVIDIA H100 和 B200 等 AI 加速器，提供高带宽。AI 热潮急剧增加了对内存的需求，但内存供应每年仅增长 20-25%，造成供需不匹配。这使得内存成为 AI 芯片中最大的组件成本，超过了逻辑芯片。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://techcrunch.com/2026/05/21/scammers-are-abusing-an-internal-microsoft-account-to-send-spam/">Scammers are abusing an internal Microsoft account ... | TechCrunch</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Microsoft_account">Microsoft account - Wikipedia</a></li>
-<li><a href="https://support.microsoft.com/en-us/account-billing/what-is-a-microsoft-account-4a7c48e9-ff5a-e9c6-5a5c-1a57d66c3bfa">What is a Microsoft account? | Microsoft Support</a></li>
+<li><a href="https://epoch.ai/data-insights/ai-chip-component-cost-shares">AI Chip Component Costs: Memory at 63% | Epoch AI | Epoch AI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/High_Bandwidth_Memory">High Bandwidth Memory - Wikipedia</a></li>
+<li><a href="https://siliconanalysts.com/tools/cost-bridge">AI Chip Cost Bridge: Manufacturing Cost Breakdown for 18 Accelerators (2026) | Silicon Analysts</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论表达了对微软域管理和安全实践的沮丧。用户指出难以区分合法域，并报告了诸如无法更改的身份验证流程和空登录历史等问题。一位评论者建议，使用子域（例如 internal.microsoft.com）将是一种更透明的方法。
+**社区讨论**: 评论者指出了不同的影响：有人预测一旦 DRAM 供应赶上需求，硬件成本可能降低约 3 倍；而其他人则指出消费级内存价格大幅上涨（例如，96GB 现价 1200 美元，两年前为 250 美元）。一些人表示，内存供应增长（每年 20-25%）不足以满足 AI 需求，不涉及 AI 的游戏玩家和 PC 爱好者正因高价而受苦。
 
-**标签**: `#security`, `#microsoft`, `#phishing`, `#spam`, `#authentication`
+**标签**: `#AI hardware`, `#memory costs`, `#chip components`, `#HBM`, `#semiconductor industry`
 
 ---
 
 <a id="item-10"></a>
-## [APKPure 上的 Telegram 官方版被植入间谍后门](https://x.com/EricParker/status/2058411298195661221) ⭐️ 8.0/10
+## [Armin Ronacher 批评 AI 生成的错误报告](https://simonwillison.net/2026/May/24/armin-ronacher/#atom-everything) ⭐️ 8.0/10
 
-通过 APKPure 分发的 Telegram 12.6.5 被篡改版本被发现包含名为 DataCollector 的间谍框架，可窃取聊天记录、通讯录、照片和位置信息。 此事件凸显了使用第三方应用商店的安全风险，即使是官方签名的应用也可能被重新打包植入恶意软件，可能危及数百万用户。 该间谍软件嵌入在 classes3.dex 中，包含超过 3000 行代码，被盗数据使用 AES-GCM 加密后外传到 C2 服务器 38.190.225.166。
+Flask 创始人 Armin Ronacher 批评了开源项目中大量出现的 AI 生成错误报告。他提出了一个简单的四行模板，要求问题报告聚焦于人类观察而非 AI 生成的推测。 这凸显了开源维护中一个日益严重的问题：低质量的 AI 生成报告浪费了维护者的时间。Ronacher 的模板可能有助于制定新的问题报告社区标准。 Ronacher 特别指出，AI 生成的报告通常包含自信但不准确的根因分析和虚假的最小复现。他提出的模板要求填写运行的确切命令、预期行为、实际行为以及错误日志。
 
-telegram · zaihuapd · 5月24日 11:38
+rss · Simon Willison · 5月24日 18:46
 
-**背景**: APKPure 是一个第三方 Android 应用商店，允许用户下载 Google Play 商店中不可用的 APK 文件。尽管 APKPure 声称采用手动审查和 VirusTotal 扫描等安全措施，但带有恶意软件的重新打包应用仍可能漏网，给侧载应用的用户带来重大风险。
+**背景**: Armin Ronacher 是 Flask Web 框架的创建者，也是 Python 社区的杰出人物。随着开发者使用大语言模型草拟问题，AI 生成的错误报告变得越来越常见，但往往内容冗长且不准确，让维护者感到沮丧。
+
+**标签**: `#open source`, `#AI`, `#bug reports`, `#software maintenance`, `#community standards`
+
+---
+
+<a id="item-11"></a>
+## [马斯克宣布 Grok V9-Medium（1.5T）训练完成](https://x.com/elonmusk/status/2058787384364265734) ⭐️ 8.0/10
+
+埃隆·马斯克宣布 xAI 已完成 Grok V9-Medium 模型的训练，该模型拥有 1.5 万亿参数，评估结果良好。目前正在进行微调，并计划在强化学习后于 2-3 周内向公众发布。 此次发布标志着从当前 0.5 万亿参数的 Grok 模型大幅升级，可能在复杂编程任务上带来显著改进。它凸显了 xAI 在竞争激烈的大型语言模型领域的快速进步。 Grok V9-Medium 模型的参数规模是当前 Grok 4.2 基础模型的三倍，其训练中加入了大量 Cursor 数据以增强编程能力。该模型将在发布前进行强化学习。
+
+telegram · zaihuapd · 5月25日 07:07
+
+**背景**: Grok 是埃隆·马斯克的公司 xAI 开发的一系列大型语言模型，旨在与 GPT-4 和 Claude 等模型竞争。Cursor 是一款基于人工智能的代码编辑器，提供代码生成和编辑辅助；将 Cursor 数据纳入训练旨在提升模型对代码的理解和生成能力。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.makeuseof.com/tag/safe-android-apk-downloads/">Can't find an app on the Play Store ? These sites may have it.</a></li>
-<li><a href="https://apkpure.net/how-to/is-apkpure-safe-to-download-apps-and-games">Is APKPure Safe? Can APKPure Be Trusted?</a></li>
+<li><a href="https://www.kucoin.com/news/flash/musk-s-xai-completes-grok-v9-medium-training-focuses-on-complex-programming">Musk's xAI Completes Training on Grok V 9 - Medium ... | KuCoin</a></li>
+<li><a href="https://www.kucoin.com/news/flash/musk-announces-grok-v9-medium-1-5t-model-to-launch-in-2-3-weeks">Musk announces the launch of the Grok V 9 - Medium ( 1 . 5 T ) model in...</a></li>
+<li><a href="https://digg.com/ai/2xkcq9ut?rank=28">xAI completes training run for Grok V 9 model · Digg</a></li>
 
 </ul>
 </details>
 
-**标签**: `#security`, `#malware`, `#spyware`, `#Telegram`, `#APKPure`
+**标签**: `#Grok`, `#AI`, `#Large Language Model`, `#Elon Musk`, `#Machine Learning`
 
 ---

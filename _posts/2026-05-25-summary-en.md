@@ -5,221 +5,236 @@ date: 2026-05-25
 lang: en
 ---
 
-> From 36 items, 10 important content pieces were selected
+> From 35 items, 11 important content pieces were selected
 
 ---
 
-1. [Micro-roughness on aircraft surfaces reduces drag, overturns engineering principle](#item-1) ⭐️ 9.0/10
-2. [Huawei's 'Tao's Law': Time Scaling Replaces Geometry Scaling in Semiconductors](#item-2) ⭐️ 9.0/10
-3. [Epic Reveals Unreal Engine 6 with Rocket League as First Showcase](#item-3) ⭐️ 9.0/10
-4. [Papal Encyclical Urges Tech Builders to Consider Ethical Impact](#item-4) ⭐️ 8.0/10
+1. [Micro-Roughness Reduces Drag, Overturns Aeronautical Principle](#item-1) ⭐️ 9.0/10
+2. [APKPure Telegram Version Infected with Spy Backdoor](#item-2) ⭐️ 9.0/10
+3. [Epic Reveals Unreal Engine 6, First Game Is Rocket League](#item-3) ⭐️ 9.0/10
+4. [Show HN: Free Open-Source Web Multitrack Audio Editor](#item-4) ⭐️ 8.0/10
 5. [DeepSeek Reasonix: Native Coding Agent with High Caching and Low Cost](#item-5) ⭐️ 8.0/10
-6. [Migrating from Go to Rust Guide Sparks Debate](#item-6) ⭐️ 8.0/10
-7. [Microsoft open-sources earliest recovered DOS source code](#item-7) ⭐️ 8.0/10
-8. [Paper Exposes Constraint Decay in LLM Agents for Backend Code](#item-8) ⭐️ 8.0/10
-9. [Scammers abuse internal Microsoft account to send spam](#item-9) ⭐️ 8.0/10
-10. [Official Telegram App on APKPure Contains Spyware Backdoor](#item-10) ⭐️ 8.0/10
+6. [Go to Rust Migration Guide Sparks Language Debate](#item-6) ⭐️ 8.0/10
+7. [Constraint Decay: LLM Agent Fragility in Backend Code Generation](#item-7) ⭐️ 8.0/10
+8. [Microsoft open-sources earliest known DOS source code](#item-8) ⭐️ 8.0/10
+9. [Memory now 63% of AI chip cost](#item-9) ⭐️ 8.0/10
+10. [Armin Ronacher criticizes AI-generated bug reports](#item-10) ⭐️ 8.0/10
+11. [Musk Announces Grok V9-Medium (1.5T) Training Complete](#item-11) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Micro-roughness on aircraft surfaces reduces drag, overturns engineering principle](https://www.wired.com/story/a-fundamental-principle-of-aeronautical-engineering-has-been-overturned/) ⭐️ 9.0/10
+## [Micro-Roughness Reduces Drag, Overturns Aeronautical Principle](https://www.wired.com/story/a-fundamental-principle-of-aeronautical-engineering-has-been-overturned/) ⭐️ 9.0/10
 
-Researchers have discovered that applying micro-roughness to aircraft surfaces can reduce aerodynamic drag, contradicting the long-held belief that smoother surfaces always improve performance. This breakthrough could lead to significant fuel savings and efficiency gains across aviation, automotive, and high-speed rail industries by enabling a simple, cost-effective drag reduction method. The drag reduction occurs specifically in the transition zone between laminar and turbulent flow; the net improvement across the entire surface may be modest, but even a small percentage gain can translate into large fuel savings for aircraft.
+A study by researchers at Tohoku University has overturned the long-held belief that smoother surfaces always reduce aerodynamic drag. They found that distributed micro-roughness can delay the transition from laminar to turbulent flow, reducing drag by up to 43.6% in wind-tunnel tests. This finding challenges a fundamental principle in aeronautical engineering and could lead to more efficient aircraft designs, reducing fuel consumption and emissions. It also unifies understanding with other fields like sailing and golf ball design, where roughness is known to aid performance. The micro-roughness used is in the range of 1000 to 1500 grit sandpaper, similar to what competitive sailors use. The study was published in the Journal of Fluid Mechanics, and the original 1940 study by Ichiro Tani had already been reinterpreted in 1989 to suggest this effect.
 
 hackernews · littlexsparkee · May 24, 19:10 · [Discussion](https://news.ycombinator.com/item?id=48260117)
 
-**Background**: Aerodynamic drag is governed by the behavior of the boundary layer—a thin layer of air next to the surface. Traditionally, engineers believed that a perfectly smooth surface promotes laminar flow (low drag), while roughness triggers turbulence (high drag). However, this study shows that controlled micro-roughness can actually delay the transition to turbulence, reducing overall drag.
+**Background**: In fluid dynamics, boundary layer flow can be laminar (smooth) or turbulent (chaotic). Laminar flow has less skin friction, but it is unstable and can transition to turbulence, increasing drag. It was believed that surface roughness triggers early transition, so surfaces were kept smooth. However, this study shows that micro-roughness can stabilize laminar flow by suppressing disturbances, delaying transition and reducing drag.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.wired.com/story/a-fundamental-principle-of-aeronautical-engineering-has-been-overturned/">A Fundamental Principle of Aeronautical Engineering Has... | WIRED</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Laminar–turbulent_transition">Laminar – turbulent transition - Wikipedia</a></li>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S0142727X23001297">Drag reduction effect of distributed roughness on the transitional flow state using direct numerical simulation - ScienceDirect</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters noted that sailors have long used fine sandpaper on underwater foils to reduce drag, and drew parallels with golf ball dimples. Some raised practical concerns about the net improvement being small and the need for retrofitting methods like sandblasting.
+**Discussion**: Commenters noted that competitive sailors have long known that fine-grit sandpaper improves hydrodynamics, questioning why this wasn't applied to aerodynamics. Others pointed to the historical context of Tani's 1940 study and its 1989 reinterpretation. Some expressed surprise that such a simple effect was not understood earlier, while others discussed practical implications for aircraft manufacturing.
 
-**Tags**: `#aeronautical engineering`, `#fluid dynamics`, `#drag reduction`, `#surface roughness`, `#aerodynamics`
+**Tags**: `#aeronautics`, `#fluid dynamics`, `#drag reduction`, `#surface roughness`, `#laminar flow`
 
 ---
 
 <a id="item-2"></a>
-## [Huawei's 'Tao's Law': Time Scaling Replaces Geometry Scaling in Semiconductors](https://www.peopleapp.com/column/30052220655-500007509895) ⭐️ 9.0/10
+## [APKPure Telegram Version Infected with Spy Backdoor](https://x.com/EricParker/status/2058411298195661221) ⭐️ 9.0/10
 
-At the 2026 International Symposium on Circuits and Systems (ISCAS) in Shanghai, Huawei unveiled 'Tao's Law,' a new semiconductor scaling principle that replaces traditional geometric scaling with time scaling. The company has already mass-produced 381 chips based on this approach, and will launch a new Kirin mobile chip featuring logic folding technology this autumn. Tao's Law offers a viable path to continue semiconductor progress beyond the physical limits of Moore's Law, potentially reshaping the global chip industry. If successful, it could reduce reliance on extreme ultraviolet lithography and give China a competitive edge in advanced chip manufacturing. Tao's Law achieves performance gains by optimizing signal propagation delay across devices, circuits, chips, and systems—collectively called 'time scaling.' Huawei projects that by 2031, high-end chips using this law will reach transistor densities equivalent to the 1.4nm process node.
+A repackaged Telegram 12.6.5 distributed on APKPure has been discovered to contain the DataCollector spyware framework, which steals chat history, contacts, photos, and other sensitive data. This incident compromises the privacy of millions of Telegram users who downloaded the app from APKPure, highlighting the security risks of third-party app stores and the importance of verifying app integrity. The backdoor injects a 3000+ line code module named DataCollector in classes3.dex, encrypts stolen data with AES-GCM, and exfiltrates it to the command-and-control server at 38.190.225.166.
 
-telegram · zaihuapd · May 25, 01:35
+telegram · zaihuapd · May 24, 11:38
 
-**Background**: Traditional semiconductor scaling—Moore's Law—relies on shrinking transistor dimensions (geometric scaling) to improve density and performance. However, physical limits such as quantum tunneling and heat dissipation make further shrinking increasingly difficult. 'Tao's Law' instead focuses on reducing signal latency through multi-layer optimization, including logic folding that stacks circuits vertically to shorten interconnects and reduce resistance-capacitance delay.
+**Background**: APKPure is a third-party Android app store that offers APK files for various apps, including Telegram, which is a popular secure messaging platform. Spyware frameworks like DataCollector are designed to steal personal information silently. AES-GCM is an advanced encryption standard that provides both confidentiality and authenticity, commonly used to protect data during transmission.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.huxiu.com/article/4861142.html">芯片发展的中国方案：华为提出的韬定律到底是什么？-虎嗅网</a></li>
-<li><a href="https://www.ithome.com/0/954/677.htm">华为发表半导体韬定律：预计到 2031 年，基于该定律的高端芯片晶体管密度将达到 1.4 纳米制程的同等水平</a></li>
-<li><a href="https://news.mydrivers.com/1/1124/1124647.htm">首发逻辑折叠技术！华为麒麟2026手机芯片官方PPT公布：晶体管密度提升53.5% 达238MTr/平方毫米 --快科技--科技改变未来</a></li>
+<li><a href="https://www.nature.com/articles/s41597-024-03027-3">AndroDex: Android Dex Images of Obfuscated Malware</a></li>
+<li><a href="https://medium.com/@thomas_40553/how-to-secure-encrypt-and-decrypt-data-within-the-browser-with-aes-gcm-and-pbkdf2-057b839c96b6">The Ultimate Developer’s Guide to AES - GCM : Encrypt and... | Medium</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#半导体`, `#摩尔定律`, `#芯片`, `#华为`, `#技术突破`
+**Tags**: `#安全`, `#间谍软件`, `#Telegram`, `#APKPure`, `#后门`
 
 ---
 
 <a id="item-3"></a>
-## [Epic Reveals Unreal Engine 6 with Rocket League as First Showcase](https://www.pcgamer.com/gaming-industry/epic-reveals-first-unreal-engine-6-game-and-its-not-fortnite/) ⭐️ 9.0/10
+## [Epic Reveals Unreal Engine 6, First Game Is Rocket League](https://www.pcgamer.com/gaming-industry/epic-reveals-first-unreal-engine-6-game-and-its-not-fortnite/) ⭐️ 9.0/10
 
-Epic Games publicly unveiled Unreal Engine 6 at the Rocket League Championship Series in Paris, confirming that Rocket League will be upgraded directly from Unreal Engine 3 to UE6. The announcement of Unreal Engine 6 marks a major milestone in game development technology, signaling a significant generational leap from UE5, while the direct upgrade of a decade-old game like Rocket League from UE3 to UE6 highlights Epic's commitment to backward compatibility and future-proofing. This move also reinforces Epic's push toward the metaverse. Rocket League has been running on Unreal Engine 3 from the Xbox 360 era, so this engine generation skip is akin to a sequel-level upgrade. Unreal Engine 5 has faced performance optimization criticism on PC over its four-year lifespan, and the UE6 teaser also included scenes from Fortnite and other games, suggesting a metaverse platform push.
+Epic Games publicly revealed Unreal Engine 6 at the Paris Rocket League Championship Series and announced that Rocket League will upgrade directly from Unreal Engine 3 to UE6, skipping UE5 entirely. This marks a significant strategic shift for Epic, demonstrating a leapfrog approach that could impact the game development ecosystem and Epic's metaverse ambitions, especially given criticism of UE5's optimization on PC. Rocket League, originally based on UE3 from the Xbox 360 era, is making a generational jump directly to UE6, a move comparable to a sequel-level upgrade. The UE6 teaser also included clips from Fortnite and other games, hinting at a unified metaverse platform.
 
 telegram · zaihuapd · May 25, 02:20
 
-**Background**: Unreal Engine is a game engine developed by Epic Games, widely used in both gaming and film production. Unreal Engine 5, released in 2022, introduced advanced features like Nanite virtual geometry and Lumen global illumination, but has been criticized for performance issues on PC. UE6 is the next iteration, promising further optimizations and better metaverse integration. Rocket League, originally released in 2015, combines soccer with vehicular acrobatics and has remained on UE3 until now.
+**Background**: Unreal Engine 5 was released four years ago and has become one of the most widely used middleware in gaming and film, but has faced frequent criticism for performance issues on PC. Epic's decision to jump directly from UE3 to UE6 for Rocket League suggests a desire to bypass the optimization problems of UE5 and consolidate future development on the new engine.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Unreal_Engine_6">Unreal Engine 6</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Unreal_Engine">Unreal Engine - Wikipedia</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#Unreal Engine`, `#Game Development`, `#Epic Games`, `#Rocket League`, `#Metaverse`
+**Tags**: `#游戏引擎`, `#虚幻引擎6`, `#Epic Games`, `#Rocket League`, `#行业新闻`
 
 ---
 
 <a id="item-4"></a>
-## [Papal Encyclical Urges Tech Builders to Consider Ethical Impact](https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html) ⭐️ 8.0/10
+## [Show HN: Free Open-Source Web Multitrack Audio Editor](https://audiomass.co/?multitrack=1) ⭐️ 8.0/10
 
-Pope Leo XIV issued the encyclical 'Magnifica Humanitas' on May 15, 2025, calling on technology creators to recognize the ethical and spiritual dimensions of their work, emphasizing that design choices reflect a vision of humanity. This encyclical marks a significant intervention by the Vatican into the ethics of technology, particularly AI, urging builders to prioritize the common good over profit and uniformity, which could influence global discourse on responsible innovation. The encyclical warns against the 'Babel syndrome'—the idolatry of profit and homogenization—and states that technology is never neutral, as it reflects the values of its creators and users.
+Audiomass, a free and open-source multitrack audio editor that runs entirely in the web browser, was showcased on Hacker News and received 412 points and 88 comments. This tool fills a niche for quick audio editing without requiring heavy desktop software, making it valuable for developers, musicians, and anyone needing fast waveform editing directly in the browser. The editor supports real-time effects, multitrack layering, and accepts .flac files out of the box; however, some features like fade timing control are not yet available.
 
-hackernews · theletterf · May 25, 10:11 · [Discussion](https://news.ycombinator.com/item?id=48265206)
+hackernews · pantelisk · May 24, 15:25 · [Discussion](https://news.ycombinator.com/item?id=48258015)
 
-**Background**: A papal encyclical is a formal letter from the Pope addressing important issues for the Catholic Church and the world. Pope Leo XIV succeeded Pope Francis and continues the latter's emphasis on technology ethics, notably in the context of AI and human dignity.
+**Background**: Web-based audio editors allow users to record, edit, and produce audio without installing software. Audiomass is built with modern web technologies and is fully open source, offering an intuitive user interface reminiscent of classic tools like Cool Edit Pro.
 
-**Discussion**: Commenters praised the encyclical's call for builders to consider their ethical responsibilities, with sethbannon highlighting the message that 'every design choice reflects a vision of humanity.' Others noted the document's relevance in opposing uniformity and defending human diversity against AI-driven homogenization.
+<details><summary>References</summary>
+<ul>
+<li><a href="https://audiomass.co/">AudioMass - Audio Editor</a></li>
 
-**Tags**: `#ethics`, `#AI ethics`, `#technology`, `#papal encyclical`, `#software engineering`
+</ul>
+</details>
+
+**Discussion**: The Hacker News community responded positively, praising the intuitive UX and the ability to handle .flac files. Some users requested cloud collaboration features and more granular effect controls, while others expressed nostalgia for the coding style used in the project.
+
+**Tags**: `#audio editing`, `#open source`, `#web app`, `#music production`, `#Hacker News Show HN`
 
 ---
 
 <a id="item-5"></a>
 ## [DeepSeek Reasonix: Native Coding Agent with High Caching and Low Cost](https://esengine.github.io/DeepSeek-Reasonix/) ⭐️ 8.0/10
 
-DeepSeek Reasonix is a terminal-based AI coding agent designed specifically for DeepSeek's API, using a cache-first loop and flash-first cost control to minimize inference costs by maximizing cache hits. This matters because tailoring agents to a model's caching behavior can significantly reduce inference costs, making AI-assisted coding more affordable and sparking debate about the trade-offs between cache-breaking for better results and maintaining low costs. The agent supports embedding indices via local Ollama or DeepSeek-hosted embeddings and can be used via npx or global install, but community feedback highlights issues with tool quality and UX, such as animated typing causing layout shifts.
+DeepSeek Reasonix is a native coding agent designed specifically for DeepSeek's API, leveraging prefix-cache stability to reduce costs. It aims to provide a cache-first loop for efficient terminal-based AI coding assistance. Reasonix demonstrates how optimizing for a specific model's caching behavior can dramatically lower operational costs, potentially making AI-assisted coding more accessible. It also highlights the growing trend of model-native tooling. Reasonix only targets DeepSeek models because its loop invariants are designed around DeepSeek's cache mechanics. The agent runs in the terminal and communicates directly with api.deepseek.com without a translation shim.
 
 hackernews · Alifatisk · May 24, 13:02 · [Discussion](https://news.ycombinator.com/item?id=48256953)
 
-**Background**: Language model inference costs are a significant concern, and caching is a key technique to reduce them. DeepSeek's API offers a discount for cached tokens, making it attractive to design agents that maximize cache hits. However, some coding agents intentionally break cache prefixes to achieve better performance, creating a trade-off between cost and quality.
+**Background**: Caching in AI reduces costs and latency by storing and reusing previous results. DeepSeek offers a prefix cache that can significantly lower token usage for repeated or similar inputs. Reasonix is built to maximize cache hits by maintaining a stable prefix in requests.
 
 <details><summary>References</summary>
 <ul>
+<li><a href="https://github.com/esengine/deepseek-reasonix">GitHub - esengine/DeepSeek-Reasonix: DeepSeek-native AI ...</a></li>
+<li><a href="https://esengine.github.io/DeepSeek-Reasonix/">Reasonix — DeepSeek-native AI coding agent for your terminal</a></li>
 <li><a href="https://api-docs.deepseek.com/quick_start/agent_integrations/reasonix">Integrate with Reasonix | DeepSeek API Docs</a></li>
-<li><a href="https://esengine.github.io/DeepSeek-Reasonix/">Reasonix — DeepSeek -native AI coding agent</a></li>
-<li><a href="https://github.com/esengine/deepseek-reasonix">GitHub - esengine/ DeepSeek - Reasonix : DeepSeek -native AI coding...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments are mixed: some users achieved high cache hit rates with a simple bridge, while others criticize the tool's generated page quality and UX flaws. There is debate about cache-breaking, with some arguing that breaking cache often yields better results and that blind reliance on caching is misguided.
+**Discussion**: Community comments are mixed; some users appreciate the caching efficiency but criticize the website's UX and question whether a specialized agent is necessary. One commenter suggests that general harnesses already handle caching effectively.
 
-**Tags**: `#DeepSeek`, `#AI coding agents`, `#caching`, `#LLM costs`, `#tooling`
+**Tags**: `#DeepSeek`, `#caching`, `#coding agent`, `#AI`, `#cost optimization`
 
 ---
 
 <a id="item-6"></a>
-## [Migrating from Go to Rust Guide Sparks Debate](https://corrode.dev/learn/migration-guides/go-to-rust/) ⭐️ 8.0/10
+## [Go to Rust Migration Guide Sparks Language Debate](https://corrode.dev/learn/migration-guides/go-to-rust/) ⭐️ 8.0/10
 
-A detailed migration guide from Go to Rust has been published, sparking extensive community discussion on the trade-offs between the two languages for web backend development. This debate highlights the ongoing tension in the developer community between managed runtime languages like Go and systems languages like Rust, influencing language choice for backend services. The guide covers syntax differences, error handling patterns, and concurrency models, but critics argue it is more advocacy than a neutral migration guide.
+A comprehensive migration guide from Go to Rust has been published, generating extensive community discussion on the trade-offs between the two languages, particularly around error handling, managed runtimes, and package management. This discussion highlights the ongoing debate in the software engineering community about choosing between Go and Rust for backend development, influencing decisions on language adoption and project architecture. The guide acknowledges Go's simplicity but notes Rust's superior error handling with the '?' operator, while community comments emphasize the managed runtime trade-off and Rust's heavy dependency trees compared to Go's lean standard library.
 
 hackernews · jabits · May 24, 18:31 · [Discussion](https://news.ycombinator.com/item?id=48259808)
 
-**Background**: Go and Rust are both modern compiled languages but with different philosophies: Go prioritizes simplicity and a managed runtime with garbage collection, while Rust offers fine-grained control over memory without a runtime, using ownership and borrowing to ensure safety. The choice often depends on whether one values development speed (Go) or performance and safety (Rust).
+**Background**: Both Go and Rust are modern systems programming languages, but they have different design philosophies: Go prioritizes simplicity and a managed runtime with garbage collection, while Rust focuses on memory safety without a garbage collector using its borrow checker. These differences make the choice between them highly contextual, often depending on performance requirements and team expertise.
 
-**Discussion**: Comments from users like Animats and tptacek provide contrasting views: one prefers Go for web backend work, while another argues the decision boils down to whether a managed runtime is desired. Others note Rust's steeper learning curve and dependency management issues.
+**Discussion**: Commenters debated the merits of managed runtimes, with some arguing that Go's GC is less of a burden than Rust's complexity. Others raised concerns about Rust's package management and the authenticity of the guide, suspecting AI-generated content.
 
-**Tags**: `#Rust`, `#Go`, `#Migration`, `#Web Backend`, `#Programming Languages`
+**Tags**: `#Go`, `#Rust`, `#migration`, `#programming languages`, `#web backend`
 
 ---
 
 <a id="item-7"></a>
-## [Microsoft open-sources earliest recovered DOS source code](https://arstechnica.com/gadgets/2026/04/microsoft-open-sources-the-earliest-dos-source-code-discovered-to-date/) ⭐️ 8.0/10
+## [Constraint Decay: LLM Agent Fragility in Backend Code Generation](https://arxiv.org/abs/2605.06445) ⭐️ 8.0/10
 
-Microsoft has open-sourced the earliest known DOS source code, painstakingly recovered from paper printouts via OCR by a team of historians and preservationists. This release preserves a critical piece of computing history and demonstrates Microsoft's commitment to software preservation, enabling developers and historians to study the foundational code of the PC era. The source code was recovered from paper printouts provided by Tim Paterson, the original author of DOS, and had to be transcribed with special OCR techniques due to the poor quality of decades-old printouts.
+The paper introduces the concept of 'constraint decay,' demonstrating that LLM coding agents experience a significant performance drop (around 30 percentage points) when required to follow specific architectural constraints, such as ORM mappings and framework conventions, in multi-file backend code generation tasks. This finding highlights a critical gap between LLM agents' impressive unconstrained coding abilities and their unreliability for production-grade software development, where strict adherence to architectural rules is essential. It underscores the need for improved constraint handling in AI-assisted coding tools. The study evaluated several LLM agents on multi-file backend generation benchmarks, and observed that assertion pass rates dropped from around 90% on unconstrained tasks to around 60% when constraints were applied. Notably, the paper did not test frontier models like GPT-4 or Claude 3.5 due to cost, which may affect the generality of the findings.
 
-hackernews · DamnInteresting · May 24, 01:21 · [Discussion](https://news.ycombinator.com/item?id=48253386)
+hackernews · wek · May 24, 12:55 · [Discussion](https://news.ycombinator.com/item?id=48256912)
 
-**Background**: MS-DOS (Microsoft Disk Operating System) was the operating system that powered IBM PCs and compatibles in the 1980s. It was a command-line OS that provided the foundation for Microsoft's early success. The source code had been lost for decades, and its recovery marks a major milestone in retrocomputing and software history.
+**Background**: In software engineering, production backend code must adhere to specific architectural patterns, ORM configurations, and framework conventions to ensure maintainability and scalability. Existing benchmarks for LLM code generation often focus on functional correctness of single-file tasks, ignoring these structural constraints. This paper addresses that gap by systematically evaluating how LLM agents perform under realistic constraints.
 
-**Discussion**: Commenters expressed gratitude to Microsoft for releasing the code, with some noting the historical significance of the accompanying BASIC source code. There was also amazement at the small size of early software—a few thousand lines of assembly—compared to modern codebases. One user confirmed that it runs in DOSBox without issues.
+<details><summary>References</summary>
+<ul>
+<li><a href="https://arxiv.org/abs/2605.06445">[2605.06445] Constraint Decay: The Fragility of LLM Agents in Backend ...</a></li>
+<li><a href="https://www.agentpatterns.ai/verification/constraint-decay-backend-agents/">Constraint Decay in Backend Code Generation - agentpatterns.ai</a></li>
+<li><a href="https://www.knowlab.io/content/30febb02-ec40-4138-8212-025d65f0a583/">Constraint Decay: The Fragility of LLM Agents in Backend Code ...</a></li>
 
-**Tags**: `#open source`, `#DOS`, `#Microsoft`, `#history`, `#software preservation`
+</ul>
+</details>
+
+**Discussion**: Community comments express broad agreement with the paper's findings, with users sharing anecdotal experiences of LLM performance degradation under constraints. Some note that including constraints incrementally rather than upfront can mitigate decay, and point out a related phenomenon termed 'calcification' where agents repeatedly reinforce existing patterns. A limitation highlighted is the exclusion of frontier models, which might perform differently.
+
+**Tags**: `#LLM agents`, `#code generation`, `#constraint decay`, `#production software`, `#AI reliability`
 
 ---
 
 <a id="item-8"></a>
-## [Paper Exposes Constraint Decay in LLM Agents for Backend Code](https://arxiv.org/abs/2605.06445) ⭐️ 8.0/10
+## [Microsoft open-sources earliest known DOS source code](https://arstechnica.com/gadgets/2026/04/microsoft-open-sources-the-earliest-dos-source-code-discovered-to-date/) ⭐️ 8.0/10
 
-A new study on arXiv systematically evaluates LLM agents for backend code generation and identifies a phenomenon called constraint decay, where agent performance drops significantly when forced to adhere to explicit architectural rules. This finding highlights a critical limitation of LLM-based code generation in production environments, where following structured constraints is essential. It suggests that while LLM agents excel at rapid prototyping, they remain unreliable for production-grade backend development. The study tested several models, including GPT-4o and Claude 3.5 Sonnet, and found performance drops of up to 30 points on a benchmark when comparing unconstrained versus constrained generation. However, the authors note that they did not fully test frontier models due to cost constraints, which limits the generalizability of the specific scores.
+Microsoft has open-sourced the earliest known version of DOS source code, painstakingly reconstructed from paper printouts via OCR by a team of historians and preservationists. This release preserves a foundational piece of computing history and allows developers and historians to study the early origins of the operating system that launched the PC revolution. The source code was obtained from paper printouts provided by Tim Paterson, the original author of DOS, and modern OCR software had difficulty with the aged printouts, requiring manual cleanup.
 
-hackernews · wek · May 24, 12:55 · [Discussion](https://news.ycombinator.com/item?id=48256912)
+hackernews · DamnInteresting · May 24, 01:21 · [Discussion](https://news.ycombinator.com/item?id=48253386)
 
-**Background**: LLM agents are AI systems that combine large language models with planning, memory, and tool use to perform complex tasks like code generation. In backend development, code must adhere to strict architectural patterns, error handling, and performance constraints. 'Constraint decay' refers to the tendency of LLM agents to underperform when these constraints multiply over time, a challenge also noted in related research as 'calcification' of codebases.
+**Background**: DOS (Disk Operating System) was the dominant operating system for IBM PC compatibles in the 1980s and early 1990s. Microsoft acquired early versions of DOS from Seattle Computer Products and licensed it to IBM, which became a pivotal moment for the company. The earliest known source code had been missing for decades, making this reconstruction and open-sourcing a significant archiving achievement.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://arxiv.org/abs/2605.06445">[2605.06445] Constraint Decay : The Fragility of LLM Agents in...</a></li>
-<li><a href="https://agentpatterns.ai/verification/constraint-decay-backend-agents/">Constraint Decay in Backend Code Generation - AgentPatterns.ai</a></li>
+**Discussion**: The community largely praised Microsoft for the release, with some noting the historical importance of the BASIC interpreter also open-sourced. Commenters expressed nostalgia and amazement at how few lines of assembly code were needed to build a successful company back then.
 
-</ul>
-</details>
-
-**Discussion**: Community comments reflect a mix of agreement and practical experience: one user notes that despite relying heavily on LLM code generation, they see limitations aligning with the paper's findings. Another highlights that the study did not test the most advanced models, which may affect the performance numbers. A developer shares their own observations of 'calcification' when agents repeatedly apply similar patterns, suggesting that constraints introduced gradually might help.
-
-**Tags**: `#LLM`, `#Code Generation`, `#AI Agents`, `#Software Engineering`, `#Reliability`
+**Tags**: `#open-source`, `#history`, `#DOS`, `#Microsoft`, `#software preservation`
 
 ---
 
 <a id="item-9"></a>
-## [Scammers abuse internal Microsoft account to send spam](https://techcrunch.com/2026/05/21/scammers-are-abusing-an-internal-microsoft-account-to-send-spam/) ⭐️ 8.0/10
+## [Memory now 63% of AI chip cost](https://epoch.ai/data-insights/ai-chip-component-cost-shares) ⭐️ 8.0/10
 
-For months, scammers have been exploiting a loophole that allows them to send spam emails from an internal Microsoft email address typically used for legitimate account alerts. This undermines trust in Microsoft's email domains and highlights security gaps in a widely-used platform, increasing the risk of phishing attacks for millions of users. The exact mechanism of the exploit remains unclear, but scammers reportedly set up new Microsoft accounts as if they were genuine corporate clients. Microsoft has not yet announced a fix.
+According to Epoch AI, memory has grown to account for 63% of AI chip component costs in 2025, up from roughly 13-14% in 2024, driven largely by HBM spending. Total component spending on AI chips surged from $22 billion in 2024 to $52 billion in 2025. This shift means memory is now the dominant cost in AI accelerators, fundamentally altering hardware pricing and supply dynamics. It could lead to higher prices for AI training and inference, affecting everything from cloud computing costs to consumer devices, and highlights the critical bottleneck in memory supply. HBM (High Bandwidth Memory) is the primary driver, with Epoch AI reporting that HBM spending alone accounts for a large portion of the cost increase. The logic die cost share remained roughly constant near 13-14% during the same period.
 
-hackernews · spike021 · May 24, 00:51 · [Discussion](https://news.ycombinator.com/item?id=48253186)
+hackernews · intelkishan · May 24, 16:31 · [Discussion](https://news.ycombinator.com/item?id=48258684)
 
-**Background**: A Microsoft account (MSA) is a personal account used to access consumer services like Outlook.com, OneDrive, and Xbox. It is separate from work or school accounts managed by organizations. The internal account being abused is typically reserved for sending automated account notifications to users. This incident highlights confusion over which domains are legitimate Microsoft domains, as the company uses many different domains for its services.
+**Background**: HBM is a 3D-stacked DRAM interface used in AI accelerators like NVIDIA's H100 and B200 to provide high bandwidth. The AI boom has sharply increased demand for memory, but memory supply grows at only 20-25% per year, creating a mismatch. This has made memory the largest component cost in AI chips, surpassing logic dies.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://techcrunch.com/2026/05/21/scammers-are-abusing-an-internal-microsoft-account-to-send-spam/">Scammers are abusing an internal Microsoft account ... | TechCrunch</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Microsoft_account">Microsoft account - Wikipedia</a></li>
-<li><a href="https://support.microsoft.com/en-us/account-billing/what-is-a-microsoft-account-4a7c48e9-ff5a-e9c6-5a5c-1a57d66c3bfa">What is a Microsoft account? | Microsoft Support</a></li>
+<li><a href="https://epoch.ai/data-insights/ai-chip-component-cost-shares">AI Chip Component Costs: Memory at 63% | Epoch AI | Epoch AI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/High_Bandwidth_Memory">High Bandwidth Memory - Wikipedia</a></li>
+<li><a href="https://siliconanalysts.com/tools/cost-bridge">AI Chip Cost Bridge: Manufacturing Cost Breakdown for 18 Accelerators (2026) | Silicon Analysts</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments express frustration with Microsoft's domain management and security practices. Users note difficulty distinguishing legitimate domains and report issues like unchangeable authentication flows and empty login history. One commenter suggests that using subdomains (e.g., internal.microsoft.com) would be a more transparent approach.
+**Discussion**: Commenters noted mixed implications: one predicted a path to ~3x hardware cost reduction once DRAM supply catches up, while others highlighted painful price increases for consumer RAM (e.g., 96GB now costing $1200 vs. $250 two years ago). Some expressed frustration that memory supply growth (20-25%/year) is insufficient to meet AI demand, and gamers and PC hobbyists not involved in AI are suffering from high prices.
 
-**Tags**: `#security`, `#microsoft`, `#phishing`, `#spam`, `#authentication`
+**Tags**: `#AI hardware`, `#memory costs`, `#chip components`, `#HBM`, `#semiconductor industry`
 
 ---
 
 <a id="item-10"></a>
-## [Official Telegram App on APKPure Contains Spyware Backdoor](https://x.com/EricParker/status/2058411298195661221) ⭐️ 8.0/10
+## [Armin Ronacher criticizes AI-generated bug reports](https://simonwillison.net/2026/May/24/armin-ronacher/#atom-everything) ⭐️ 8.0/10
 
-A modified version of Telegram 12.6.5 distributed through APKPure has been found to contain a spyware framework called DataCollector, which can steal chats, contacts, photos, and location data. This incident highlights the security risks of using third-party app stores, as even officially-signed apps can be repackaged with malware, potentially compromising millions of users. The spyware is embedded in classes3.dex and contains over 3000 lines of code, encrypting stolen data with AES-GCM before exfiltration to C2 server 38.190.225.166.
+Armin Ronacher, creator of Flask, criticizes the influx of AI-generated bug reports on open source projects. He proposes a simple four-line template for issue reports that focuses on human observations rather than AI-generated speculation. This highlights a growing problem in open source maintenance where low-quality AI-generated reports waste maintainers' time. Ronacher's template could help set new community standards for issue reporting. Ronacher specifically notes that AI-generated reports often contain confident but inaccurate root causes and fake minimal reproductions. His proposed template asks for the exact command run, expected behavior, actual behavior, and the error log.
 
-telegram · zaihuapd · May 24, 11:38
+rss · Simon Willison · May 24, 18:46
 
-**Background**: APKPure is a third-party Android app store that allows users to download APK files not available on the Google Play Store. While APKPure claims to employ security measures such as manual reviews and VirusTotal scans, repackaged apps with malware can still slip through, posing significant risks to users who sideload apps.
+**Background**: Armin Ronacher is the creator of the Flask web framework and a prominent figure in the Python community. AI-generated bug reports have become more common as developers use LLMs to draft issues, often resulting in verbose and inaccurate content that frustrates maintainers.
+
+**Tags**: `#open source`, `#AI`, `#bug reports`, `#software maintenance`, `#community standards`
+
+---
+
+<a id="item-11"></a>
+## [Musk Announces Grok V9-Medium (1.5T) Training Complete](https://x.com/elonmusk/status/2058787384364265734) ⭐️ 8.0/10
+
+Elon Musk announced that xAI has completed training of the Grok V9-Medium model, a 1.5 trillion parameter foundation model, with strong evaluation results. Fine-tuning is underway, and public release is expected in 2-3 weeks after reinforcement learning. This release marks a significant scale-up from the current 0.5 trillion parameter Grok model, potentially offering major improvements in complex programming tasks. It underscores xAI's rapid progress in the competitive large language model landscape. The Grok V9-Medium model is three times larger than the current Grok 4.2 base model, and its training incorporated a large set of Cursor data to enhance programming capabilities. The model will undergo reinforcement learning in the coming days before release.
+
+telegram · zaihuapd · May 25, 07:07
+
+**Background**: Grok is a series of large language models developed by Elon Musk's company xAI, designed to compete with models like GPT-4 and Claude. Cursor is an AI-powered code editor that provides code generation and editing assistance; incorporating Cursor data into training aims to improve the model's code understanding and generation capabilities.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.makeuseof.com/tag/safe-android-apk-downloads/">Can't find an app on the Play Store ? These sites may have it.</a></li>
-<li><a href="https://apkpure.net/how-to/is-apkpure-safe-to-download-apps-and-games">Is APKPure Safe? Can APKPure Be Trusted?</a></li>
+<li><a href="https://www.kucoin.com/news/flash/musk-s-xai-completes-grok-v9-medium-training-focuses-on-complex-programming">Musk's xAI Completes Training on Grok V 9 - Medium ... | KuCoin</a></li>
+<li><a href="https://www.kucoin.com/news/flash/musk-announces-grok-v9-medium-1-5t-model-to-launch-in-2-3-weeks">Musk announces the launch of the Grok V 9 - Medium ( 1 . 5 T ) model in...</a></li>
+<li><a href="https://digg.com/ai/2xkcq9ut?rank=28">xAI completes training run for Grok V 9 model · Digg</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#security`, `#malware`, `#spyware`, `#Telegram`, `#APKPure`
+**Tags**: `#Grok`, `#AI`, `#Large Language Model`, `#Elon Musk`, `#Machine Learning`
 
 ---
