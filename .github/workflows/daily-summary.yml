@@ -1,6 +1,8 @@
 name: Daily Horizon Summary
 
 on:
+  push:
+    branches: [ main ]    # Also run on push to main for verification
   schedule:
     - cron: '7 0 * * *'   # Runs daily at 08:07 AM (UTC+8)
   workflow_dispatch:      # Allow manual trigger
