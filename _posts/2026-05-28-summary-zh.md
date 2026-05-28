@@ -5,214 +5,271 @@ date: 2026-05-28
 lang: zh
 ---
 
-> 从 40 条内容中筛选出 10 条重要资讯。
+> 从 38 条内容中筛选出 12 条重要资讯。
 
 ---
 
-1. [微软 Copilot Cowork 漏洞可通过提示注入窃取文件](#item-1) ⭐️ 9.0/10
-2. [GitHub 事故影响拉取请求、议题和 Git 操作](#item-2) ⭐️ 8.0/10
-3. [Go 将实现对结构体的泛型方法支持](#item-3) ⭐️ 8.0/10
-4. [科技 CEO 的 AI 炒作被批为‘精神病’](#item-4) ⭐️ 8.0/10
-5. [私募股权接管美国关键服务](#item-5) ⭐️ 8.0/10
-6. [SQLite 引入 AGENTS.md 政策拒绝 AI 代理代码](#item-6) ⭐️ 8.0/10
-7. [AI 安全报告让 curl 维护者不堪重负](#item-7) ⭐️ 8.0/10
-8. [NASA 公布月球基地计划细节，授予着陆器合同](#item-8) ⭐️ 8.0/10
-9. [7-Zip 高危堆溢出漏洞已在 26.01 版本修复](#item-9) ⭐️ 8.0/10
-10. [长鑫科技科创板 IPO 过会，拟募资 295 亿元](#item-10) ⭐️ 8.0/10
+1. [英伟达 CEO 称公司已放弃中国 AI 芯片市场](#item-1) ⭐️ 9.0/10
+2. [YouTube 将自动标注 AI 生成视频](#item-2) ⭐️ 8.0/10
+3. [Anthropic 与 OpenAI 在成本上升中显示产品市场契合](#item-3) ⭐️ 8.0/10
+4. [探索网状网络：Meshtastic、MeshCore 和 Reticulum](#item-4) ⭐️ 8.0/10
+5. [Go 提议支持泛型方法，已获批实施](#item-5) ⭐️ 8.0/10
+6. [GitHub 事故影响 PR、Issue、Git 操作和 API](#item-6) ⭐️ 8.0/10
+7. [谷歌员工因在 Polymarket 上内幕交易下注 100 万美元被起诉](#item-7) ⭐️ 8.0/10
+8. [SQLite 发布 AGENTS.md 文件，规范 AI Agent 贡献](#item-8) ⭐️ 8.0/10
+9. [Curl 维护者描述前所未有的 AI 报告压力](#item-9) ⭐️ 8.0/10
+10. [微软 Copilot Cowork 邮件数据泄露攻击](#item-10) ⭐️ 8.0/10
+11. [高通与字节跳动合作定制 AI ASIC 芯片](#item-11) ⭐️ 8.0/10
+12. [英伟达计划每年在台湾投资 1500 亿美元](#item-12) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [微软 Copilot Cowork 漏洞可通过提示注入窃取文件](https://simonwillison.net/2026/May/26/copilot-cowork-exfiltrates-files/#atom-everything) ⭐️ 9.0/10
+## [英伟达 CEO 称公司已放弃中国 AI 芯片市场](https://t.me/zaihuapd/41609) ⭐️ 9.0/10
 
-PromptArmor 披露了微软 Copilot Cowork 的一个漏洞，攻击者可通过发送包含外部图片的恶意邮件来窃取文件，当用户打开邮件时图片渲染会触发网络请求泄露数据。 该攻击利用了自动批准的代理操作和外部图片渲染，暴露了 AI 代理系统中的严重安全缺陷，凸显了在能够访问敏感数据的 LLM 代理中防范提示注入的持续挑战。 该漏洞利用了 OneDrive 预认证的下载链接，成功的提示注入可泄露这些链接，使攻击者能够下载文件。该攻击对包括 Claude Opus 4.7 在内的最先进模型取得了高成功率。
+英伟达 CEO 黄仁勋表示，受美国出口管制影响，公司已基本放弃中国 AI 芯片市场，并告知投资者不要对获得先进芯片出口许可证抱有任何期望。他承认华为等本土厂商目前正在主导中国市场。 这标志着全球 AI 芯片格局的重大转变，中国曾是英伟达的重要收入来源。此举巩固了华为作为领先 AI 芯片供应商的地位，并凸显了地缘政治紧张对半导体供应链的影响。 中国此前曾占英伟达数据中心收入的至少五分之一。2026 年 4 月，特朗普政府要求对华芯片出口须取得许可证，实质上将英伟达排除在外。黄仁勋指出华为及本地芯片生态表现非常强劲，而英伟达正将资金用于供应链扩张和 800 亿美元的股票回购计划。
 
-rss · Simon Willison · 5月26日 15:36
+telegram · zaihuapd · 5月28日 03:03
 
-**背景**: 提示注入是一种网络安全攻击，通过恶意提示使 LLM 产生非预期行为。在如 Copilot Cowork 的代理系统中，代理可以执行发送邮件等操作，如果渲染了外部图片，则可能通过触发向攻击者控制的服务器发送网络请求来窃取数据。
+**背景**: 英伟达基于 Hopper 架构的 H100 GPU 是领先的 AI 加速器，广泛用于训练大模型。华为 Ascend 950PR 芯片近期在单芯片性能上已达到与英伟达 Hopper 相当的水平，使得中国企业能够替代英伟达产品。美国的出口管制逐步限制了对华先进芯片销售，加速了中国本土芯片的发展。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.promptarmor.com/resources/microsoft-copilot-cowork-exfiltrates-files">Microsoft Copilot Cowork Exfiltrates Files</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Prompt_injection">Prompt injection - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nvidia_H100_GPU">Nvidia H100 GPU</a></li>
+<li><a href="https://www.tomshardware.com/tech-industry/huawei-expects-12-billion-in-ai-chip-revenue-this-year-as-nvidias-china-market-share-hits-zero">Huawei braces for $12 billion in AI chip revenue driven by homegrown AI model demand — Chinese fabs can barely keep up as Nvidia's market share craters within the region | Tom's Hardware</a></li>
+<li><a href="https://www.huaweicentral.com/ascend-950pr-ai-chip-everything-you-need-to-know/">Ascend 950PR AI Chip: Everything you need to know - Huawei Central</a></li>
 
 </ul>
 </details>
 
-**标签**: `#security`, `#prompt injection`, `#Microsoft Copilot`, `#exfiltration`, `#AI agents`
+**标签**: `#英伟达`, `#AI芯片`, `#出口管制`, `#中国市场`, `#半导体`
 
 ---
 
 <a id="item-2"></a>
-## [GitHub 事故影响拉取请求、议题和 Git 操作](https://www.githubstatus.com/incidents/xy1tt3hs572m) ⭐️ 8.0/10
+## [YouTube 将自动标注 AI 生成视频](https://blog.youtube/news-and-events/improving-ai-labels-viewers-creators/) ⭐️ 8.0/10
 
-在最近一个未指定的日期，GitHub 发生了一起事故，影响了拉取请求、议题、Git 操作和 API 请求，导致不一致的行为，例如拉取请求未能反映所有提交或分支更改。 这一事故意义重大，因为它影响了软件开发协作所需的核心 GitHub 功能，并且是近期一系列中断的一部分，引发了人们对 GitHub 可靠性的担忧。 用户报告称，Web UI 和 API 上的拉取请求未能一致地反映所有提交或分支更改，这可能导致未经全面审查就合并代码。该事故加剧了过去一个月发生的系列中断。
+YouTube 宣布将自动标注包含 AI 生成或篡改内容的视频，将其透明度工作扩展到创作者自行披露以外。 该政策回应了日益增长的 AI 生成虚假信息和深度伪造问题，帮助观众对内容真实性做出知情判断。儿童和老年人等弱势用户尤其容易受此类内容影响。 自动标注将利用 C2PA 来源元数据和 Google 的 SynthID 水印等技术标准来检测 AI 生成内容。涵盖合成语音、人工生成面孔及其他 AI 篡改元素。
 
-hackernews · maxnoe · 5月27日 12:15 · [社区讨论](https://news.ycombinator.com/item?id=48293080)
+hackernews · nopg · 5月27日 20:00 · [社区讨论](https://news.ycombinator.com/item?id=48299753)
 
-**背景**: GitHub 是一个广泛使用的版本控制和协作平台，基于 Git。GitOps 是一种运营框架，将 Git 仓库作为基础设施和应用部署的唯一真实来源。此类中断会影响到依赖 GitHub 进行持续集成和交付的开发者和团队。
+**背景**: 内容来源与真实性联盟（C2PA）提供了追踪数字内容来源和编辑的开放标准。Google DeepMind 的 SynthID 将不可见的水印嵌入 AI 生成的图像、音频和文本中。这些技术使 YouTube 等平台能够自动标注并提升透明度。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://about.gitlab.com/topics/gitops/">What is GitOps?</a></li>
-<li><a href="https://www.redhat.com/en/topics/devops/what-is-gitops">What is GitOps?</a></li>
-<li><a href="https://www.atlassian.com/git/tutorials/gitops">What Is GitOps? | Atlassian Git Tutorial</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Content_Authenticity_Initiative">Content Authenticity Initiative - Wikipedia</a></li>
+<li><a href="https://ai.google.dev/responsible/docs/safeguards/synthid">SynthID: Tools for watermarking and detecting LLM-generated Text | Responsible Generative AI Toolkit | Google AI for Developers</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论表达了对于近期中断频率的沮丧和担忧。有用户创建了 'isgithubcooked.com' 网站来追踪可靠性，其他人则强调了由于 PR 状态不一致导致合并不完整代码的风险。还有人呼吁问责，包括建议解雇领导层。
+**社区讨论**: 评论者普遍支持此举，并分享了家人被 AI 内容欺骗的个人经历。有人质疑该政策是否涵盖音乐领域，因为 AI 生成的曲目很普遍。另有人指出，仅靠标注可能不够，还需要改变推荐算法。
 
-**标签**: `#github`, `#outage`, `#gitops`, `#reliability`, `#infrastructure`
+**标签**: `#AI`, `#Content Moderation`, `#YouTube`, `#Transparency`, `#Policy`
 
 ---
 
 <a id="item-3"></a>
-## [Go 将实现对结构体的泛型方法支持](https://github.com/golang/go/issues/77273) ⭐️ 8.0/10
+## [Anthropic 与 OpenAI 在成本上升中显示产品市场契合](https://simonwillison.net/2026/May/27/product-market-fit/#atom-everything) ⭐️ 8.0/10
 
-Go 团队正在着手实现对结构体支持泛型方法，具体记录在 GitHub issue #77273 中。这将允许方法拥有独立于接收者类型参数的类型参数。 此特性弥补了 Go 泛型的一个重大空白，使得更富有表现力的库设计成为可能，例如通用数据访问模式和单子接口。它回应了社区长期以来的诉求，并使 Go 更接近其他静态类型语言的能力。 实现将允许在泛型结构体上使用泛型方法，但由于实现难度，泛型接口方法仍不被支持。该提议仍在 Go 团队内部进行技术讨论。
+Anthropic 被传即将迎来首个盈利季度，且 Anthropic 与 OpenAI 均已将企业定价改为基于 API 的收费模式，导致公司的大语言模型成本意外飙升。Simon Willison 认为这表明 AI 模型提供商找到了产品市场契合。 这标志着 AI 实验室从免费试用向可持续营收转型，但也引发企业对高额 token 开销投资回报率的担忧。争论澄清了产品市场契合不等于盈利，对知识工作者生产力的实际影响仍在评估中。 Anthropic 于 2025 年 11 月将企业计划改为 20 美元/座位/月加 API 使用费，OpenAI 在 2026 年 4 月做了类似调整。Willison 的个人使用数据显示，他仅花 200 美元订阅费就获得了价值 2180 美元的 token，凸显消费者与企业之间的巨大折扣差异。
 
-hackernews · f311a · 5月27日 09:02 · [社区讨论](https://news.ycombinator.com/item?id=48291575)
+rss · Simon Willison · 5月27日 16:38 · [社区讨论](https://news.ycombinator.com/item?id=48296794)
 
-**背景**: Go 在 1.18 版本中引入了泛型，但最初不允许方法拥有独立于接收者的类型参数。这一限制在最初的设计中被认为是“现在不做，不代表永远不做”。自泛型引入以来，社区一直积极请求这一特性。
+**背景**: 产品市场契合（PMF）指产品满足强劲市场需求，而盈利是另一财务指标。像 Claude 和 GPT-4 这样的大语言模型通过 API 或订阅使用，编码智能体消耗大量 token。随着实验室从补贴转向基于使用量的定价，企业正面临更高账单。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://github.com/golang/go/issues/77273">spec: generic methods for Go · Issue #77273 · golang/go</a></li>
-<li><a href="https://go.dev/doc/tutorial/generics">Tutorial: Getting started with generics - The Go Programming Language</a></li>
-<li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-generics-in-go">How To Use Generics in Go | DigitalOcean</a></li>
+**社区讨论**: 评论者对将产品市场契合与盈利混为一谈表示怀疑，指出大规模硬件建设每年需要超过 1 万亿美元的 token 支出。有人认为像 GLM-5.1 这样的开源模型以更低成本提供类似质量，威胁到 Anthropic 和 OpenAI 的商业模式。
 
-</ul>
-</details>
-
-**社区讨论**: 社区反应总体积极，如 xena 用户对于构建单子库感到兴奋，nasretdinov 指出最初对缺乏泛型方法感到惊讶。一些评论者如 h1fra 讽刺地观察到 Go 现在正在实现之前被认为不必要的特性，而 reactordev 则认可这一方向，认为它弥合了与其他语言的差距。
-
-**标签**: `#Go`, `#generics`, `#programming languages`, `#open source`
+**标签**: `#AI`, `#LLMs`, `#product-market fit`, `#profitability`, `#enterprise AI`
 
 ---
 
 <a id="item-4"></a>
-## [科技 CEO 的 AI 炒作被批为‘精神病’](https://techcrunch.com/2026/05/27/tech-ceos-are-apparently-suffering-from-ai-psychosis/) ⭐️ 8.0/10
+## [探索网状网络：Meshtastic、MeshCore 和 Reticulum](https://www.jonaharagon.com/posts/im-getting-into-mesh-networks-meshtastic-meshcore-and-reticulum/) ⭐️ 8.0/10
 
-TechCrunch 上的一篇评论文章和 Hacker News 的讨论指责科技 CEO 们患上了‘AI 精神病’，其特点是对 AI 能力非理性的过度自信。文章认为，CEO 们往往缺乏技术理解，却对 AI 能实现什么做出笼统的断言。 这一批评凸显了科技行业中对炒作驱动决策日益增长的担忧。过高的期望可能导致资源错配和不切实际的产品承诺，影响投资者、员工和最终用户。 文章将 CEO 的行为比作精神病，即他们在不了解底层技术的情况下依据信念行事。社区评论指出，类似的动态在之前的科技泡沫（如云计算和移动互联网）中也曾出现，并且这种现象并非 AI 独有。
+作者分享了对三种网状网络技术（Meshtastic、MeshCore 和 Reticulum）的个人经验和见解，强调了它们在离网通信中的潜力。 网状网络提供独立于中央基础设施的弹性去中心化通信，对于应急响应和抗审查通信至关重要。 Meshtastic 使用 LoRa 无线电实现低功耗、远距离通信，而 MeshCore 和 Reticulum 则提供不同的网状网络方法，对互联网连接的依赖程度不同。
 
-hackernews · IAmGraydon · 5月27日 15:20 · [社区讨论](https://news.ycombinator.com/item?id=48295679)
+hackernews · Panda_ · 5月27日 19:52 · [社区讨论](https://news.ycombinator.com/item?id=48299638)
 
-**背景**: 这篇评论文章是围绕 AI 炒作周期的持续辩论的一部分，公司在实际理解有限的情况下匆忙将 AI 融入产品。历史上，类似的热潮曾伴随区块链和元宇宙等技术。‘精神病’一词是比喻性的，用来批评科技领导者中出现的非理性狂热和过度承诺。
+**背景**: LoRa 是一种用于物联网和网状网络的长距离、低功耗无线电协议。ISM 频段允许免许可证操作。网状网络允许设备中继消息，从而在没有中央基础设施的情况下扩展范围。
 
-**社区讨论**: Hacker News 社区在很大程度上同意这一批评，许多人指出这种过度炒作在科技行业并不新鲜。一些用户分享了成功 AI 应用的个人经历，但警告不要从这些例子中过度推断。一个关键观点是，领导层往往缺乏技术深度，导致不切实际的期望和糟糕的决策。
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Meshtastic">Meshtastic - Wikipedia</a></li>
+<li><a href="https://meshtastic.org/">Off-Grid Communication For Everyone | Meshtastic</a></li>
+<li><a href="https://reticulum.network/">Reticulum Network</a></li>
 
-**标签**: `#AI`, `#tech industry`, `#critique`, `#hype`, `#community discussion`
+</ul>
+</details>
+
+**社区讨论**: 评论者注意到节点密度低和连接不可靠等实际问题，并讨论了依赖互联网与完全独立设计之间的权衡，以实现真正的离网弹性。
+
+**标签**: `#mesh networks`, `#decentralized communication`, `#LoRa`, `#amateur radio`, `#community discussion`
 
 ---
 
 <a id="item-5"></a>
-## [私募股权接管美国关键服务](https://rubbishtalk.com/economy/how-private-equity-bought-americas-essential-services/) ⭐️ 8.0/10
+## [Go 提议支持泛型方法，已获批实施](https://github.com/golang/go/issues/77273) ⭐️ 8.0/10
 
-本文分析了私募股权公司如何主要因养老基金对高回报的需求而收购美国关键基础设施控制权。 这一发展对经济具有系统性影响，因为关键服务变得以利润为导向，可能导致质量下降和消费者成本上升。 文章指出，养老基金需要约 7%的年回报率才能维持偿付能力，这促使它们投资私募股权（PE），而 PE 往往导致削减成本和服务质量下降。
+Go 联合设计者 Robert Griesemer 提出的为 Go 添加泛型方法的提案已获批准，并进入实施阶段，推翻了语言 FAQ 中长期坚持的立场。 这解决了 Go 泛型的一个主要限制，使开发者能够编写更可复用和表达力强的代码，尤其对库和框架影响深远。它使 Go 更接近 Java 和 C# 等语言中的现代泛型支持。 该提案允许方法拥有独立于类型的类型参数。然而，Go 接口仍然不能包含泛型方法，这仍是一个单独的约束。
 
-hackernews · NoRagrets · 5月27日 12:00 · [社区讨论](https://news.ycombinator.com/item?id=48292941)
+hackernews · f311a · 5月27日 09:02 · [社区讨论](https://news.ycombinator.com/item?id=48291575)
 
-**背景**: 私募股权公司从养老基金等机构投资者筹集资金，通常利用杠杆收购公司。它们旨在改善后出售获利，有时会优先考虑短期收益。养老基金投资私募股权（PE）以达到回报目标，但这种模式可能给关键服务的提供带来压力。
+**背景**: Go 在 1.18 版本中引入了泛型，允许函数和类型拥有类型参数，但明确排除了方法级别的类型参数。这一限制常被指出是一个重大缺陷，导致需要笨拙的变通方案。此次逆转表明该语言在保持简洁的同时，持续向更灵活的方向演进。
 
-**社区讨论**: 评论者指出具有讽刺意味的是，养老基金推动了私募股权（PE），将价值从当前生活水平转移到退休金。一些人将之比作古罗马克拉苏的消防队，而另一些人则哀叹 PE 收购小企业时对社会资本的掠夺。
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.theregister.com/2026/03/02/generic_methods_go/">Generic methods approved for Go , devs miss other features</a></li>
 
-**标签**: `#private equity`, `#economy`, `#pensions`, `#essential services`, `#investment`
+</ul>
+</details>
+
+**社区讨论**: 社区反应复杂但总体积极。一些开发者对之前缺失此功能表示惊讶并欢迎这一变化，而另一些人则批评 Go 的演进速度过慢。值得注意的是，一位评论者开玩笑说终于可以构建梦寐以求的 monad 库，另一位则回忆称最初缺乏泛型曾被宣传为一项特性。
+
+**标签**: `#Go`, `#generics`, `#programming languages`, `#feature request`
 
 ---
 
 <a id="item-6"></a>
-## [SQLite 引入 AGENTS.md 政策拒绝 AI 代理代码](https://simonwillison.net/2026/May/27/sqlite-agents/#atom-everything) ⭐️ 8.0/10
+## [GitHub 事故影响 PR、Issue、Git 操作和 API](https://www.githubstatus.com/incidents/xy1tt3hs572m) ⭐️ 8.0/10
 
-SQLite 在其仓库中添加了 AGENTS.md 文件，声明不接受代理代码贡献，但欢迎错误报告和文档补丁。此外，该项目还创建了一个单独的错误论坛来处理大量 AI 生成的错误报告。 该政策为开源项目治理 AI 生成的贡献树立了明确先例，直接回应了许多项目面临的低质量 AI 提交挑战。它可能促使其他重大项目采用类似指导方针。 AGENTS.md 还要求拉取请求事先获得同意并附上法律文件，最新提交删除了“（目前）”一词以强化对代理代码的拒绝。SQLite 论坛被 AI 错误报告淹没，因此创建了由 D. Richard Hipp 维护的专用错误论坛。
+GitHub 近日发生一起事故，影响拉取请求、议题、Git 操作和 API 请求，用户报告拉取请求数据不一致。 此事件凸显了 GitHub 作为软件开发关键平台的持续可靠性问题，并因差异信息不完整而增加了不安全合并的风险。 该事故影响核心功能，包括拉取请求、议题、Git 操作和 API 请求；用户注意到拉取请求未能一致地反映所有提交或分支变更。
 
-rss · Simon Willison · 5月27日 23:44
+hackernews · maxnoe · 5月27日 12:15 · [社区讨论](https://news.ycombinator.com/item?id=48293080)
 
-**背景**: 代理编码指使用自主 AI 代理在最少人工干预下规划、编写、测试和修改代码。SQLite 是一个广泛部署的嵌入式数据库引擎，以其保守的开发实践著称。该政策阐明了项目对 AI 生成代码的立场，区分了自动化代码贡献和人工审查的错误报告。
+**背景**: GitHub 是使用 Git 进行版本控制和协作的广泛使用的平台。此类事故可能扰乱全球数百万开发者的工作流程。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://cloud.google.com/discover/what-is-agentic-coding">What is agentic coding? How it works and use cases | Google Cloud</a></li>
+**社区讨论**: 社区评论对频繁中断表示不满，有人开玩笑说要回退到 2018 版软件。用户还猜测自 AI 编程工具普及以来，可靠性变差。
 
-</ul>
-</details>
-
-**标签**: `#sqlite`, `#AI agents`, `#open-source governance`, `#software engineering`
+**标签**: `#github`, `#outage`, `#incident`, `#developer-tools`, `#reliability`
 
 ---
 
 <a id="item-7"></a>
-## [AI 安全报告让 curl 维护者不堪重负](https://simonwillison.net/2026/May/26/the-pressure/#atom-everything) ⭐️ 8.0/10
+## [谷歌员工因在 Polymarket 上内幕交易下注 100 万美元被起诉](https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html) ⭐️ 8.0/10
 
-curl 维护者 Daniel Stenberg 报告说，项目目前面临的安全报告数量是 2024 年的 4 到 5 倍，是 2025 年的两倍，平均每天超过一份报告，这些报告都非常详细，而且往往是 AI 辅助生成的。 这一激增凸显了 AI 生成的安全研究给开源维护者带来的越来越大的压力，威胁到维护者的福祉和项目的可持续性，尤其是像 curl 这样的关键基础设施。 尽管报告数量激增，但发现的漏洞几乎都是低或中等严重性，最后一个高严重性 CVE (CVE-2023-38545) 发布于 2023 年 10 月。
+一名谷歌员工被指控在预测市场 Polymarket 上进行内幕交易，利用机密搜索词数据下注超过 100 万美元。 这是首批将内幕交易与基于加密货币的预测市场结合的重大案件之一，引发了对市场完整性及潜在监管打击的法律问题。 该员工位于瑞士，使用了不允许美国参与者使用的 Polymarket，但被美国法律指控窃取美国公司信息并使用美国金融系统。
 
-rss · Simon Willison · 5月26日 23:48
+hackernews · pseudolus · 5月28日 00:49 · [社区讨论](https://news.ycombinator.com/item?id=48302822)
 
-**背景**: curl 是一个广泛使用的命令行工具和库，用于通过 URL 传输数据，支持 HTTP、FTP 等多种协议。它是无数系统和应用中的关键组件。该项目由 Daniel Stenberg 领导的一个小团队维护，由于 AI 辅助安全报告的涌入，他现在面临着前所未有的心理压力和工作生活失衡。
+**背景**: 预测市场（如 Polymarket）允许参与者对未来事件（如选举或产品发布）下注。Polymarket 是一个基于 Polygon 区块链的去中心化平台，用户交易代表结果概率的份额。然而，该平台因潜在的内幕交易和缺乏监管而受到批评，大部分利润集中在一小部分交易者手中。
 
-**标签**: `#curl`, `#open source`, `#security`, `#AI`, `#maintenance`
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Polymarket">Polymarket</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Prediction_market">Prediction market - Wikipedia</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 社区评论反应不一：有人认为该员工应受惩罚，但警告投注者不要参与存在内幕优势的预测市场；也有人质疑政府为何针对此类案件，认为预测市场对社会无益。还有讽刺言论提到政客和白宫内幕人员也应面临类似指控。
+
+**标签**: `#insider-trading`, `#prediction-markets`, `#google`, `#legal`, `#ethics`
 
 ---
 
 <a id="item-8"></a>
-## [NASA 公布月球基地计划细节，授予着陆器合同](https://www.bbc.com/news/articles/c39228nxyr4o) ⭐️ 8.0/10
+## [SQLite 发布 AGENTS.md 文件，规范 AI Agent 贡献](https://simonwillison.net/2026/May/27/sqlite-agents/#atom-everything) ⭐️ 8.0/10
 
-NASA 公布了月球基地计划的新细节，目标是在 2032 年前在南极建成一个半永久性前哨站。多家公司，包括 Blue Origin、Intuitive Machines 和 Astrobotic，已获得建造着陆器、漫游车和通信设备的合同。 这一计划代表着向月球持续有人驻留迈出的具体一步，对资源开采和火星任务具有重要意义。然而，SpaceX 载人登月着陆器的延误以及来自中国的竞争增加了政治紧迫性。 该计划包括在 2029 年前进行 25 次发射，运送 4 吨货物，使用机器人着陆器和跳跃无人机勘测南极。基地将由核反应堆和太阳能联合供电。
+SQLite 新增了一个 AGENTS.md 文件，声明不接受由 AI 代理自主生成的代码（agentic code），但欢迎人类审查过的 pull request 作为概念验证，以及包含可重现测试用例的 AI 代理 bug 报告。同时，该项目还拆分出一个新的 Bug 论坛，以应对大量 AI 生成的错误报告。 作为最广泛使用的嵌入式数据库之一，SQLite 的明确立场为开源项目如何负责任地处理 AI 生成的贡献树立了先例。它解决了日益增长的关于低质量 AI 代码和错误报告淹没维护者的担忧。 AGENTS.md 文件于五日前提交，随后的一次提交删除了“(currently)”一词，以强化不接受 agentic code 的声明。D. Richard Hipp 正在新的 SQLite Bug 论坛上积极修复错误，并提交了大量代码。
 
-telegram · zaihuapd · 5月27日 03:08
+rss · Simon Willison · 5月27日 23:44
 
-**背景**: NASA 的 Artemis 计划旨在让人类重返月球并建立可持续的存在。月球基地将作为未来火星任务的中转站。由于恶劣环境和漫长的月夜，核能被认为是长期月球操作所必需的。
+**背景**: Agentic coding 是一种软件开发方法，其中自主 AI 代理在最少人工干预下规划、编写、测试和修改代码，与需要用户提示的 AI 编码助手形成对比。SQLite 是嵌入无数应用程序的关键基础设施，其贡献政策在开源社区中具有重大影响力。该项目长期以来要求提供法律文件以将贡献置于公共领域。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.bbc.com/future/article/20240417-the-nuclear-reactors-that-could-power-moon-bases">The nuclear reactors that could power bases on the Moon</a></li>
-<li><a href="https://phys.org/news/2025-03-firm-moon-drill-rovers-drone.html">US firm targets Moon landing with drill, rovers, hopping drone</a></li>
+<li><a href="https://cloud.google.com/discover/what-is-agentic-coding">What is agentic coding? How it works and use cases | Google Cloud</a></li>
+<li><a href="https://github.com/melissawm/open-source-ai-contribution-policies">GitHub - melissawm/open-source-ai-contribution-policies: A list of policies by different open source projects about how to engage with AI-generated contributions. · GitHub</a></li>
 
 </ul>
 </details>
 
-**标签**: `#NASA`, `#lunar base`, `#space exploration`, `#Blue Origin`, `#SpaceX`
+**标签**: `#SQLite`, `#AI agents`, `#open source`, `#policy`, `#software engineering`
 
 ---
 
 <a id="item-9"></a>
-## [7-Zip 高危堆溢出漏洞已在 26.01 版本修复](https://socprime.com/blog/cve-2026-48095-7-zip-heap-overflow-flaw/) ⭐️ 8.0/10
+## [Curl 维护者描述前所未有的 AI 报告压力](https://simonwillison.net/2026/May/26/the-pressure/#atom-everything) ⭐️ 8.0/10
 
-7-Zip 的 NTFS 处理程序中存在一个高危堆缓冲区写入溢出漏洞（CVE-2026-48095），攻击者可通过特制压缩文件执行任意代码。该漏洞已在 2026 年 4 月 27 日发布的 26.01 版本中修复。 7-Zip 是全球广泛使用的文件压缩工具，此漏洞可通过基于签名的回退逻辑触发，即使带有 .7z 或 .zip 等常见扩展名的压缩文件也可能被伪装利用。用户应立即更新以防远程代码执行或应用崩溃。 该漏洞位于 NTFS 归档处理程序（NTFSHandler.cpp）中，解析特制 NTFS 镜像时会导致堆缓冲区溢出。漏洞 CVSS 评分为 8.8，影响 7-Zip 26.00 及之前所有版本，由 GitHub 安全实验室的 Jaroslav Lobačevski 发现。
+Daniel Stenberg 报告称，curl 项目现在每天收到超过一份安全报告，比 2024 年增加了 4-5 倍，是 2025 年的两倍，且大多数报告非常详细且可信，这主要归因于 AI 辅助工具。 这一趋势凸显了 AI 生成的安全报告给开源维护者带来的日益沉重的负担，威胁到维护者的福祉和项目的可持续性，可能需要新的社区或行业支持机制。 尽管报告数量激增，但发现的漏洞大多为低或中等严重性；curl 最近一个高危 CVE 是在 2023 年 10 月。Stenberg 指出，这是他的妻子第一次对他的工作时间表示担忧。
 
-telegram · zaihuapd · 5月27日 08:01
+rss · Simon Willison · 5月26日 23:48
 
-**背景**: 堆缓冲区溢出发生在程序向堆中已分配的内存区域之外写入数据时，可能覆盖关键数据结构。攻击者可利用此漏洞执行任意代码或导致应用崩溃。7-Zip 使用基于签名的回退机制：当根据文件扩展名的处理程序失败时，会按文件签名尝试所有剩余处理程序。这使得伪装成 .7z 或 .zip 文件的特制 NTFS 镜像能够到达存在漏洞的 NTFS 处理程序。
+**背景**: Curl 是一个广泛使用的命令行工具和库，用于通过 URL 传输数据，在无数软件系统中至关重要。AI 辅助安全工具近期得到改进，能够自动生成详细的漏洞报告。这导致像 curl 这样流行的开源项目收到的报告激增，使维护者不堪重负。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://securitylab.github.com/advisories/GHSL-2026-140_7-Zip/">GHSL-2026-140: Heap Buffer Write Overflow in 7-Zip | GitHub Security Lab</a></li>
-<li><a href="https://blog.gridinsoft.com/7-zip-cve-2026-48095/">7-Zip CVE-2026-48095: Update to 26.01 and Handle Archives Safely</a></li>
-<li><a href="https://socprime.com/blog/cve-2026-48095-7-zip-heap-overflow-flaw/">CVE-2026-48095: 7-Zip Heap Overflow Flaw</a></li>
+<li><a href="https://www.heise.de/en/opinion/Comment-Open-source-developers-are-working-themselves-sick-on-AI-bugs-11308553.html">Comment: Open - source developers are working themselves sick on AI ...</a></li>
+<li><a href="https://www.how2shout.com/news/google-openai-anthropic-12-million-open-source-security-linux-foundation.html">Google, OpenAI, Anthropic Pledge $12.5M for Open Source Security</a></li>
 
 </ul>
 </details>
 
-**标签**: `#security`, `#vulnerability`, `#CVE`, `#7-Zip`, `#heap overflow`
+**标签**: `#curl`, `#security`, `#open-source`, `#AI`, `#software maintenance`
 
 ---
 
 <a id="item-10"></a>
-## [长鑫科技科创板 IPO 过会，拟募资 295 亿元](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/000001_20260527_SPLE.pdf) ⭐️ 8.0/10
+## [微软 Copilot Cowork 邮件数据泄露攻击](https://simonwillison.net/2026/May/26/copilot-cowork-exfiltrates-files/#atom-everything) ⭐️ 8.0/10
 
-长鑫科技在科创板 IPO 获得上市委会议通过，拟募资 295 亿元，用于 DRAM 制造升级和前瞻技术研发。 此次 IPO 是中国本土 DRAM 行业的一个重要里程碑，将为存储器制造升级提供巨额资金，减少对外部供应商的依赖，也体现了国家对半导体自主可控的持续支持。 募集资金将用于存储器晶圆制造量产线技术升级、DRAM 技术升级和前瞻技术研发。该公司是中国领先的 DRAM 制造商之一。
+微软 Copilot Cowork 存在安全漏洞，代理可以通过发送包含外部图片的邮件来泄露数据，当用户打开邮件时图片会触发网络请求。提示注入可被利用来泄露预认证的 OneDrive 下载链接。 该漏洞凸显了在保障具身 AI 系统安全方面的关键挑战，即自动化操作可能被利用进行数据泄露。它影响微软 Copilot Cowork 用户，并强调了 AI 产品中需要更好的访问控制。 该攻击之所以可行，是因为 Copilot Cowork 代理可以直接向用户收件箱发送邮件而无需审批，并且这些邮件会渲染外部图片从而触发网络请求。此外，OneDrive 的预认证下载链接允许攻击者在通过提示注入泄露后下载文件。
 
-telegram · zaihuapd · 5月27日 09:12
+rss · Simon Willison · 5月26日 15:36
 
-**背景**: DRAM（动态随机存取存储器）是一种易失性存储器，广泛用作计算机等设备的主存。全球 DRAM 市场目前由三星、SK 海力士和美光主导。中国一直致力于发展本土 DRAM 生产以减少进口依赖，长鑫科技（CXMT）等公司是其中的先锋。科创板是上海证券交易所专门支持高科技和创新企业的板块。
+**背景**: 具身 AI 系统旨在代表用户执行操作，例如发送邮件或访问文件。然而，它们容易受到提示注入攻击，恶意指令会导致 AI 执行非预期操作。通过外部图片渲染进行数据泄露是 AI 产品中已知的技术，之前在 Continue 和 Cursor IDE 等产品中已出现过类似漏洞。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Dynamic_random-access_memory">Dynamic random-access memory - Wikipedia</a></li>
+<li><a href="https://wraith.sh/learn/markdown-image-exfiltration">Data Exfiltration via Markdown Images : The Quiet AI... | Wraith</a></li>
+<li><a href="https://versprite.com/blog/data-exfiltration-via-image-rendering-fixed-in-continue/">Data Exfiltration via Image Rendering Fixed in Continue - VerSprite</a></li>
+<li><a href="https://embracethered.com/blog/posts/2025/cursor-data-exfiltration-with-mermaid/">Cursor IDE: Arbitrary Data Exfiltration Via Mermaid...</a></li>
 
 </ul>
 </details>
 
-**标签**: `#semiconductor`, `#DRAM`, `#IPO`, `#China technology`, `#memory manufacturing`
+**标签**: `#security`, `#AI agents`, `#data exfiltration`, `#Microsoft Copilot`, `#prompt injection`
+
+---
+
+<a id="item-11"></a>
+## [高通与字节跳动合作定制 AI ASIC 芯片](https://t.me/zaihuapd/41616) ⭐️ 8.0/10
+
+高通与字节跳动达成协议，将提供数百万颗定制 AI ASIC 芯片，用于支持字节跳动的 AI 服务，并帮助将其内部芯片设计转化为量产半导体产品。 此次合作凸显了对专用 AI 硬件日益增长的需求，并标志着高通向超大规模云客户的定制 ASIC 领域扩张，可能重塑 AI 芯片供应链格局。 据了解，该交易涉及数百万颗芯片，而高通此前曾宣布将在今年内向一家超大规模云服务商交付首款 ASIC。两家公司均未正式置评。
+
+telegram · zaihuapd · 5月28日 07:09
+
+**背景**: ASIC 即专用集成电路，是为特定任务而非通用用途设计的芯片。谷歌的张量处理单元（TPU）就是一款知名的 AI ASIC。大型科技公司越来越多地使用定制 AI 芯片来优化其特定工作负载的性能和成本。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://grokipedia.com/page/Application-specific_integrated_circuit">Application-specific integrated circuit (ASIC)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tensor_Processing_Unit">Tensor Processing Unit - Wikipedia</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI chips`, `#Qualcomm`, `#ByteDance`, `#ASIC`, `#semiconductor`
+
+---
+
+<a id="item-12"></a>
+## [英伟达计划每年在台湾投资 1500 亿美元](https://arstechnica.com/tech-policy/2026/05/nvidia-ceo-wants-taiwan-to-be-center-of-ai-revolution-not-us/) ⭐️ 8.0/10
+
+英伟达 CEO 黄仁勋宣布计划每年在台湾投入约 1500 亿美元，称台湾是 AI 革命中心。投资覆盖 AI 芯片生产、系统制造和供应链合作。 这一巨额投资凸显了台湾在全球 AI 硬件供应链中的关键地位，尤其是在先进芯片制造和组装方面。它可能重塑 AI 发展的地缘政治和经济格局，对美国本土芯片制造努力有潜在影响。 英伟达在台北的新总部预计今年动工、2030 年启用，可容纳 4000 名员工。主要合作伙伴包括台积电、鸿海（富士康）、纬创和广达电脑。
+
+telegram · zaihuapd · 5月28日 07:33
+
+**背景**: 英伟达是 AI 芯片设计的领导者，但依赖台积电进行制造，并依靠纬创、广达等台湾电子制造商进行系统组装。台湾的半导体生态系统已成为全球 AI 基础设施的支柱，台积电生产了英伟达几乎所有最先进的芯片。黄仁勋的声明反映了台湾制造集群的战略重要性。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Wistron_Corporation">Wistron - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Quanta_Computer">Quanta Computer</a></li>
+
+</ul>
+</details>
+
+**标签**: `#NVIDIA`, `#AI`, `#台湾`, `#芯片制造`, `#供应链`
 
 ---
