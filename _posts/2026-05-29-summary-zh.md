@@ -5,259 +5,267 @@ date: 2026-05-29
 lang: zh
 ---
 
-> 从 28 条内容中筛选出 11 条重要资讯。
+> 从 37 条内容中筛选出 12 条重要资讯。
 
 ---
 
-1. [Anthropic 以 9650 亿美元估值完成 650 亿美元 H 轮融资](#item-1) ⭐️ 10.0/10
-2. [Anthropic 发布 Claude Opus 4.8，预告 Mythos 模型](#item-2) ⭐️ 8.0/10
-3. [Postgres 上的持久化工作流方案引发热议](#item-3) ⭐️ 8.0/10
-4. [YouTube 自动标注 AI 生成视频](#item-4) ⭐️ 8.0/10
-5. [SQLite 的 AGENTS.md 明确拒绝 AI 代理代码贡献](#item-5) ⭐️ 8.0/10
-6. [Willison 称 Anthropic 与 OpenAI 已找到产品市场匹配](#item-6) ⭐️ 8.0/10
-7. [黄仁勋：英伟达已基本放弃中国 AI 芯片市场](#item-7) ⭐️ 8.0/10
-8. [高通与字节跳动达成定制 AI 芯片合作](#item-8) ⭐️ 8.0/10
-9. [索尼 Bravia 9 II 和 7 II 采用独立 RGB LED 背光](#item-9) ⭐️ 8.0/10
-10. [比亚迪发布 4nm 智驾芯片璇玑 A3](#item-10) ⭐️ 8.0/10
-11. [美国司法部要求 Reddit 和 X 提供匿名批评 ICE 用户信息](#item-11) ⭐️ 8.0/10
+1. [vLLM v0.22.0：DeepSeek V4 加固、MRv2 改进、Rust 前端](#item-1) ⭐️ 9.0/10
+2. [Anthropic 发布 Claude Opus 4.8，带来适度提升](#item-2) ⭐️ 9.0/10
+3. [印度高考阅卷系统被发现多项安全漏洞](#item-3) ⭐️ 9.0/10
+4. [蓝色起源新格伦火箭静态点火爆炸，重创 NASA 登月计划](#item-4) ⭐️ 9.0/10
+5. [大众汽车通过 OAuth 客户端断言阻止 Home Assistant 集成](#item-5) ⭐️ 8.0/10
+6. [汽车收集并出售驾驶员数据，隐私风险升级](#item-6) ⭐️ 8.0/10
+7. [GitHub 因发布 Windows 零日漏洞封禁安全研究员](#item-7) ⭐️ 8.0/10
+8. [用 Postgres 实现持久化工作流：新范式](#item-8) ⭐️ 8.0/10
+9. [SQLite 通过新 AGENTS.md 政策拒绝 AI 生成代码](#item-9) ⭐️ 8.0/10
+10. [Anthropic 和 OpenAI 找到了产品市场契合点](#item-10) ⭐️ 8.0/10
+11. [Anthropic 估值达 9650 亿美元，超越 OpenAI](#item-11) ⭐️ 8.0/10
+12. [中国认证 9 款国产 AI 芯片用于政府采购](#item-12) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Anthropic 以 9650 亿美元估值完成 650 亿美元 H 轮融资](https://www.anthropic.com/news/series-h) ⭐️ 10.0/10
+## [vLLM v0.22.0：DeepSeek V4 加固、MRv2 改进、Rust 前端](https://github.com/vllm-project/vllm/releases/tag/v0.22.0) ⭐️ 9.0/10
 
-本轮融资使 Anthropic 成为估值最高的私营 AI 公司，在营收和估值上均超越 OpenAI，标志着 AI 竞争格局的重大转变。 470 亿美元的年化营收是公司自行报告的，基于近期增长趋势的年化数据。该公司此前在 2026 年 4 月报告为 300 亿美元，显示快速加速。
+vLLM v0.22.0 发布，包含来自 230 位贡献者的 459 次提交。它引入了 DeepSeek V4 模型加固、Model Runner V2 改进、实验性 Rust 前端以及具有 28.9% 延迟提升的批处理不变推理。 此版本显著提升了领先的开源 LLM 服务框架 vLLM 的性能和灵活性。DeepSeek V4 的成熟度和 Model Runner V2 的改进将加速在生产环境中的采用，而 Rust 前端则为性能关键型服务开辟了新的可能性。 DeepSeek V4 现在拥有专用包、NVFP4 融合 MoE 支持、全 CUDA graph 和 MTP 推测解码。Model Runner V2 增加了 Qwen3 稠密模型的 oracle、休眠模式权重重载和共享 KV-cache 层。Rust 前端是实验性的，支持数据并行服务。
 
-hackernews · meetpateltech · 5月28日 18:09 · [社区讨论](https://news.ycombinator.com/item?id=48313048)
+github · khluu · 5月29日 10:28
 
-**背景**: 年化营收是将短期收入推算至全年的估算指标，常被高增长公司使用。Anthropic 开发 Claude AI 助手，与 OpenAI 的 ChatGPT 直接竞争。H 轮融资是历史上最大的私募融资之一，反映了投资者对 AI 的信心。
+**背景**: vLLM 是一个用于高吞吐量 LLM 服务的开源库，因其高效的内存管理和批处理而被广泛用于生产环境。Model Runner 是负责执行模型推理的核心组件；版本 2 是模块化重写，以实现更好的性能。像 MTP（多令牌预测）这样的推测解码使用辅助头在每个步骤草拟多个令牌，从而减少延迟。NVFP4 是 NVIDIA 的一种 4 位浮点量化格式，用于高效的 MoE 推理。
 
-**社区讨论**: 社区评论对估值表示惊叹，部分人质疑年化营收的使用方式。也有人指出 Anthropic 已超越 OpenAI，使 OpenAI 显得脆弱。讨论还涉及公司等待万亿美元估值才上市的趋势。
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://docs.vllm.ai/en/stable/api/vllm/model_executor/layers/fused_moe/oracle/nvfp4/">nvfp4 - vLLM</a></li>
+<li><a href="https://docs.vllm.ai/en/latest/features/speculative_decoding/mtp/">MTP (Multi-Token Prediction) - vLLM</a></li>
+<li><a href="https://docs.vllm.ai/en/latest/design/model_runner_v2/">Model Runner V2 Design Document - vLLM</a></li>
 
-**标签**: `#AI`, `#funding`, `#Anthropic`, `#valuation`, `#OpenAI`
+</ul>
+</details>
+
+**标签**: `#vllm`, `#LLM serving`, `#deepseek`, `#model runner`, `#rust`
 
 ---
 
 <a id="item-2"></a>
-## [Anthropic 发布 Claude Opus 4.8，预告 Mythos 模型](https://www.anthropic.com/news/claude-opus-4-8) ⭐️ 8.0/10
+## [Anthropic 发布 Claude Opus 4.8，带来适度提升](https://www.anthropic.com/news/claude-opus-4-8) ⭐️ 9.0/10
 
-Anthropic 发布了 Claude Opus 4.8，相比上一代有适度但切实的提升，并宣布了 Project Glasswing，向部分组织预览用于网络安全的新 'Mythos 级' 模型。 此次发布表明 Anthropic 对其前沿模型进行持续的渐进式改进，而 Mythos 预览暗示了 AI 驱动网络安全的潜在突破，但安全问题推迟了其公开发布。 Opus 4.8 允许用户在网页界面中关闭自适应思考功能，这是社区所要求的功能。Mythos 预览版在用户指示下能够识别并利用主要操作系统和 Web 浏览器中的零日漏洞。
+Anthropic 发布了旗舰大语言模型的新版本 Claude Opus 4.8，相较于前代 Opus 4.7 带来了适度但可感知的提升。 此次发布延续了 Anthropic 对 Opus 模型的稳步增量改进，社区基准测试显示它在复杂编码任务（如构建即时战略游戏）中表现出色。此外，在网页界面中禁用自适应思考的功能解决了用户的痛点，提升了实际可用性。 Claude Opus 4.8 是 Opus 4.5 系列中的第三个次版本号更新（继 4.6 和 4.7 之后）。用户已验证，现在可以在网页界面中关闭自适应思考，这是许多人一直要求的功能。
 
 hackernews · craigmart · 5月28日 16:49 · [社区讨论](https://news.ycombinator.com/item?id=48311647)
 
-**背景**: Anthropic 的 Claude 模型家族包括 Sonnet 和 Opus 等层级，其中 Opus 是旗舰型号。Opus 4.5 系列已经历多次小版本更新（4.6、4.7、4.8），带来适度提升。Project Glasswing 是一项利用先进 AI 保护关键软件基础设施的网络安全计划，Mythos 是一个新的、能力更强但尚未公开发布的前沿模型。
+**背景**: Claude 是 Anthropic 开发的一系列大语言模型，于 2023 年 3 月首次发布。Opus 是 Anthropic 能力最强的模型层级，旨在处理复杂推理、编码和创意任务。4.5 子系列引入了重大能力飞跃，后续版本（4.6、4.7、4.8）则专注于增量改进。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.anthropic.com/glasswing">Project Glasswing : Securing critical software for the AI era \ Anthropic</a></li>
-<li><a href="https://www.bbc.com/news/articles/crk1py1jgzko">What is Anthopic's Claude Mythos and what risks does it pose?</a></li>
-<li><a href="https://red.anthropic.com/2026/mythos-preview/">Claude Mythos Preview \ red.anthropic.com</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Claude_(language_model)">Claude (language model ) - Wikipedia</a></li>
+<li><a href="https://claude.com/product/overview">The AI for Problem Solvers | Claude by Anthropic</a></li>
+<li><a href="https://www.anthropic.com/news/claude-opus-4-6">Claude Opus 4.6 \ Anthropic</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论褒贬不一：一些人欣赏适度改进和关闭自适应思考的能力，而另一些人则批评能力提升速度缓慢。人们对 Mythos 模型感到兴奋，但也对其安全性影响表示担忧。
+**社区讨论**: 社区成员报告了 Opus 4.8 在编码基准测试中的积极结果，一位用户指出它创造的功能性即时战略游戏优于以往任何模型。另一位用户对能够关闭自适应思考表示赞赏，因为该功能之前曾导致输出不一致。一些评论者指出，这是第三次次版本号更新，但没有带来戏剧性的改进，与早期重大飞跃形成对比。
 
-**标签**: `#AI`, `#Anthropic`, `#Claude`, `#model release`, `#Project Glasswing`
+**标签**: `#AI`, `#machine learning`, `#Anthropic`, `#Claude`, `#LLM`
 
 ---
 
 <a id="item-3"></a>
-## [Postgres 上的持久化工作流方案引发热议](https://www.dbos.dev/blog/postgres-is-all-you-need-for-durable-execution) ⭐️ 8.0/10
+## [印度高考阅卷系统被发现多项安全漏洞](https://ni5arga.com/blog/posts/hacking-cbse/) ⭐️ 9.0/10
 
-一篇博客文章探讨了如何在 Postgres 上构建持久化工作流，引发了社区对 DBOS、Temporal、River 以及 Armin Ronacher 的 absurd 实现的比较讨论。 这场讨论帮助开发者在利用 Postgres 作为基础的情况下，选择正确的持久化工作流方案，平衡简易性、可扩展性和成本。 DBOS 需要付费组件 Conductor 来实现扩展和恢复；River 的免费版本不支持死信队列；absurd 是 Flask 创建者 Armin Ronacher 提出的仅基于 Postgres 的简单实现。
+一名安全研究人员披露了印度 CBSE 高考网上阅卷系统的严重漏洞，包括硬编码密码和客户端 OTP 校验，该问题于 2026 年 2 月向 CERT-In 报告。 这些漏洞可能使攻击者接管阅卷员账户，查看并修改考试成绩，从而影响数百万学生的成绩。这暴露了国家教育技术系统的严重安全缺陷。 研究人员在 CBSE 否认问题后提供了截图和录屏等证据。此外，在系统下线前还发现了 SQL 注入漏洞。
 
-hackernews · KraftyOne · 5月28日 18:41 · [社区讨论](https://news.ycombinator.com/item?id=48313530)
+telegram · zaihuapd · 5月29日 05:52
 
-**背景**: 持久化工作流确保一系列步骤在发生故障时也能恰好执行一次。传统的 Temporal 等方案需要独立服务，而 DBOS、River 和 absurd 等较新的工具则直接将持久化能力嵌入 Postgres，简化了技术栈。
+**背景**: 客户端 OTP 校验意味着一次性密码在用户浏览器端而非服务器端验证，攻击者可绕过认证。硬编码密码是嵌入在源代码中的静态凭据，一旦被发现即可轻松实现未授权访问。这些都是常见的 Web 应用安全漏洞。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://lucumr.pocoo.org/2025/11/3/absurd-workflows/">Absurd Workflows: Durable Execution With Just Postgres | Armin Ronacher's Thoughts and Writings</a></li>
-<li><a href="https://riverqueue.com/">River - Fast, reliable background jobs in Go</a></li>
-<li><a href="https://www.dbos.dev/">DBOS | Durable Workflow Orchestration</a></li>
+<li><a href="https://en.wikipedia.org/wiki/One-time_password">One - time password - Wikipedia</a></li>
+<li><a href="https://owasp.org/www-community/vulnerabilities/Use_of_hard-coded_password">Use of hard-coded password | OWASP Foundation</a></li>
+<li><a href="https://valencynetworks.com/kb/resolve-client-side-otp-validation-bypass-vulnerability.html">Resolve Client Side otp Validation Bypass Vulnerability</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区成员分享了他们的经验和担忧：有用户认为 DBOS 的付费扩展功能令人无法接受；有人指出 River 缺少死信队列是一个陷阱；其他人则称赞 absurd 的简洁性，并表示希望在实际应用中对这些工具进行比较。
-
-**标签**: `#postgres`, `#durable workflows`, `#queue processing`, `#temporal`, `#software engineering`
+**标签**: `#security`, `#vulnerabilities`, `#web application security`, `#education technology`, `#India`
 
 ---
 
 <a id="item-4"></a>
-## [YouTube 自动标注 AI 生成视频](https://blog.youtube/news-and-events/improving-ai-labels-viewers-creators/) ⭐️ 8.0/10
+## [蓝色起源新格伦火箭静态点火爆炸，重创 NASA 登月计划](https://arstechnica.com/space/2026/05/blue-origins-new-glenn-rocket-just-exploded-during-a-static-fire-test/) ⭐️ 9.0/10
 
-YouTube 已开始使用自动检测系统来标注 AI 生成和合成内容，要求创作者披露此类材料，否则平台将自动添加标签。 这项政策意义重大，因为它提高了观众透明度，帮助识别潜在的误导性 AI 内容，并为其他平台监管合成媒体树立了先例。 自动标签适用于逼真描绘从未发生事件或人物的视频，创作者可对错误标签提出申诉；该功能最初在移动设备和平板设备上推出。
+2026 年 5 月 28 日晚，蓝色起源公司的新格伦重型火箭在佛罗里达州卡纳维拉尔角 36 号发射台进行静态点火测试时发生爆炸，火箭全毁，发射台受损。 此次事故严重延误了蓝色起源的复飞计划，并威胁到 NASA 的阿尔忒弥斯计划——该计划依赖新格伦火箭执行月球着陆器和月球车发射任务。 爆炸源于一级火箭的七台 BE-4 甲烷发动机点火过程出现异常，导致火箭完全报废，发射台的闪电防护塔部分倒塌。所幸无人员伤亡。
 
-hackernews · nopg · 5月27日 20:00 · [社区讨论](https://news.ycombinator.com/item?id=48299753)
+telegram · zaihuapd · 5月29日 11:08
 
-**背景**: 2025 年 3 月，YouTube 推出政策要求创作者披露其内容是否经过修改或合成，包括 AI 生成材料，标签会显示在视频描述中。现在，YouTube 正在扩展这一政策，通过自动检测来捕捉未披露的 AI 内容，其技术类似于第三方 AI 视频检测工具。
+**背景**: 新格伦是蓝色起源研发的重型火箭，采用七台燃烧液化甲烷的 BE-4 发动机。该火箭计划用于商业卫星发射（如亚马逊的 Project Kuiper）和 NASA 月球任务。静态点火测试是飞行前验证发动机和火箭系统状态的标准流程。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://blog.youtube/news-and-events/disclosing-ai-generated-content/">How we're helping creators disclose altered or synthetic content - YouTube Blog</a></li>
-<li><a href="https://support.google.com/youtube/answer/14328491?hl=en&co=GENIE.Platform=Android">Disclosing use of altered or synthetic content - Android - YouTube Help</a></li>
-<li><a href="https://www.plataformamedia.com/en/2026/05/27/youtube-automatic-ai-detection-content-labeling/">YouTube begins automatically labeling AI-generated content</a></li>
+<li><a href="https://en.wikipedia.org/wiki/BE-4">BE-4 - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者普遍欢迎这一举措，指出儿童和老年人等弱势群体经常受到 AI 生成内容的侵害，且目前的披露信息难以查找。有人质疑标签是否会应用于 AI 音乐，并对自动检测的有效性表示怀疑。
+**社区讨论**: 评论者表达了震惊和同情，有人提到 BBC 视频显示火箭一侧在主爆炸前先解体。许多评论猜测可能的原因，如操作失误或制造缺陷，并指出发射台损坏严重，预计修复时间超过一年。还有评论强调这对 NASA 月球计划的打击。
 
-**标签**: `#AI`, `#YouTube`, `#Content Moderation`, `#Platform Policy`, `#Digital Media`
+**标签**: `#火箭爆炸`, `#蓝色起源`, `#新格伦`, `#NASA`, `#阿尔忒弥斯`
 
 ---
 
 <a id="item-5"></a>
-## [SQLite 的 AGENTS.md 明确拒绝 AI 代理代码贡献](https://simonwillison.net/2026/May/27/sqlite-agents/#atom-everything) ⭐️ 8.0/10
+## [大众汽车通过 OAuth 客户端断言阻止 Home Assistant 集成](https://github.com/robinostlund/homeassistant-volkswagencarnet/issues/967) ⭐️ 8.0/10
 
-SQLite 新增了一个 AGENTS.md 文件，明确声明不接受代理生成的代码，并删除了“目前”一词以加强拒绝力度。同时，该项目将 AI 生成的错误报告分流到独立论坛，以应对数量激增。 这标志着主流开源项目首次明确反对 AI 代理贡献的政策声明，为其他项目树立了先例。它凸显了 AI 辅助开发与传统开源治理之间日益增长的矛盾。 AGENTS.md 指出，SQLite 不接受未经事先协议和法律文件的拉取请求，但人类开发者可以审查概念验证补丁。代理提交的包含可复现测试用例的错误报告仍被接受，新的 SQLite Bug 论坛专门处理 AI 生成的提交。
+大众汽车更新了其 carnet API，要求使用客户端断言（一种 OAuth 2.0 身份验证机制），从而有效阻止了 Home Assistant 等第三方集成。 此举限制了用户对自己车辆数据的访问，引发了对企业锁定的担忧，并可能违背欧盟数据法案的精神。它影响了开源智能家居社区，并凸显了制造商与用户数据权利之间的持续紧张关系。 这一变更需要客户端断言令牌，而 Home Assistant 的开源集成在没有官方凭证的情况下无法获取。其他汽车制造商如比亚迪也采取了类似行动，发出了 DMCA 删除通知。
 
-rss · Simon Willison · 5月27日 23:44
+hackernews · Kwastie · 5月29日 05:45 · [社区讨论](https://news.ycombinator.com/item?id=48319509)
 
-**背景**: 代理编码是指 AI 系统自主进行规划、编写、测试和修改代码，几乎无需人工干预。像 SQLite 这样依赖人工精工和严格许可的开源项目，面临着 AI 代理可能产生低质量或法律模糊贡献的挑战。目前许多项目正在制定明确的 AI 贡献政策。
+**背景**: Home Assistant 是一个开源家庭自动化平台，通过 API 与各种设备（包括车辆）集成。OAuth 2.0 客户端断言是一种安全的身份验证方法，客户端使用签名的 JWT 证明其身份，通常需要汽车制造商控制的客户端密钥或证书。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://cloud.google.com/discover/what-is-agentic-coding">What is agentic coding? How it works and use cases | Google Cloud</a></li>
-<li><a href="https://www.ibm.com/think/topics/agentic-coding">What is Agentic Coding? | IBM</a></li>
-<li><a href="https://www.linuxfoundation.org/blog/todo-group-launches-new-working-group-on-agentic-ai-to-empower-open-source-program-offices">TODO Group Launches New Working Group on Agentic AI to...</a></li>
+<li><a href="https://blog.logto.io/client-assertion-in-client-authn">What is client assertion in OAuth 2.0 client authentication? · Logto blog</a></li>
+<li><a href="https://datatracker.ietf.org/doc/html/rfc7521">RFC 7521 - Assertion Framework for OAuth 2.0 Client Authentication and Authorization Grants</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 该消息由 Alex Garcia 在 Datasette Discord 上分享，可能引发了讨论。考虑到 SQLite 论坛将 AI 错误报告分流，社区情绪似乎喜忧参半——一些人赞赏政策清晰，另一些人可能认为过于严格。
+**社区讨论**: 社区成员表达了不满，并指出欧盟数据法案可能适用，一些人还提到了其他制造商的类似行为。他们质疑这一做法的商业合理性，认为它伤害了忠实客户且带来的收入收益微乎其微。
 
-**标签**: `#sqlite`, `#open-source policy`, `#AI-generated code`, `#software engineering`, `#agent contributions`
+**标签**: `#Volkswagen`, `#Home Assistant`, `#IoT`, `#Data Access`, `#Open Source`
 
 ---
 
 <a id="item-6"></a>
-## [Willison 称 Anthropic 与 OpenAI 已找到产品市场匹配](https://simonwillison.net/2026/May/27/product-market-fit/#atom-everything) ⭐️ 8.0/10
+## [汽车收集并出售驾驶员数据，隐私风险升级](https://www.bbc.com/future/article/20260513-your-car-is-spying-on-you-its-about-to-get-worse) ⭐️ 8.0/10
 
-Simon Willison 认为，Anthropic 和 OpenAI 已实现产品市场匹配，理由包括 Anthropic 即将首次盈利的传闻以及企业对高昂 LLM API 账单的惊讶。 这表明 AI 公司正从试验阶段转向可持续收入模式，企业客户愿意为编码代理支付全额 API 价格，验证了商业模式的可行性。 Anthropic 和 OpenAI 已将企业计划改为按席位加 API 定价，使得重度使用成本高昂；Willison 估算其个人使用量按 API 定价需 2180 美元，而他仅支付 200 美元订阅费。
+BBC 一篇报道指出，现代汽车广泛收集位置、速度和驾驶行为等远程信息处理数据，汽车制造商常将这些数据出售给 Verisk 等数据经纪商，且通常未获得用户的明确同意。 这种做法使数百万驾驶员面临监视和个人数据被滥用的风险，但与数据销售利润相比，法律处罚微不足道，凸显了隐私监管方面的重大漏洞。 例如，现代每辆车从 Verisk 获得 61 美分，本田获得 26 美分，而通用汽车通过数据销售赚取 2000 万美元，却仅在加州面临 1275 万美元罚款——这是 CCPA 有史以来最高的处罚。
 
-rss · Simon Willison · 5月27日 16:38
+hackernews · 1vuio0pswjnm7 · 5月29日 03:01 · [社区讨论](https://news.ycombinator.com/item?id=48318481)
 
-**背景**: 产品市场匹配指产品满足强劲市场需求。Anthropic 的 Claude Code 和 OpenAI 的 Codex 是开发者使用的 AI 编码代理。企业计划转向基于 API 的定价反映了使用量的增长和付费意愿。
+**背景**: 远程信息处理是指汽车中收集和传输有关车辆运行和驾驶员行为数据的技术。汽车制造商通常未经驾驶员明确同意就与第三方经纪商共享这些数据，这些数据可用于保险评级、定向广告或出售给其他公司。内置蜂窝连接和传感器已成为现代汽车的标准配置，这进一步促进了数据收集。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Claude_Code">Claude Code</a></li>
-<li><a href="https://claude.com/product/claude-code">Claude Code by Anthropic | AI Coding Agent, Terminal, IDE</a></li>
+<li><a href="https://neworleanscitybusiness.com/blog/2025/11/06/modern-cars-driver-data-privacy/">One Tech Tip: Modern cars are spying on... | New Orleans CityBusiness</a></li>
+<li><a href="https://www.theglobeandmail.com/drive/technology/article-what-kind-of-data-is-my-new-car-collecting-about-me-nearly-everything/">What kind of data is my new car collecting ... - The Globe and Mail</a></li>
+<li><a href="https://blog.usro.net/2024/10/why-your-car-is-spying-on-you-a-look-at-modern-telematics-and-privacy/">Why Your Car Is Spying on You: A Look at Modern Telematics and...</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI Industry`, `#Product-Market Fit`, `#Anthropic`, `#OpenAI`, `#LLM Economics`
+**社区讨论**: 评论对汽车制造商缺乏后果表示不满，一位用户指出数据销售的财务回报远超处罚。另一位建议 CEO 们应公开分享自己的驾驶数据，还有人讨论移除蜂窝芯片或购买不带联网功能的汽车等技术解决方案。
+
+**标签**: `#privacy`, `#data collection`, `#automotive`, `#surveillance`, `#consumer rights`
 
 ---
 
 <a id="item-7"></a>
-## [黄仁勋：英伟达已基本放弃中国 AI 芯片市场](https://t.me/zaihuapd/41609) ⭐️ 8.0/10
+## [GitHub 因发布 Windows 零日漏洞封禁安全研究员](https://www.tomshardware.com/tech-industry/cyber-security/microsofts-github-bans-security-researcher-who-posted-zero-day-windows-exploits-because-company-ruined-their-life-expert-claims-action-is-vindictive-and-promises-further-retaliation) ⭐️ 8.0/10
 
-英伟达 CEO 黄仁勋表示，受美国出口管制影响，公司已基本放弃中国 AI 芯片市场，将其让给华为等本土厂商。他告知投资者不要对获得在华销售先进芯片的许可抱有任何期望。 这标志着全球 AI 芯片格局的重大转变——中国曾是英伟达的重要收入来源，其退出将强化华为等本土厂商的地位，也凸显了中美技术脱钩对半导体行业日益加深的影响。 中国市场此前占英伟达数据中心收入至少 20%。2025 年 4 月，特朗普政府要求对华芯片出口取得许可证，实质上禁止了英伟达 H20 等先进芯片。英伟达现正专注于供应链扩张和 800 亿美元的股票回购计划。
+GitHub 封禁了一名安全研究员，原因是他发布了 Windows 零日漏洞，这违反了服务条款。该研究员此前曾向微软报告了这些漏洞，但未获得任何补偿。 这一事件凸显了安全研究员与平台之间在负责任披露政策上的持续紧张关系，可能打击道德黑客的积极性。同时，它也引发了对漏洞奖励计划公平性和平台审查制度的质疑。 研究员的身份未公开，他在微软未承认其发现或支付报酬后发布了漏洞利用代码。微软旗下的 GitHub 封禁了该研究员，据报道 GitLab 也采取了类似行动。
 
-telegram · zaihuapd · 5月28日 03:03
+hackernews · possibilistic · 5月28日 21:45 · [社区讨论](https://news.ycombinator.com/item?id=48315968)
 
-**背景**: 自 2022 年 10 月起，美国对华实施先进 AI 芯片出口管制，最初禁止了英伟达 A100 和 H100。后续规则又针对了 H20 等性能较低的芯片。作为回应，华为等中国企业开发了自家 AI 芯片，如昇腾 910B 和 920，这些芯片越来越多地用于训练大模型。2026 年 2 月，智谱 AI 完全使用华为昇腾 910B 芯片和 MindSpore 框架训练了 GLM-5，展示了中国本土 AI 生态的成长能力。
+**背景**: 零日漏洞是指软件厂商未知的漏洞，对攻击者极具价值。漏洞奖励计划旨在激励研究人员负责任地报告此类缺陷，但关于披露和报酬的争议很常见。GitHub 的服务条款禁止在未满 30 天披露窗口期发布利用代码，但有争议的封禁可能会阻止白帽研究。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://www.tomshardware.com/pc-components/gpus/huawei-introduces-the-ascend-920-ai-chip-to-fill-the-void-left-by-nvidias-h20">Huawei introduces the Ascend 920 AI chip to fill the... | Tom's Hardware</a></li>
-<li><a href="https://thamizhelango.medium.com/mindspore-zhipu-ai-huawei-ascend-how-china-built-a-frontier-ai-model-without-a-single-nvidia-68403d92cedb">MindSpore, Zhipu AI & Huawei Ascend : How China Built... | Medium</a></li>
-<li><a href="https://www.rand.org/pubs/commentary/2025/02/deepseeks-lesson-america-needs-smarter-export-controls.html">DeepSeek's Lesson: America Needs Smarter Export Controls | RAND</a></li>
+**社区讨论**: 评论者对当前的漏洞奖励计划表示失望，一位用户分享了曾因报告漏洞而差点被逮捕的经历。另一位推测微软可能会后悔此次封禁，因为研究员可能会将漏洞出售给他人。一些人质疑 GitHub 和 GitLab 为何双双封禁该研究员，暗示可能违反了某些规则。
 
-</ul>
-</details>
-
-**标签**: `#Nvidia`, `#AI Chips`, `#Export Controls`, `#China`, `#Huawei`
+**标签**: `#security`, `#zero-day`, `#GitHub`, `#Microsoft`, `#bug bounty`
 
 ---
 
 <a id="item-8"></a>
-## [高通与字节跳动达成定制 AI 芯片合作](https://t.me/zaihuapd/41616) ⭐️ 8.0/10
+## [用 Postgres 实现持久化工作流：新范式](https://www.dbos.dev/blog/postgres-is-all-you-need-for-durable-execution) ⭐️ 8.0/10
 
-据报道，高通已与字节跳动就定制 AI ASIC 芯片达成合作，字节跳动计划采购数百万颗芯片以支持其 AI 服务。这笔合作还将帮助字节跳动将其内部芯片设计转化为可量产的半导体产品。 此次合作标志着字节跳动在 AI 基础设施上的重大投资，也凸显了高通向定制 AI 加速器领域的扩张。它可能加剧 AI 芯片供应商之间的竞争，并推动专用 ASIC 在大规模 AI 工作负载中的进一步采用。 该报道基于匿名消息来源，尚未得到高通或字节跳动的证实。高通此前曾在 4 月宣布，将于今年向某超大规模云服务商交付首款 ASIC。
+DBOS.dev 的一篇博客文章认为，仅使用 Postgres 就足以构建持久、可靠的工作流，挑战了像 Temporal 或 Cadence 等专用工作流引擎的必要性。 这种方法可以通过减少对外部工作流引擎的依赖来简化系统架构，利用许多组织已有的 Postgres 部署，并可能降低运营复杂性。 文章引用了 Armin Ronacher 的'absurd'项目作为 Postgres 上持久化工作流的一个实现，并讨论了在单一数据库中处理重试、退避、超时和版本控制等实际权衡。
 
-telegram · zaihuapd · 5月28日 07:09
+hackernews · KraftyOne · 5月28日 18:41 · [社区讨论](https://news.ycombinator.com/item?id=48313530)
 
-**背景**: 专用集成电路（ASIC）是为特定任务设计的定制芯片，相比通用 CPU 或 GPU，在性能和能效上具有优势。在 AI 领域，ASIC 越来越多地用于加速推理和训练，前沿设计常采用 4nm 或 3nm 等先进制程。字节跳动作为 TikTok 的母公司，运营着需要海量计算资源的大型 AI 服务，因此定制 ASIC 成为一种有吸引力的选择。
+**背景**: 持久化工作流是跨故障维护执行状态的系统，通常使用专用工作流引擎实现。Postgres 是一个成熟的关系型数据库，具有强大的事务保证，并支持诸如咨询锁和 LISTEN/NOTIFY 等功能，使其成为工作流编排的潜在平台。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.arm.com/glossary/asic">What is ASIC? - ASIC Cost</a></li>
-<li><a href="https://tspasemiconductor.substack.com/p/the-rise-of-asic-custom-chips-becoming">The Rise of ASIC: Custom Chips Becoming a Key Trend</a></li>
-<li><a href="https://www.marvell.com/products/custom-asic.html">Custom ASICs | Pushing the boundaries of AI with advanced silicon technologies and custom multi-chip systems - Marvell</a></li>
+<li><a href="https://www.linkedin.com/pulse/developers-guide-durable-workflow-execution-shubhanshu-singh-cdauc">The Developer's Guide to Durable Workflow Execution</a></li>
+<li><a href="https://docs.hatchet.run/v1/durable-workflows-overview">Durable Workflows - Hatchet Documentation</a></li>
+<li><a href="https://github.com/meirwah/awesome-workflow-engines">GitHub - meirwah/awesome- workflow - engines : A curated list of...</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI hardware`, `#ASIC`, `#Qualcomm`, `#ByteDance`, `#semiconductors`
+**社区讨论**: 评论者提到了与 Armin Ronacher 的'absurd'的比较，分享了使用 DBOS.dev、Restate.dev 和 Cloudflare Workflows 的经验，并担心从 Postgres 开始工作流最终可能导致重新实现专用工作流系统中已有的功能。
+
+**标签**: `#postgresql`, `#workflows`, `#durability`, `#distributed-systems`, `#software-architecture`
 
 ---
 
 <a id="item-9"></a>
-## [索尼 Bravia 9 II 和 7 II 采用独立 RGB LED 背光](https://www.flatpanelshd.com/news.php?subaction=showfull&amp;id=1779897602) ⭐️ 8.0/10
+## [SQLite 通过新 AGENTS.md 政策拒绝 AI 生成代码](https://simonwillison.net/2026/May/27/sqlite-agents/#atom-everything) ⭐️ 8.0/10
 
-索尼发布了 Bravia 9 II 和 Bravia 7 II，这是首批采用独立红绿蓝（RGB）LED 背光技术（称为“True RGB”）的消费电视，峰值亮度接近 4000 尼特，色域覆盖超过 90%的 BT.2020 标准。 这一突破将 Mini LED 的亮度与 OLED 的色彩纯度相结合，提供卓越的色彩体积和准确性，可能为高端液晶电视树立新标准，并对 Mini LED 和 OLED 技术构成挑战。 新电视提供 50 至 115 英寸的尺寸选择，其中 115 英寸型号是索尼有史以来最大的电视。不过，高端机型仍只配备两个 HDMI 2.1 接口，且不支持杜比视界 2.0。
+SQLite 在其仓库中新增了 AGENTS.md 文件，明确表示不接受“代理生成的代码”（即 AI 生成的贡献），但欢迎 AI 代理提交错误报告和文档补丁。政策通过删除“（目前）”一词得到强化。 由于 SQLite 是数十亿设备中使用的基础数据库引擎，这一政策为关键开源项目如何管理 AI 生成贡献的涌入树立了先例。它凸显了 AI 代理的效率提升与人类监督及代码质量需求之间的张力。 AGENTS.md 文件还指出，SQLite 不接受未经事先同意且没有将贡献置于公共领域的法律文书的拉取请求。此外，由于 AI 生成的错误报告过多，SQLite 论坛已被淹没，因此创建了单独的“SQLite Bug 论坛”来处理这些问题，D. Richard Hipp 正在积极解决其中的问题。
 
-telegram · zaihuapd · 5月28日 12:15
+rss · Simon Willison · 5月27日 23:44
 
-**背景**: 传统液晶电视使用白色 LED 背光和彩色滤光片，而 Mini LED 背光改善了局部调光但仍使用白光 LED。独立 RGB LED 背光使用独立的红、绿、蓝 LED 直接控制色彩，从而获得更纯净的颜色和更宽的色域。索尼早在 2004 年就在 QUALIA 005 上尝试了这项技术，但成本高昂且小众。新的'True RGB'系统旨在将这项技术带入主流消费电视。
+**背景**: AGENTS.md 是某些项目用于为 AI 编码代理提供特定指令的文件，类似于 Codex 等工具的自定义指令。它定义了代理可以接受的贡献类型。SQLite 的 AGENTS.md 明确禁止代理编写的任何代码，但允许错误报告和文档补丁，这反映了在关键基础设施中对 AI 生成代码的谨慎态度。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.ascension6.com/article/122.html">【新葡京】密度 LED 显示系统值得等待！ 新葡京网上赌场索尼 RGB ...</a></li>
-<li><a href="https://tieba.baidu.com/p/5946775886">有大佬解释下 BT .709和 2020 吗【电视吧】_百度贴吧</a></li>
+<li><a href="https://simonwillison.net/2026/May/27/sqlite-agents/">sqlite AGENTS . md | Simon Willison’s Weblog</a></li>
+<li><a href="https://agents.md/">AGENTS . md</a></li>
 
 </ul>
 </details>
 
-**标签**: `#display technology`, `#TV`, `#Sony`, `#consumer electronics`, `#backlight`
+**社区讨论**: 该消息在 Datasette Discord 上被讨论，由 Alex Garcia 分享。虽然没有提供详细内容，但总体情绪似乎支持 SQLite 的明确政策，并认识到开源项目中 AI 生成噪音日益增长的挑战。
+
+**标签**: `#sqlite`, `#open-source`, `#AI-agents`, `#policy`, `#software-engineering`
 
 ---
 
 <a id="item-10"></a>
-## [比亚迪发布 4nm 智驾芯片璇玑 A3](https://finance.sina.com.cn/roll/2026-05-28/doc-inhznenn1371824.shtml) ⭐️ 8.0/10
+## [Anthropic 和 OpenAI 找到了产品市场契合点](https://simonwillison.net/2026/May/27/product-market-fit/#atom-everything) ⭐️ 8.0/10
 
-比亚迪于 2026 年 5 月 28 日在“敢为”智能化战略发布会上发布了 4nm 智驾芯片“璇玑 A3”。该芯片已开启规模化量产，支持 L3 和 L4 自动驾驶，三颗芯片总算力超过 2100 TOPS。 此次发布标志着比亚迪在辅助驾驶硬件上实现全链条掌控，顺应了中国车企自研芯片的趋势。它可能加速 L3/L4 自动驾驶在量产车中的普及，并加剧电动车芯片领域的竞争。 每颗璇玑 A3 芯片提供 700 TOPS 算力，结合比亚迪自研算法，算力利用率声称提升一倍。比亚迪还透露已推出 2000 多款芯片产品，并拥有五座晶圆工厂。
+据传 Anthropic 即将迎来首个盈利季度，且 Anthropic 和 OpenAI 均已将企业定价改为基于 API 使用量，导致部分公司 LLM 费用迅速上升。 这表明大语言模型已实现可持续的产品市场契合，验证了 AI 实验室的商业模式，并说明企业采用正在加速。 Anthropic 于 2025 年 11 月将企业计划改为每位用户每月 20 美元加上 API 定价，OpenAI 于 2026 年 4 月 2 日做出类似调整，将 Codex 定价与 token 使用量对齐。
 
-telegram · zaihuapd · 5月28日 13:01
+rss · Simon Willison · 5月27日 16:38
 
-**背景**: 自动驾驶芯片是处理传感器数据和决策的专用处理器。TOPS（每秒万亿次操作）衡量芯片性能，更高的 TOPS 可实现更高级的驾驶辅助功能。作为中国领先的电动车制造商，比亚迪一直在大力投资垂直整合，包括芯片设计，以减少对外部供应商的依赖。
+**背景**: 产品市场契合（PMF）指产品满足强大市场需求，通常体现在盈利和客户支出增长上。Anthropic（Claude）和 OpenAI（ChatGPT/Codex）等 LLM 公司此前提供订阅制固定费用计划，但现在根据实际 token 使用量向企业客户收费，导致重度用户账单增加。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://cnevpost.com/2026/05/28/byd-unveils-4nm-smart-driving-chip-xuanji-a3/">BYD unveils 4nm smart driving chip , deepening vertical... - CnEVPost</a></li>
-<li><a href="https://electrek.co/2026/05/28/byd-reveals-chinas-first-in-house-4nm-smart-driving-chip/">BYD reveals China's first in-house 4nm smart driving chip</a></li>
-<li><a href="https://thenextweb.com/news/byd-has-built-chinas-first-4nm-driving-chip-and-its-putting-lidar-on-a-10000-car">BYD unveils China's first 4nm driving chip and expands God's Eye</a></li>
+<li><a href="https://claude.com/product/claude-code">Claude Code by Anthropic | AI Coding Agent, Terminal, IDE</a></li>
+<li><a href="https://www.anthropic.com/claude-code">Claude Code : Deep Coding at Terminal Velocity \ Anthropic</a></li>
 
 </ul>
 </details>
 
-**标签**: `#BYD`, `#autonomous driving`, `#chip`, `#semiconductor`, `#AI`
+**标签**: `#AI`, `#LLMs`, `#product-market fit`, `#Anthropic`, `#OpenAI`
 
 ---
 
 <a id="item-11"></a>
-## [美国司法部要求 Reddit 和 X 提供匿名批评 ICE 用户信息](https://www.bloomberg.com/news/articles/2026-05-28/trump-s-doj-ramps-up-probes-of-anonymous-ice-critics-with-x-reddit-subpoenas) ⭐️ 8.0/10
+## [Anthropic 估值达 9650 亿美元，超越 OpenAI](https://www.nytimes.com/2026/05/28/technology/anthropic-tops-openai-valuation.html) ⭐️ 8.0/10
 
-美国司法部已向 Reddit 和 X 发出传票，要求提供至少两名匿名用户的真实姓名、住址和银行信息，这些用户曾批评 ICE，传票已从行政传唤升级为大陪审团传票。 此举威胁到网络匿名和言论自由，因其针对政府批评者，可能抑制异议。同时引发对政府过度干预以及对匿名网络用户扩大使用大陪审团传票的担忧。 传票已升级为大陪审团传票，表明涉及刑事调查，但用户尚未被告知具体罪名。用户已聘请律师在法庭上挑战传票，法官正在审理撤销传票的动议。
+Anthropic 完成了 650 亿美元的融资，投后估值达到 9650 亿美元，超过了 OpenAI 约 8520 亿美元的估值。 这标志着 AI 初创公司估值领导地位的重大转变，表明投资者对 Anthropic 的技术和商业潜力有强烈信心，并加剧了 AI 行业的竞争。 Anthropic 的核心产品是 Claude 系列 AI 模型，这笔巨额融资将用于算力、模型训练和商业化扩张。
 
-telegram · zaihuapd · 5月28日 14:22
+telegram · zaihuapd · 5月29日 03:29
 
-**背景**: 在美国法律中，行政传唤由联邦机构发出，无需法院批准；而大陪审团传票则作为刑事调查的一部分发出，通常更难挑战。从行政传唤升级为大陪审团传票，表明司法部打算对匿名批评者提起刑事指控。该案正由联邦法官审理，将决定是否撤销传票。
+**背景**: Anthropic 是由前 OpenAI 员工创立的 AI 安全初创公司，以 Claude 聊天机器人闻名。OpenAI 是 GPT-4 和 ChatGPT 的创造者，此前是估值最高的 AI 初创公司。估值反映了市场对未来收入和技术领先地位的预期。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://theamericanroulette.com/news/justice-dept-john-brennan-subpoenas-html-2/">司 法 部周一急撤对布伦南 大 陪 审 团 传 票 上周刚踢掉资深检察官 换上 81...</a></li>
+**标签**: `#AI startups`, `#valuation`, `#Anthropic`, `#funding`
 
-</ul>
-</details>
+---
 
-**标签**: `#legal`, `#free speech`, `#subpoena`, `#Reddit`, `#ICE`
+<a id="item-12"></a>
+## [中国认证 9 款国产 AI 芯片用于政府采购](https://www.tomshardware.com/tech-industry/semiconductors/china-certifies-nine-domestic-ai-chips-for-government-procurement) ⭐️ 8.0/10
+
+这一政策转向推动中国半导体自主可控，减少对外国 AI 芯片如英伟达的依赖，影响全球供应链，并加速国产 AI 硬件发展。 认证芯片包括华为昇腾、阿里平头哥镇武、壁仞科技、海光等；寒武纪与百度昆仑芯未出现。该认证是政府和国有企业采购的前提条件。
+
+telegram · zaihuapd · 5月29日 08:41
+
+**背景**: “安可”（安全可控）采购目录是中国推动政务和国企领域采用国产 IT 设备的关键机制，旨在替代外国技术。此次将目录扩展至 AI 芯片，这些芯片对国家级 AI 战略和数据安全至关重要。
+
+**标签**: `#AI chips`, `#China`, `#government procurement`, `#semiconductors`, `#policy`
 
 ---
