@@ -5,257 +5,290 @@ date: 2026-05-31
 lang: zh
 ---
 
-> 从 36 条内容中筛选出 11 条重要资讯。
+> 从 36 条内容中筛选出 13 条重要资讯。
 
 ---
 
-1. [vLLM v0.22.0 发布：DeepSeek V4 成熟、MRv2 进展、Rust 前端](#item-1) ⭐️ 9.0/10
-2. [Anthropic 年化营收达 470 亿美元](#item-2) ⭐️ 9.0/10
-3. [蓝色起源新格伦火箭静态点火爆炸](#item-3) ⭐️ 9.0/10
-4. [领域专长是 AI 降低门槛后的真正护城河](#item-4) ⭐️ 8.0/10
-5. [深入解析复古渲染算法 Voxel Space](#item-5) ⭐️ 8.0/10
-6. [OpenRouter 获得 1.13 亿美元 B 轮融资，LLM 代理需求激增](#item-6) ⭐️ 8.0/10
-7. [Openrsync：OpenBSD 的 Clean-Room 版 Rsync 已用于 macOS 15.0](#item-7) ⭐️ 8.0/10
-8. [利奥首次通谕抨击技术弥赛亚主义](#item-8) ⭐️ 8.0/10
-9. [Anthropic 如何在多个产品中隔离 Claude](#item-9) ⭐️ 8.0/10
-10. [SpaceX 赢得 41.6 亿美元美军卫星导弹追踪合同](#item-10) ⭐️ 8.0/10
-11. [华为提出“韬定律”：以时间缩微替代几何缩微](#item-11) ⭐️ 8.0/10
+1. [vLLM v0.22.0 发布：DeepSeek V4 成熟、MRv2 进展、Rust 前端](#item-1) ⭐️ 8.0/10
+2. [领域专长依然是开发者的真正护城河](#item-2) ⭐️ 8.0/10
+3. [AV2 v1.0 规范发布，效率提升 20-30%](#item-3) ⭐️ 8.0/10
+4. [微软 Office 2019/2021 Mac 版将于 2026 年变为只读模式](#item-4) ⭐️ 8.0/10
+5. [请不要用“AI vibe”毁掉这个软件](#item-5) ⭐️ 8.0/10
+6. [埃森哲以 12 亿美元收购 Ookla 以增强网络 AI 能力](#item-6) ⭐️ 8.0/10
+7. [OpenBSD 发布新 rsync 实现 openrsync](#item-7) ⭐️ 8.0/10
+8. [Voxel Space：复古高度图渲染技术](#item-8) ⭐️ 8.0/10
+9. [Zig ELF 链接器实现快速增量链接](#item-9) ⭐️ 8.0/10
+10. [OpenRouter 完成 1.13 亿美元 B 轮融资](#item-10) ⭐️ 8.0/10
+11. [Anthropic 详解 Claude 跨产品沙箱技术](#item-11) ⭐️ 8.0/10
+12. [在浏览器中使用 Pyodide 和服务人员运行 Python ASGI 应用](#item-12) ⭐️ 8.0/10
+13. [FROST 攻击利用 SSD 计时窥探浏览活动](#item-13) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [vLLM v0.22.0 发布：DeepSeek V4 成熟、MRv2 进展、Rust 前端](https://github.com/vllm-project/vllm/releases/tag/v0.22.0) ⭐️ 9.0/10
+## [vLLM v0.22.0 发布：DeepSeek V4 成熟、MRv2 进展、Rust 前端](https://github.com/vllm-project/vllm/releases/tag/v0.22.0) ⭐️ 8.0/10
 
-vLLM v0.22.0 将 DeepSeek V4 作为成熟后端引入，包含专用包和 NVFP4 融合 MoE；推动模型运行器 V2（MRv2）成为默认运行器；并添加了实验性的 Rust 前端。 此版本显著增强了 vLLM 服务 DeepSeek V4 等最先进模型的能力，提升了性能和模块化程度，Rust 前端有望提高数据并行服务的效率。 该版本包含来自 230 位贡献者的 459 次提交，通过 Cutlass FP8 实现了批不变推理的 28.9% 端到端延迟改进，并引入了新的多层 KV 缓存卸载框架，将卸载范围扩展到 CPU 内存之外。
+vLLM v0.22.0 发布，包含来自 230 位贡献者的 459 次提交，对 DeepSeek V4 支持进行了重大加固，推动 Model Runner V2 成为默认选项，并增加了实验性的 Rust 前端。 此版本显著提高了 DeepSeek V4 等前沿模型的推理效率，通过 NVFP4 融合 MoE 和批次不变推理等功能实现了高达 28.9% 的延迟改进，惠及更广泛的 LLM 服务生态系统。 DeepSeek V4 获得了专用包、NVFP4 融合 MoE 支持、CUDA 图改进和 MTP 推测解码；Model Runner V2 获得了 Qwen3 稠密模型的选择器和休眠模式权重重载；Rust 前端增加了用于数据并行服务的 DP Supervisor。
 
 github · khluu · 5月29日 10:28
 
-**背景**: vLLM 是一个用于快速 LLM 推理和服务的开源库。模型运行器 V2（MRv2）是从头开始重新实现的模型运行器，旨在实现更简洁、更模块化的执行。Rust 前端是实验性的，旨在取代 Python 组件以获得更高性能。
+**背景**: vLLM 是一个用于大语言模型的高吞吐量、内存高效的推理和服务引擎。NVFP4 是一种用于量化的 4 位浮点格式。MTP（多令牌预测）是一种推测解码方法，其中目标模型本身预测多个令牌，无需单独的草稿模型。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://docs.vllm.ai/en/latest/design/model_runner_v2/">Model Runner V2 Design Document - vLLM</a></li>
-<li><a href="https://vllm.ai/blog/mrv2">Model Runner V2: A Modular and Faster Core for vLLM | vLLM Blog</a></li>
-<li><a href="https://api-docs.deepseek.com/news/news260424">DeepSeek V4 Preview Release | DeepSeek API Docs</a></li>
+<li><a href="https://docs.vllm.ai/en/latest/features/speculative_decoding/mtp/">MTP (Multi-Token Prediction) - vLLM</a></li>
+<li><a href="https://www.kad8.com/ai/megamoe-megakernel-architecture-optimizing-deepseek-v4-llm-performance/">MegaMoE MegaKernel Architecture: Optimizing DeepSeek-V4 LLM Performance · KAD</a></li>
+<li><a href="https://docs.vllm.ai/en/latest/api/vllm/model_executor/layers/fused_moe/experts/trtllm_nvfp4_moe/">trtllm_ nvfp 4 _ moe - vLLM</a></li>
 
 </ul>
 </details>
 
-**标签**: `#vLLM`, `#LLM inference`, `#DeepSeek V4`, `#Model Runner`, `#Rust`
+**标签**: `#vllm`, `#LLM inference`, `#DeepSeek`, `#Rust`, `#Model Runner`
 
 ---
 
 <a id="item-2"></a>
-## [Anthropic 年化营收达 470 亿美元](https://simonwillison.net/2026/May/29/anthropic/#atom-everything) ⭐️ 9.0/10
+## [领域专长依然是开发者的真正护城河](https://www.brethorsting.com/blog/2026/05/domain-expertise-has-always-been-the-real-moat/) ⭐️ 8.0/10
 
-Anthropic 在其 650 亿美元的 H 轮融资公告中表示，其年化营收在本月早些时候突破了 470 亿美元，高于 2026 年 4 月的 300 亿美元和 2025 年底的 90 亿美元。 这一爆炸性收入增长标志着一家领先人工智能公司的重要财务里程碑，表明市场采用强劲，且根据分析师的看法，其扩张速度在任何行业都史无前例。 年化营收是将最近一个月的收入乘以 12 得出的年化预测值；Anthropic 在之前的融资公告中也曾分享过此类数字，包括 2026 年 2 月的 140 亿美元。
+这一见解很重要，因为随着 AI 的发展，理解和验证领域特定需求的能力变得比原始编码能力更为关键。它改变了软件开发者的职业发展建议和招聘标准，使其更重视领域专长。 文章和社区评论强调，验证生成代码及其输出是否正确需要深厚的领域知识，而目前 AI 缺乏这一点。例如，金融管理系统和海洋数据应用需要多年的领域经验。
 
-rss · Simon Willison · 5月29日 01:23
+hackernews · aaronbrethorst · 5月30日 20:40 · [社区讨论](https://news.ycombinator.com/item?id=48340411)
 
-**背景**: 年化营收是高速增长公司用来年化当前收入的非 GAAP 指标，常见于私营公司的披露中。Anthropic 是一家领先的人工智能安全与研究公司，以其 Claude 模型系列闻名，并从 Google 和 Spark Capital 等投资者处筹集了大量资金。
+**社区讨论**: 社区普遍认同这一论点，并补充了领域专长证明其价值的个人实例。多位评论者指出，验证输出的能力与生成输出的能力是不同的，而将编码技能与领域知识结合会使开发者变得不可或缺。
 
-**社区讨论**: 一些观察者对 470 亿美元的数字表示怀疑，指出这些数据来自 Anthropic 自身。然而，作者认为，由于这些数字是作为融资轮次的一部分披露的，撒谎将构成证券欺诈，实际数字很可能会在即将提交的 IPO 招股说明书中得到验证。
-
-**标签**: `#Anthropic`, `#AI`, `#revenue`, `#business`, `#growth`
+**标签**: `#domain expertise`, `#software engineering`, `#AI`, `#developer skills`, `#competitive advantage`
 
 ---
 
 <a id="item-3"></a>
-## [蓝色起源新格伦火箭静态点火爆炸](https://arstechnica.com/space/2026/05/blue-origins-new-glenn-rocket-just-exploded-during-a-static-fire-test/) ⭐️ 9.0/10
+## [AV2 v1.0 规范发布，效率提升 20-30%](https://av2.aomedia.org/) ⭐️ 8.0/10
 
-2026 年 5 月 28 日，蓝色起源新格伦火箭在卡纳维拉尔角进行静态点火测试时发生爆炸，火箭全毁，发射台受损。事故发生原计划发射 48 颗亚马逊 Leo 卫星的 NG-4 任务准备阶段。 此次爆炸严重影响了蓝色起源的发射计划以及 NASA 阿尔忒弥斯计划，该计划依赖新格伦火箭运送月球着陆器和月球车。同时也推迟了亚马逊卫星互联网星座的部署。 火箭一级由七台 BE-4 甲烷发动机提供动力，点火过程中出现异常。爆炸摧毁了火箭两级并导致避雷塔倒塌，未造成人员伤亡。
+开放媒体联盟（AOMedia）发布了 AV2 视频编解码器的最终 v1.0 规范，声称压缩效率比 AV1 提升约 20-30%。 AV2 代表了下一代开源视频压缩技术，但由于需要专门的硬件和尚未解决的专利许可问题，实际部署预计要等到 2028 年左右。 目前的 AV2 参考编码器在良好硬件上运行速度约为每秒 1 帧，硬件加速芯片预计要到 2028 年才能问世，而流媒体广泛采用可能要等到 2030 年左右。
 
-telegram · zaihuapd · 5月29日 11:08
+hackernews · ksec · 5月30日 21:46 · [社区讨论](https://news.ycombinator.com/item?id=48340910)
 
-**背景**: 新格伦是蓝色起源开发的重型运载火箭，使用燃烧液氧和甲烷的 BE-4 发动机。该火箭旨在与 SpaceX 的猎鹰重型竞争，并支持 NASA 的阿尔忒弥斯计划。亚马逊的 Project Kuiper（现名 Amazon Leo）已与蓝色起源签约多次发射，以部署其宽带卫星星座。
+**背景**: 视频编解码器压缩数字视频以实现高效存储和流媒体传输。AV1 由 AOMedia 于 2018 年发布，已被广泛使用，但面临专利挑战。AV2 旨在以更好的压缩效率改进 AV1，但计算复杂度更高。硬件支持和法律明确性的时间表仍然是主要障碍。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/BE-4">BE-4 - Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Project_Kuiper">Project Kuiper</a></li>
+<li><a href="https://www.cnx-software.com/2025/11/21/aomedia-av2-open-video-codec-release-nears-delivers-around-40-bandwidth-reduction/">AOMedia AV 2 open video codec release nears... - CNX Software</a></li>
+<li><a href="https://www.fastpix.io/blog/av2-vs-av1-a-comprehensive-comparison-of-next-gen-video-codecs">AV 2 vs AV 1 : Next-Gen Video Codec Comparison</a></li>
 
 </ul>
 </details>
 
-**标签**: `#航天`, `#火箭爆炸`, `#蓝色起源`, `#NASA`, `#事故`
+**社区讨论**: 社区评论持谨慎乐观态度：虽然效率提升显著，但许多人指出实际应用的时间线很长（硬件约 2028 年，主流约 2030 年）以及潜在的专利诉讼。一些人对 AVIF 图像格式的改进感兴趣，而另一些人则对“免版税”的说法表示怀疑，因为围绕 AV1 的诉讼仍在进行。
+
+**标签**: `#video codec`, `#AV2`, `#compression`, `#open standards`, `#patent licensing`
 
 ---
 
 <a id="item-4"></a>
-## [领域专长是 AI 降低门槛后的真正护城河](https://www.brethorsting.com/blog/2026/05/domain-expertise-has-always-been-the-real-moat/) ⭐️ 8.0/10
+## [微软 Office 2019/2021 Mac 版将于 2026 年变为只读模式](https://consumerrights.wiki/w/Microsoft_Office_2019_and_2021_for_Mac_view-only_conversion_(2026)) ⭐️ 8.0/10
 
-一篇博客文章指出，随着 AI 工具（如“vibe coding”）降低技术门槛，领域专长而非技术技能才是软件开发中持久的竞争优势。 这一观点重新定义了 AI 对软件工程影响的讨论，表明深刻理解自身领域的专业人士将蓬勃发展，而仅依赖技术技能的人可能面临风险。 文章强调，随着 AI 自动化编程，定义问题、验证输出以及整合领域知识的能力变得更加关键，使领域专长成为最终的护城河。
+微软计划在 2026 年将 Office 2019 和 2021 for Mac 的永久许可证转换为只读模式，用户若无订阅将无法编辑文档。 这一变化削弱了被宣传为一次性购买的永久许可证的价值，可能违反多个国家的消费者权益法，并促使用户转向 Microsoft 365 订阅。 该转换仅适用于 Office 2019 和 2021 的 Mac 版本；只读模式允许打开和打印文件，但不能编辑。具体强制执行日期预计在 2026 年。
 
-hackernews · aaronbrethorst · 5月30日 20:40 · [社区讨论](https://news.ycombinator.com/item?id=48340411)
+hackernews · antipurist · 5月30日 23:26 · [社区讨论](https://news.ycombinator.com/item?id=48341578)
 
-**背景**: “Vibe coding”一词由 Andrej Karpathy 于 2025 年 2 月创造，指开发者用自然语言描述项目并接受 AI 生成代码而无需深入审查的 AI 辅助编程方式。这一趋势降低了软件创作的门槛，但批评者警告存在可维护性和安全风险。领域专长——对特定领域的专业知识——使开发者能够设计出有用且可靠的系统，这是单纯的 AI 生成所无法替代的。
+**背景**: 永久许可证是一种一次性购买，传统上允许无限期使用软件。微软一直在推广其基于订阅的 Microsoft 365 服务。只读模式是一种许可证强制执行机制，当检测不到有效许可证时会限制功能。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Vibe_coding">Vibe coding</a></li>
-<li><a href="https://grokipedia.com/page/Vibe_coding">Vibe coding</a></li>
+<li><a href="https://learn.microsoft.com/en-us/microsoft-365-apps/licensing-activation/overview-viewer-mode">Overview of viewer mode for Microsoft 365 Apps - Microsoft 365 Apps | Microsoft Learn</a></li>
+<li><a href="https://trustwrites.com/en/life-office-licensing-2025-en/">《Life Notes》Is Perpetual Office Really Going Away? Microsoft's Policy ...</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者对 AI 领域中不断变化的“重要素质”标准表示怀疑，一位评论者指出，领域专长只是继“成为好开发者”、“架构能力”和“品味”之后的最新护城河。另一位分享了一个实际案例：一个通过 vibe coding 构建的应用因缺乏领域知识而问题百出，支持了本文论点。还有评论者质疑 AI 本身能否拥有同等的领域专长。
+**社区讨论**: 评论者表示愤怒，认为这一变化违反了消费者保障（例如在澳大利亚），并可能导致法律诉讼。一些人建议改用 LibreOffice，而另一些人指出盗版版本可能更尊重原始购买条款。
 
-**标签**: `#AI`, `#domain expertise`, `#software engineering`, `#vibe coding`, `#moat`
+**标签**: `#Microsoft Office`, `#software licensing`, `#consumer rights`, `#Mac`, `#subscription model`
 
 ---
 
 <a id="item-5"></a>
-## [深入解析复古渲染算法 Voxel Space](https://s-macke.github.io/VoxelSpace/) ⭐️ 8.0/10
+## [请不要用“AI vibe”毁掉这个软件](https://github.com/RsyncProject/rsync/issues/929) ⭐️ 8.0/10
 
-一篇在线文章详细解释了 1992 年游戏《Comanche》所使用的基于高度图的 Voxel Space 渲染算法。 这篇回顾性文章突显了一种在有限硬件上实现惊人性能的突破性伪 3D 技术，为复古游戏爱好者和算法设计者提供了宝贵见解。 该算法使用高度图（二维高程值数组）而非真正的体积像素，通过渲染垂直列来高效绘制地形。
+rsync 社区强烈反对在软件中集成 AI 的任何提议，用户认为此举毫无必要且可能损害稳定性。 这场争论反映了开源项目中，在维持既有可靠工具与采纳潮流 AI 功能之间的紧张关系，可能影响维护者如何平衡创新与用户信任。 该 GitHub issue 已有 122 条评论，参与度很高，部分用户明确建议创建分支来开发带 AI 的版本，而不是修改原始 rsync。
 
-hackernews · davikr · 5月30日 14:25 · [社区讨论](https://news.ycombinator.com/item?id=48336564)
+hackernews · justdotJS · 5月31日 03:16 · [社区讨论](https://news.ycombinator.com/item?id=48342705)
 
-**背景**: 体素是代表三维空间的体积像素，但 Voxel Space 技术采用高度图，在每个网格点存储高程值。通过从高度图扫描列来渲染景观，比完整的 3D 体素光线投射计算成本更低，使得在 1990 年代的硬件上实现实时飞行模拟成为可能。
+**背景**: rsync 是一款广泛使用的命令行工具，用于文件同步和数据传输，以其可靠性和高效性著称。该软件历史悠久，拥有大量依赖其稳定性的用户。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://experiments.withgoogle.com/javascript-voxel-spacing">Javascript Voxel Spacing by Selim Arsever - Experiments with Google</a></li>
+**社区讨论**: 评论显示了对 AI 集成的强烈反对意见，用户引用 GPL 保修免责声明，认为 AI 对 rsync 的核心功能毫无必要，并对维护者竟然考虑此事表示沮丧。部分用户建议为 AI 功能建立独立分支，另一些则批评原始 issue 的措辞。
 
-</ul>
-</details>
-
-**社区讨论**: 评论者澄清该技术使用的是高度图而非真正的体素，分享了受本文启发的个人项目，并回忆了该游戏在 386SX 等低端硬件上令人印象深刻的性能。
-
-**标签**: `#voxels`, `#rendering`, `#algorithms`, `#retro-gaming`, `#heightmaps`
+**标签**: `#rsync`, `#AI integration`, `#software maintenance`, `#open-source debate`, `#community reaction`
 
 ---
 
 <a id="item-6"></a>
-## [OpenRouter 获得 1.13 亿美元 B 轮融资，LLM 代理需求激增](https://openrouter.ai/announcements/series-b) ⭐️ 8.0/10
+## [埃森哲以 12 亿美元收购 Ookla 以增强网络 AI 能力](https://newsroom.accenture.com/news/2026/accenture-to-acquire-ookla-to-strengthen-network-intelligence-and-experience-with-data-and-ai-for-enterprises) ⭐️ 8.0/10
 
-OpenRouter，一个 LLM API 代理服务，宣布已获得 1.13 亿美元的 B 轮融资，表明投资者对统一模型访问和账单管理日益增长的需求信心十足。 这轮融资验证了市场对简化多模型访问基础设施的需求日益增长，为开发者提供了更低的摩擦和更好的成本控制。它也将 OpenRouter 定位为 AI 生态系统的关键参与者，可能加速多样化 AI 模型的采用。 融资后 OpenRouter 仍由创始人领导并控制，公司表示将继续为 AI 构建者打造产品。该服务在模型提供商成本的基础上收取少量附加费（约 5%），这一直是社区讨论的焦点。
+埃森哲于 2026 年 3 月宣布以 12 亿美元收购 Ookla，后者是 Speedtest 和 Downdetector 的母公司。该交易旨在将 Ookla 的网络数据与埃森哲的 AI 能力相结合，为企业提供增强的网络智能。 此次收购凸显了网络数据和智能在 AI 时代日益增长的价值，尤其是对电信和企业客户而言。它使埃森哲能够提供更深入的网络优化洞察，可能重塑 CSP 和企业管理 5G 和 Wi-Fi 网络的方式。 Ookla 的数据平台每月包含超过 2.5 亿次消费者发起的测试，以及受控的驾车、步行和嵌入式测试。此次收购还将 Downdetector、Ekahau 和 RootMetrics 等品牌纳入埃森哲旗下。
 
-hackernews · freeCandy · 5月30日 17:27 · [社区讨论](https://news.ycombinator.com/item?id=48338660)
+hackernews · Garbage · 5月30日 16:28 · [社区讨论](https://news.ycombinator.com/item?id=48337987)
 
-**背景**: OpenRouter 是一个 LLM API 代理服务，提供统一接口来访问和管理来自 OpenAI、Google、Anthropic 等多个提供商的大语言模型的账单。它允许开发者尝试不同模型，而无需处理每个提供商的独特 API，并提供账单上限等功能以防止意外费用。
+**背景**: Ookla 最著名的是 Speedtest.net（一款广泛使用的互联网速度测试服务）和 Downdetector（一个实时故障监控平台）。电信运营商每年支付高额费用购买 Ookla 聚合的网络性能数据，以识别覆盖缺口并改善服务质量。埃森哲此前已通过收购 Umlaut 拥有网络咨询业务，因此这笔交易是其数据资产的战略扩展。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://openrouter.ai/">OpenRouter</a></li>
-<li><a href="https://grokipedia.com/page/openrouter">OpenRouter</a></li>
+<li><a href="https://www.ookla.com/about">About | Ookla</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Downdetector">Downdetector - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论总体积极，用户称赞 OpenRouter 在尝试新模型时的低摩擦和账单上限功能。但一些人对长期价值表示怀疑，指出随着模型格局稳定，5% 的附加费可能变得不那么合理。联合创始人关于保持创始人控制的保证得到了好评。
+**社区讨论**: 评论者指出，这笔交易本质上是一次数据收购，因为电信运营商每年为 Ookla 的洞察支付六位数金额。一些人因产品看似简单而对 12 亿美元的估值感到惊讶，而另一些人则强调了 Ookla 数据变现的深度及其竞争地位。少数人提到了像 nettfart.no 这样的替代工具。
 
-**标签**: `#AI`, `#LLM`, `#funding`, `#OpenRouter`, `#startup`
+**标签**: `#acquisition`, `#network intelligence`, `#data monetization`, `#telecommunications`, `#AI`
 
 ---
 
 <a id="item-7"></a>
-## [Openrsync：OpenBSD 的 Clean-Room 版 Rsync 已用于 macOS 15.0](https://github.com/kristapsdz/openrsync) ⭐️ 8.0/10
+## [OpenBSD 发布新 rsync 实现 openrsync](https://github.com/kristapsdz/openrsync) ⭐️ 8.0/10
 
-OpenBSD 的 openrsync（一个对 rsync 工具的 clean-room 重新实现）现已用于苹果 macOS 15.0（Sequoia），替换了原始 rsync 以增强安全性和可靠性。 这一采用凸显了对原始 rsync 代码库安全性和代码质量的日益担忧，并验证了 OpenBSD 构建安全、可移植工具的方法。macOS 及其他系统的用户将受益于更值得信赖的文件同步工具。 Openrsync 设计轻量且简单，采用 BSD 许可证，仍在开发中，与 Samba 的 rsync 相比缺少某些功能。它在追求兼容性的同时注重安全性。
+OpenBSD 团队发布了 openrsync，这是 rsync 文件同步工具的一个新实现，代码托管在 GitHub 上。 作为原 Samba 维护的 rsync 的替代品，openrsync 提供了更简洁且可能更安全的代码库，考虑到主 rsync 代码库因大量提交而出现回归问题，这一点尤为重要。 Openrsync 目前缺少原 rsync 的某些功能，例如完全保留所有文件元数据或处理复杂的 rsync 选项；它最初是作为一个 RPKI 验证器项目的一部分开发的。
 
 hackernews · sph · 5月30日 10:51 · [社区讨论](https://news.ycombinator.com/item?id=48334854)
 
-**背景**: Clean-room 实现是一种在不侵犯版权的情况下逆向工程系统的方法：由一组人分析原始系统并编写规范，再由另一组独立团队根据规范实现。OpenBSD 是一个注重安全的类 Unix 操作系统，以主动安全和集成加密著称。它的许多组件（如 OpenSSH）被广泛用于其他系统。Openrsync 延续了这一传统，为原始 rsync 提供了安全的替代方案。
+**背景**: rsync 是一款广泛使用的开源工具，用于高效地同步本地或网络上的文件，以其差异传输算法著称。openrsync 是 OpenBSD 团队从头实现的版本，强调安全性和代码简洁性，在许多情况下可以作为原 rsync 的直接替代品。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Openrsync">Openrsync</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Clean_room_implementation">Clean room implementation</a></li>
+**社区讨论**: 社区评论表达了谨慎乐观的态度：部分用户报告成功使用，但指出某些功能缺失，如对 --rsync-path 的正确处理；另一些用户则因原 rsync 近期出现回归问题而欢迎该项目。还有评论提到了 Gokrazy 团队的 Go 语言实现作为另一个替代方案。
 
-</ul>
-</details>
-
-**社区讨论**: 评论者指出 openrsync 已随时间改进，但仍缺乏某些功能，如使用特定路径创建远程文件。其他人提到该项目最初是作为 RPKI 验证器的一部分开发的，并且还有 Go 语言的实现。总体情绪积极，尤其是在原始 rsync 代码库因“氛围编码”提交而出现回归的情况下。
-
-**标签**: `#rsync`, `#OpenBSD`, `#security`, `#macOS`, `#open-source`
+**标签**: `#openrsync`, `#rsync`, `#OpenBSD`, `#file synchronization`, `#open-source`
 
 ---
 
 <a id="item-8"></a>
-## [利奥首次通谕抨击技术弥赛亚主义](https://www.economist.com/europe/2026/05/28/leos-first-encyclical-attacks-technological-messianism) ⭐️ 8.0/10
+## [Voxel Space：复古高度图渲染技术](https://s-macke.github.io/VoxelSpace/) ⭐️ 8.0/10
 
-教皇利奥发布了其首道通谕，强烈批评技术弥赛亚主义——即认为技术（特别是 AI）能解决所有人类问题并取代伦理判断的信念。 这道通谕挑战了 OpenAI 和 Anthropic 等科技公司的主导叙事，引发了一场关于谁应控制技术的全球辩论：技术专家、政府还是宗教机构。 这道通谕是利奥教皇的首份重要文件，重点关注 AI 取代人类决策的风险。它警告不要将 AI 奉为神明，并呼吁设置伦理护栏。
+一篇技术文章解释了 1992 年游戏《Comanche》中使用的基于高度图的渲染算法，社区成员分享了实现代码和见解。 该算法在当时具有开创性，能在有限硬件上实现流畅的 3D 地形渲染，而此次讨论让这一技术在现代游戏开发者和历史爱好者中保持活力。 该技术使用高度图（灰度图像）存储高程，然后从远到近逐列渲染颜色，类似于对高度场进行光线投射。它并非真正的体素渲染，因为缺乏完整的体积数据。
 
-hackernews · 1vuio0pswjnm7 · 5月30日 10:30 · [社区讨论](https://news.ycombinator.com/item?id=48334710)
+hackernews · davikr · 5月30日 14:25 · [社区讨论](https://news.ycombinator.com/item?id=48336564)
 
-**背景**: 技术弥赛亚主义认为技术将拯救人类脱离所有问题，在 AI 炒作中尤为常见。梵蒂冈长期参与 AI 伦理讨论，曾与 Dario Amodei 等技术领袖会面。
+**背景**: 高度图是一种灰度图像，每个像素的亮度代表地形高程。Voxel Space 算法从视点发出射线，沿每条射线采样高度图，从而渲染高度图，产生 2.5D 效果。它是 20 世纪 90 年代初实时地形渲染的一个里程碑。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.biomedima.org/techno-messianism/">Techno- Messianism | BioMedima</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Heightmap">Heightmap - Wikipedia</a></li>
+<li><a href="https://observablehq.com/@ehouais/heightmap-rendering-using-a-floorcasting-algorithm">Heightmap rendering using a floorcasting algorithm / Philippe Deschaseaux | Observable</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论提及彼得·蒂尔的反基督者名单，有人暗示他如今将 AI CEO 列入其中。其他人争论技术专家、政府或宗教领袖谁应控制 AI，一名评论者指责 AI CEO 患上了“精神病”，将大语言模型视为神明。
+**社区讨论**: 评论澄清该技术基于高度图，并非真正的体素渲染，但放在 1992 年仍令人印象深刻。有用户分享了使用原始地图的 C++重新实现，有人将其移植到 AGS 引擎，还提出了一个用于软件质量的测试隐喻（'油罐假期测试'）。
 
-**标签**: `#technology`, `#ethics`, `#AI`, `#religion`, `#society`
+**标签**: `#graphics`, `#rendering`, `#voxel`, `#game development`, `#history`
 
 ---
 
 <a id="item-9"></a>
-## [Anthropic 如何在多个产品中隔离 Claude](https://simonwillison.net/2026/May/30/how-we-contain-claude/#atom-everything) ⭐️ 8.0/10
+## [Zig ELF 链接器实现快速增量链接](https://ziglang.org/devlog/2026/#2026-05-30) ⭐️ 8.0/10
 
-Anthropic 发布了一篇详细的博客文章，阐述了在 Claude.ai、Claude Code 和 Claude Cowork 中使用的沙箱技术，包括 gVisor、Seatbelt、Bubblewrap 以及完整的虚拟机。 这种透明度解决了 AI 沙箱文档普遍缺乏的问题，帮助开发者和用户理解 Claude 智能体的安全边界，并建立对系统的信任。 Claude.ai 使用 Google 的 gVisor 用户空间沙箱，Claude Code 在 macOS 上使用 Apple 的 Seatbelt、在 Linux 上使用 Bubblewrap，而 Claude Cowork 则运行完整的虚拟机（macOS 上使用 Apple Virtualization，Windows 上使用 HCS）。文章还描述了一个之前遗漏的通过/v1/files API 端点的数据泄露途径。
+Zig 编程语言的 ELF 链接器得到了改进，支持快速增量链接，大幅缩短了开发过程中的编译时间。 这一改进使 Zig 更加接近 C 语言的全面替代品，开发者能够以解释型语言的速度进行迭代，同时保持类似 C 的性能。 增量链接预计与链接时优化（LTO）不兼容，因此主要适用于开发构建而非发布构建。
 
-rss · Simon Willison · 5月30日 21:36
+hackernews · kristoff_it · 5月30日 17:29 · [社区讨论](https://news.ycombinator.com/item?id=48338673)
 
-**背景**: 沙箱是一种安全技术，用于隔离应用程序，以限制其被攻破时可能造成的损害。对于像 Claude 这样的 AI 智能体，沙箱可以防止对主机系统、凭据或数据的未授权访问。gVisor 是 Google 开发的开源容器沙箱，它在用户空间实现系统调用。Seatbelt 是 macOS 的内核扩展，用于限制进程能力。Bubblewrap 是 Flatpak 等使用的轻量级 Linux 沙箱工具。完整的虚拟机则提供硬件级别的隔离。
+**背景**: Zig 是一种通用系统编程语言，旨在作为 C 语言的现代改进。ELF（可执行与可链接格式）是 Linux 系统上的标准二进制格式。链接器将编译后的目标文件合并成可执行文件；增量链接重用之前链接的输出以加速后续构建。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/GVisor">gVisor - Wikipedia</a></li>
-<li><a href="https://github.com/containers/bubblewrap">GitHub - containers/bubblewrap: Low-level unprivileged sandboxing tool used by Flatpak and similar projects · GitHub</a></li>
-<li><a href="https://theapplewiki.com/wiki/Dev:Seatbelt">Dev:Seatbelt - The Apple Wiki</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Zig_(programming_language)">Zig (programming language)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format">Executable and Linkable Format - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI safety`, `#sandboxing`, `#Anthropic`, `#Claude`, `#security`
+**社区讨论**: 社区成员对此充满热情，有人表示 Zig 将“成为 C 语言的替代品”，实现类似 JavaScript 或 Python 的迭代速度。另一位用户因 Zig 更优的构建系统而选择它而非 Rust 用于一个转译项目。也有人担忧增量链接可能与 LTO 互斥。
+
+**标签**: `#Zig`, `#linker`, `#ELF`, `#systems programming`, `#compiler`
 
 ---
 
 <a id="item-10"></a>
-## [SpaceX 赢得 41.6 亿美元美军卫星导弹追踪合同](https://www.bloomberg.com/news/articles/2026-05-29/spacex-wins-4-billion-contract-for-us-golden-dome-satellites) ⭐️ 8.0/10
+## [OpenRouter 完成 1.13 亿美元 B 轮融资](https://openrouter.ai/announcements/series-b) ⭐️ 8.0/10
 
-SpaceX 获得美国太空军价值 41.6 亿美元的合同，将建设一套天基追踪网络，用于识别和跟踪外国飞机及导弹，这是“金穹”防御计划的一部分。 这份合同使 SpaceX 成为美国重大国防计划的核心，该计划旨在应对先进导弹威胁（尤其是高超音速导弹），通过减少地面系统存在的盲区来提升防御能力。 该天基网络将整合太空传感器、通信系统和地面处理能力。SpaceX 此前已参与“金穹”计划的天基拦截器原型开发，并加入了该计划底层软件系统的多公司联盟。
+OpenRouter 宣布完成 1.13 亿美元的 B 轮融资，用于扩展其提供统一 API 以访问多个大语言模型的代理服务。 这笔巨额投资验证了 LLM 接入的代理模式，凸显了市场对简化多模型集成的强烈需求，并可能加速 OpenRouter 作为关键基础设施玩家的增长。 OpenRouter 在模型提供商价格之上收取 5%的附加费，并提供计费上限等功能以防止意外成本。融资后公司仍由创始人领导并控制。
 
-telegram · zaihuapd · 5月30日 01:53
+hackernews · freeCandy · 5月30日 17:27 · [社区讨论](https://news.ycombinator.com/item?id=48338660)
 
-**背景**: “金穹”是美国计划中的多层导弹防御系统，旨在探测并摧毁弹道导弹、高超音速导弹和巡航导弹。当前美国的导弹预警卫星针对可预测的弹道轨迹设计，难以有效跟踪以五倍音速机动的高超音速导弹。太空发展局正在采购和发射数百颗导弹跟踪与通信卫星组成网络。
+**背景**: OpenRouter 是一个代理服务，提供单一 API 端点以访问来自不同提供商的多种大语言模型，简化了开发者的集成工作。它与其他 API 聚合解决方案以及 LiteLLM 等自托管代理竞争。B 轮融资将用于扩展基础设施和支持更多模型。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Golden_Dome_(missile_defense_system)">Golden Dome (missile defense system) - Wikipedia</a></li>
-<li><a href="https://www.bbc.com/news/articles/cqxp27j1xyjo">Trump's ' Golden Dome ' will cost $1.2tn and might not stop all-out...</a></li>
-<li><a href="https://arstechnica.com/space/2025/07/pentagon-may-put-spacex-at-the-center-of-a-sensor-to-shooter-targeting-network/">Pentagon may put SpaceX at the center of... - Ars Technica</a></li>
+<li><a href="https://apify.com/apify/openrouter">OpenRouter · Apify</a></li>
+<li><a href="https://grokipedia.com/page/Openrouter-proxy">Openrouter-proxy</a></li>
 
 </ul>
 </details>
 
-**标签**: `#SpaceX`, `#defense`, `#satellites`, `#military`, `#space technology`
+**社区讨论**: Hacker News 上的评论者称赞 OpenRouter 在尝试模型时的低摩擦和有用的计费上限，但有些人质疑 5%的附加费以及名称中的“Open”（开放），因为它不是开源的。联合创始人回应说，公司仍由创始人领导，专注于为爱好者构建优秀产品。
+
+**标签**: `#AI`, `#LLM`, `#funding`, `#infrastructure`, `#API`
 
 ---
 
 <a id="item-11"></a>
-## [华为提出“韬定律”：以时间缩微替代几何缩微](https://t.me/zaihuapd/41648) ⭐️ 8.0/10
+## [Anthropic 详解 Claude 跨产品沙箱技术](https://simonwillison.net/2026/May/30/how-we-contain-claude/#atom-everything) ⭐️ 8.0/10
 
-在 2026 年上海国际电路与系统研讨会上，华为正式提出“韬定律”（τ定律），主张以“时间缩微”替代基于制程节点缩小的“几何缩微”，作为半导体演进的新指导原则。 这代表了半导体行业的潜在范式转变，因为它提供了一条无需依赖极紫外光刻或不断缩小的纳米节点即可继续提升性能的路径，而这些传统方法正逼近物理极限。如果得到验证，可能重塑竞争格局并降低对先进制造设备的依赖。 过去六年，华为已基于韬定律设计并量产了 381 款芯片，今年秋季将推出采用“逻辑折叠”技术的新麒麟手机芯片。华为的长期目标是到 2031 年实现等效 1.4 纳米制程的晶体管密度。
+Anthropic 发布了一篇详细的博文，解释了用于 Claude.ai、Claude Code 和 Claude Cowork 的沙箱技术，包括使用 gVisor、Seatbelt、Bubblewrap 和完整虚拟机。 这解决了 AI 代理沙箱普遍缺乏透明度的问题，帮助用户和开发者了解 Anthropic 产品的安全边界，建立信任。 Claude.ai 使用 Google 开发的 gVisor 容器沙箱；Claude Code 在 macOS 上使用 Seatbelt，在 Linux 上使用 Bubblewrap；Claude Cowork 运行完整虚拟机，使用 Apple 的虚拟化框架或 Windows 上的 HCS。文章还提到了过去遗漏的风险，包括通过 api.anthropic.com/v1/files 的数据外泄向量。
 
-telegram · zaihuapd · 5月30日 02:18
+rss · Simon Willison · 5月30日 21:36
 
-**背景**: 传统半导体进步遵循摩尔定律和 Dennard 缩放，依赖缩小晶体管尺寸（几何缩微）来提升密度和性能。但随着物理极限的临近，进一步缩小变得越来越困难和昂贵。韬定律将焦点从减小特征尺寸转向在整个系统栈中降低时间常数τ（tau）——从晶体管到数据中心工作负载——通过逻辑折叠等设计创新来压缩信号传播时延。
+**背景**: 沙箱技术将 AI 代理与主机系统隔离，防止未授权访问。gVisor 是 Google 开发的开源容器沙箱，在用户空间实现 Linux 系统调用以提供安全隔离。Seatbelt 是 macOS 内置的沙箱框架，可限制文件系统和网络访问。Bubblewrap 是轻量级 Linux 沙箱工具，被 Flatpak 等容器系统使用。这些技术强制执行文件系统、网络和进程能力的严格边界。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.cnblogs.com/qiniushanghai/p/20166392">华为韬（τ）定律：用"时间缩微"重写半导体演进规则（2026） - 七牛云行业应用 - 博客园</a></li>
-<li><a href="https://www.sohu.com/a/1027841484_121123901">华为韬定律：多层电子系统的时间缩放理论（附下载）_晶体管_Dennard_半导体</a></li>
-<li><a href="https://m.thepaper.cn/newsDetail_forward_33228813">究竟｜“韬定律”将如何影响半导体产业演进路径</a></li>
+<li><a href="https://gvisor.dev/">The Container Security Platform - gVisor</a></li>
+<li><a href="https://code.claude.com/docs/en/sandboxing">Sandboxing - Claude Code Docs</a></li>
+<li><a href="https://github.com/containers/bubblewrap">GitHub - containers/ bubblewrap : Low-level unprivileged sandboxing...</a></li>
 
 </ul>
 </details>
 
-**标签**: `#半导体`, `#华为`, `#摩尔定律`, `#芯片设计`
+**标签**: `#AI safety`, `#sandboxing`, `#Claude`, `#security`, `#Anthropic`
+
+---
+
+<a id="item-12"></a>
+## [在浏览器中使用 Pyodide 和服务人员运行 Python ASGI 应用](https://simonwillison.net/2026/May/30/pyodide-asgi-browser/#atom-everything) ⭐️ 8.0/10
+
+Simon Willison 成功演示了通过将 Pyodide 与服务工作者结合，在浏览器中运行 Python ASGI 应用（包括 Datasette），这改进了他之前使用 Web Worker 的方法，后者无法执行<script>标签中的 JavaScript。 这项技术使更丰富的 Python Web 应用能够在没有服务器的情况下完全在客户端运行，可能扩大 Datasette 等工具的应用范围，并允许在浏览器中运行更复杂的 Python 应用。 该方法使用服务工作者拦截网络请求，并提供通过 Pyodide 在 WebAssembly 中运行的 Python ASGI 应用生成的响应，克服了 Web Worker 中<script>标签无法执行的限制。
+
+rss · Simon Willison · 5月30日 21:02
+
+**背景**: Pyodide 是将 CPython 移植到 WebAssembly/Emscripten 的项目，使 Python 能在浏览器中运行。ASGI（异步服务器网关接口）是构建异步 Python Web 应用的标准，是 WSGI 的继任者。服务工作者是浏览器在后台独立于网页运行的脚本，支持拦截网络请求等功能。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://pyodide.org/en/stable/console.html">pyodide .org/en/stable/console.html</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Asynchronous_Server_Gateway_Interface">Asynchronous Server Gateway Interface - Wikipedia</a></li>
+
+</ul>
+</details>
+
+**标签**: `#Pyodide`, `#ASGI`, `#WebAssembly`, `#Service Workers`, `#Datasette`
+
+---
+
+<a id="item-13"></a>
+## [FROST 攻击利用 SSD 计时窥探浏览活动](https://futurism.com/future-society/websites-spying-solid-state-drive) ⭐️ 8.0/10
+
+研究人员披露了一种名为 FROST 的新型侧信道攻击，通过浏览器 Origin Private File System (OPFS)测量 SSD 读写时间，推断用户同时访问的网站或使用的应用。该攻击对网站识别的准确率达到 88.95%，对应用检测的准确率达到 95.83%，无需安装软件或用户交互。 此次攻击揭示了现代浏览器中一种新的隐私漏洞，任何恶意网站都可能未经许可窥探用户的浏览习惯。它挑战了 OPFS 是安全存储端点的假设，如果不加以缓解，可能会影响数百万用户。 该攻击已在 macOS 和 Linux 上进行了测试，但研究人员认为 Windows 同样易受攻击。使用后及时关闭浏览器标签页可降低风险，因为攻击依赖于多个打开标签页或应用同时访问 SSD 引起的时间变化。
+
+telegram · zaihuapd · 5月31日 01:55
+
+**背景**: 侧信道攻击利用系统间接泄露的信息（如时间、功耗或电磁辐射）来推断敏感数据。Origin Private File System (OPFS)是一种浏览器 API，为 Web 应用提供快速、针对来源的虚拟文件系统，但会无意中暴露因 SSD 访问模式导致的时间差异。FROST 攻击利用这些时间差异来推断哪些其他网站或应用正在积极使用存储。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Side-channel_attack">Side-channel attack - Wikipedia</a></li>
+<li><a href="https://hothardware.com/news/frost-side-channel-attack-turns-ssd-activity-into-a-new-browser-privacy-nightmare">FROST Side-Channel Attack Turns SSD Activity Into A New Browser Privacy Nightmare | HotHardware</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system">Origin private file system - Web APIs | MDN</a></li>
+
+</ul>
+</details>
+
+**标签**: `#security`, `#side-channel attack`, `#browser privacy`, `#SSD`, `#OPFS`
 
 ---
